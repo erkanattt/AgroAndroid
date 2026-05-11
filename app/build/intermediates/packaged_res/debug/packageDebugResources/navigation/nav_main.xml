@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="kz.agrosfera.app.ui.home.HomeFragment"
+        android:label="@string/nav_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_check"
+        android:name="kz.agrosfera.app.ui.diagnose.DiagnoseFragment"
+        android:label="@string/nav_check"
+        tools:layout="@layout/fragment_diagnose" />
+
+    <fragment
+        android:id="@+id/nav_field"
+        android:name="kz.agrosfera.app.ui.diseases.CommonDiseasesFragment"
+        android:label="@string/nav_field"
+        tools:layout="@layout/fragment_common_diseases" />
+
+    <fragment
+        android:id="@+id/nav_knowledge"
+        android:name="kz.agrosfera.app.ui.knowledge.KnowledgeFragment"
+        android:label="@string/nav_knowledge"
+        tools:layout="@layout/fragment_knowledge" />
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="kz.agrosfera.app.ui.profile.ProfileFragment"
+        android:label="@string/nav_profile"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profile_to_login"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_profile_to_register"
+            app:destination="@id/registerFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="kz.agrosfera.app.ui.auth.LoginFragment"
+        android:label="@string/login_title"
+        tools:layout="@layout/fragment_login" />
+
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="kz.agrosfera.app.ui.auth.RegisterFragment"
+        android:label="@string/register_title"
+        tools:layout="@layout/fragment_register" />
+</navigation>
