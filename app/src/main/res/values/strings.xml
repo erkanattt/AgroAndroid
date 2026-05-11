@@ -17,6 +17,7 @@
     <string name="feat_info_desc">Нұсқаулықтар мен мақалалар</string>
 
     <string name="how_title">Қалай жұмыс істейді?</string>
+    <string name="home_process_hint">Суретті жүктеңіз → ЖИ талдайды → нәтиже мен алдын алу кеңестері. Толығырақ төменгі мәзірден «Тексеру» бөлімін ашыңыз.</string>
     <string name="step1_title">Суретке түсіру</string>
     <string name="step2_title">Жүктеу</string>
     <string name="step3_title">ЖИ талдауы</string>
@@ -42,4 +43,49 @@
     <string name="nav_field">Егістік</string>
     <string name="nav_knowledge">Білім</string>
     <string name="nav_profile">Профиль</string>
+
+    <string name="diagnose_title">Өсімдікті ЖИ арқылы тексеру</string>
+    <string name="diagnose_hint">Суретті галереядан таңдаңыз немесе камерамен түсіріңіз, содан кейін «Талдау» батырмасын басыңыз.</string>
+    <string name="pick_gallery">Галерея</string>
+    <string name="take_photo">Камера</string>
+    <string name="analyze">Талдау (ЖИ)</string>
+    <string name="analyzing">Талдануда…</string>
+    <string name="diagnosis_result_title">Болжамды нәтиже</string>
+    <string name="diagnosis_confidence">Сенімділік: %1$d%%</string>
+    <string name="diagnosis_prevention">Алдын алу және емдеу</string>
+    <string name="diagnosis_symptoms">Белгілер</string>
+    <string name="diagnosis_demo_note">Демо режим: нақты ЖИ сервері қосылмаған. Суреттің «белгісі» бойынша каталогтан ауру таңдалады. Нақты диагноз үшін маманға жүгініңіз.</string>
+    <string name="need_image">Алдымен сурет таңдаңыз немесе түсіріңіз.</string>
+    <string name="permission_camera_denied">Камера рұқсаты қажет.</string>
+
+    <string name="common_diseases_title">Жиі кездесетін аурулар</string>
+    <string name="common_diseases_subtitle">Егістікте жиі кездесетін патологиялар тізімі. Толығырақ карточканы басыңыз.</string>
+
+    <string name="knowledge_screen_title">Агро білім</string>
+    <string name="knowledge_intro">Алдын алу — емдеуден арзан. Төмендегі қағидаларды сақтаңыз.</string>
+    <string name="knowledge_block1_title">Суру және ылғал</string>
+    <string name="knowledge_block1_text">Тамшы суару артық ылғалды азайтады. Жапырақтарды құрғақтандыру уақытын қалдырыңыз.</string>
+    <string name="knowledge_block2_title">Ауыспалы егіс</string>
+    <string name="knowledge_block2_text">Бір түрді бір жерде тұрақты өсіру ауру жинақталуына әкеледі. Ауыспалы егіс жоспарлаңыз.</string>
+    <string name="knowledge_block3_title">Таза құрал</string>
+    <string name="knowledge_block3_text">Қайшы, пырақ пен қолғаптарды залалсыз өсімдіктерден кейін дезинфекциялаңыз.</string>
+
+    <string name="profile_title">Профиль</string>
+    <string name="profile_guest">Қонақ режимі</string>
+    <string name="profile_hello">Сәлем, %1$s!</string>
+    <string name="profile_email_label">Пошта: %1$s</string>
+    <string name="login_title">Кіру</string>
+    <string name="register_title">Тіркелу</string>
+    <string name="field_email">Пошта</string>
+    <string name="field_password">Құпия сөз</string>
+    <string name="field_name">Аты-жөні</string>
+    <string name="field_password_confirm">Құпия сөзді растау</string>
+    <string name="action_login">Кіру</string>
+    <string name="action_register">Тіркелу</string>
+    <string name="action_logout">Шығу</string>
+    <string name="auth_error_empty">Барлық өрістерді толтырыңыз.</string>
+    <string name="auth_error_password_mismatch">Құпия сөздер сәйкес келмейді.</string>
+    <string name="auth_error_invalid">Пошта немесе құпия сөз қате.</string>
+    <string name="auth_success_register">Тіркелу сәтті аяқталды.</string>
+    <string name="auth_success_login">Қош келдіңіз!</string>
 </resources>
