@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background">#0B1610</color>
+    <color name="accent">#76C043</color>
+    <color name="card">#152A1E</color>
+    <color name="card_elevated">#1A3324</color>
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#B8C4BC</color>
+    <color name="danger">#E53935</color>
+    <color name="hero_overlay">#990B1610</color>
+    <color name="icon_circle_bg">#1E3D2A</color>
+</resources>

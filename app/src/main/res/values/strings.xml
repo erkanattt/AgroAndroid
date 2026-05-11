@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AgroSfera</string>
+    <string name="hero_title">Жасанды интеллект арқылы өсімдік ауруларын анықтау және алдын алу</string>
+    <string name="hero_subtitle">Сурет арқылы жылдам диагноз, алдын алу кеңестері және егістік мониторингі бір қосымшада.</string>
+    <string name="cta_check_plant">Өсімдікті тексеру</string>
+    <string name="logo_agro">AGRO</string>
+    <string name="logo_sfera">SFERA</string>
+
+    <string name="feat_ai_title">ЖИ диагнозы</string>
+    <string name="feat_ai_desc">Сурет бойынша ауруды анықтау</string>
+    <string name="feat_prevent_title">Алдын алу</string>
+    <string name="feat_prevent_desc">Қорғану стратегиясы</string>
+    <string name="feat_yield_title">Өнім бақылау</string>
+    <string name="feat_yield_desc">Динамика және болжам</string>
+    <string name="feat_info_title">Білім базасы</string>
+    <string name="feat_info_desc">Нұсқаулықтар мен мақалалар</string>
+
+    <string name="how_title">Қалай жұмыс істейді?</string>
+    <string name="step1_title">Суретке түсіру</string>
+    <string name="step2_title">Жүктеу</string>
+    <string name="step3_title">ЖИ талдауы</string>
+    <string name="step4_title">Нәтиже және кеңес</string>
+
+    <string name="latest_title">Соңғы диагноз</string>
+    <string name="diag_name">Септориоз</string>
+    <string name="diag_badge">Ауру анықталды</string>
+    <string name="diag_confidence">Сенімділік</string>
+    <string name="rec1">Зақымдалған жапырақтарды алып тастаңыз</string>
+    <string name="rec2">Фунгицидтермен емдеңіз</string>
+    <string name="rec3">Өсімдіктер арасында желдетуді жақсартыңыз</string>
+    <string name="summary_disease">Ауру түрі</string>
+    <string name="summary_risk">Тәуекел</string>
+    <string name="summary_risk_high">Жоғары</string>
+    <string name="summary_spread">Таралу</string>
+    <string name="summary_spread_value">Жел арқылы</string>
+    <string name="summary_conditions">Тәуліктік жағдай</string>
+    <string name="summary_temp">18–24°C, ылғалдылық жоғары</string>
+
+    <string name="nav_home">Басты бет</string>
+    <string name="nav_check">Тексеру</string>
+    <string name="nav_field">Егістік</string>
+    <string name="nav_knowledge">Білім</string>
+    <string name="nav_profile">Профиль</string>
+</resources>
