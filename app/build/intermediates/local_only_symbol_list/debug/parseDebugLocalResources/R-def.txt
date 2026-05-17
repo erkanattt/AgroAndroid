@@ -107,8 +107,13 @@ string diagnose_hint
 string diagnose_title
 string diagnosis_confidence
 string diagnosis_demo_note
+string diagnosis_error_generic
+string diagnosis_error_server
+string diagnosis_error_timeout
 string diagnosis_prevention
 string diagnosis_result_title
+string diagnosis_server_offline
+string diagnosis_server_online
 string diagnosis_symptoms
 string feat_ai_desc
 string feat_ai_title
@@ -126,6 +131,7 @@ string hero_subtitle
 string hero_title
 string home_process_hint
 string how_title
+string image_picked_ready
 string knowledge_block1_text
 string knowledge_block1_title
 string knowledge_block2_text
@@ -145,6 +151,7 @@ string nav_knowledge
 string nav_profile
 string need_image
 string permission_camera_denied
+string permission_gallery_denied
 string pick_gallery
 string profile_email_label
 string profile_guest
@@ -168,3 +175,4 @@ string summary_temp
 string take_photo
 style Theme.AgroSfera
 xml file_paths
+xml network_security_config

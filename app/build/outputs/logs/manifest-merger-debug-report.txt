@@ -1,20 +1,20 @@
 -- Merging decision tree log ---
 provider#androidx.core.content.FileProvider
-INJECTED from C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:23:9-31:20
+INJECTED from C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:26:9-34:20
 	android:grantUriPermissions
-		ADDED from C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:27:13-47
+		ADDED from C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:30:13-47
 	android:authorities
 		INJECTED from C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:25:13-64
+		ADDED from C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:28:13-64
 	android:exported
-		ADDED from C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:26:13-37
+		ADDED from C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:29:13-37
 	android:name
-		ADDED from C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:24:13-62
+		ADDED from C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:27:13-62
 manifest
-ADDED from C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:2:1-42:12
-INJECTED from C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:2:1-42:12
-INJECTED from C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:2:1-42:12
-INJECTED from C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:2:1-42:12
+ADDED from C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:2:1-45:12
+INJECTED from C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:2:1-45:12
+INJECTED from C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:2:1-45:12
+INJECTED from C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:2:1-45:12
 MERGED from [androidx.databinding:viewbinding:8.7.2] C:\Users\yerka\.gradle\caches\8.9\transforms\2f82f2f253da669995a4b388019db9f2\transformed\viewbinding-8.7.2\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.navigation:navigation-common:2.8.4] C:\Users\yerka\.gradle\caches\8.9\transforms\96a1063f5ebd9144da1d38a4ffa8bdb4\transformed\navigation-common-2.8.4\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.navigation:navigation-common-ktx:2.8.4] C:\Users\yerka\.gradle\caches\8.9\transforms\7d2c1ff1b5820f6314f761df7901284a\transformed\navigation-common-ktx-2.8.4\AndroidManifest.xml:2:1-7:12
@@ -92,23 +92,27 @@ ADDED from C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManif
 		ADDED from C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:6:9-33
 	android:name
 		ADDED from C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:5:9-47
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:8:5-67
+	android:name
+		ADDED from C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:8:22-64
 uses-permission#android.permission.CAMERA
-ADDED from C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:8:5-65
+ADDED from C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:9:5-65
 	android:name
-		ADDED from C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:8:22-62
+		ADDED from C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:9:22-62
 uses-permission#android.permission.READ_MEDIA_IMAGES
-ADDED from C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:9:5-76
+ADDED from C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:10:5-76
 	android:name
-		ADDED from C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:9:22-73
+		ADDED from C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:10:22-73
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:10:5-12:38
+ADDED from C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:11:5-13:38
 	android:maxSdkVersion
-		ADDED from C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:12:9-35
+		ADDED from C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:13:9-35
 	android:name
-		ADDED from C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:11:9-64
+		ADDED from C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:12:9-64
 application
-ADDED from C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:14:5-41:19
-INJECTED from C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:14:5-41:19
+ADDED from C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:15:5-44:19
+INJECTED from C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:15:5-44:19
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\yerka\.gradle\caches\8.9\transforms\0f9c5b13a9f7d72e9f5af472a7ccf750\transformed\material-1.12.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\yerka\.gradle\caches\8.9\transforms\0f9c5b13a9f7d72e9f5af472a7ccf750\transformed\material-1.12.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.2.0] C:\Users\yerka\.gradle\caches\8.9\transforms\c80f3100b90461ddbbe9b059e3225476\transformed\constraintlayout-2.2.0\AndroidManifest.xml:7:5-20
@@ -132,43 +136,47 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\ye
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.15.0] C:\Users\yerka\.gradle\caches\8.9\transforms\18408fadaa261faab4931b1df5c99247\transformed\core-1.15.0\AndroidManifest.xml:28:18-86
 	android:supportsRtl
-		ADDED from C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:20:9-35
+		ADDED from C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:22:9-35
 	android:label
-		ADDED from C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:18:9-41
+		ADDED from C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:19:9-41
 	android:roundIcon
-		ADDED from C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:19:9-54
+		ADDED from C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:20:9-54
 	android:icon
-		ADDED from C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:17:9-43
+		ADDED from C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:18:9-43
 	android:allowBackup
-		ADDED from C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:16:9-35
+		ADDED from C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:17:9-35
 	android:theme
-		ADDED from C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:21:9-47
+		ADDED from C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:23:9-47
+	android:networkSecurityConfig
+		ADDED from C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:21:9-69
+	android:usesCleartextTraffic
+		ADDED from C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:24:9-44
 	android:name
-		ADDED from C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:15:9-32
+		ADDED from C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:16:9-32
 activity#kz.agrosfera.app.MainActivity
-ADDED from C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:32:9-40:20
+ADDED from C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:35:9-43:20
 	android:exported
-		ADDED from C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:34:13-36
+		ADDED from C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:37:13-36
 	android:theme
-		ADDED from C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:35:13-51
+		ADDED from C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:38:13-51
 	android:name
-		ADDED from C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:33:13-41
+		ADDED from C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:36:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:36:13-39:29
+ADDED from C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:39:13-42:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:37:17-69
+ADDED from C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:40:17-69
 	android:name
-		ADDED from C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:37:25-66
+		ADDED from C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:40:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:38:17-77
+ADDED from C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:41:17-77
 	android:name
-		ADDED from C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:38:27-74
+		ADDED from C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:41:27-74
 meta-data#android.support.FILE_PROVIDER_PATHS
-ADDED from C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:28:13-30:54
+ADDED from C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:31:13-33:54
 	android:resource
-		ADDED from C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:30:17-51
+		ADDED from C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:33:17-51
 	android:name
-		ADDED from C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:29:17-67
+		ADDED from C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:32:17-67
 uses-sdk
 INJECTED from C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml

@@ -1,38 +1,42 @@
 [
     {
-        "merged": "kz.agrosfera.app-mergeDebugResources-51:/layout/fragment_knowledge.xml",
-        "source": "kz.agrosfera.app-main-54:/layout/fragment_knowledge.xml"
+        "merged": "C:\\Users\\yerka\\.gradle\\daemon\\8.9\\kz.agrosfera.app-mergeDebugResources-51:\\layout\\fragment_register.xml",
+        "source": "C:\\Users\\yerka\\.gradle\\daemon\\8.9\\kz.agrosfera.app-main-54:\\layout\\fragment_register.xml"
     },
     {
-        "merged": "kz.agrosfera.app-mergeDebugResources-51:/layout/fragment_home.xml",
-        "source": "kz.agrosfera.app-main-54:/layout/fragment_home.xml"
+        "merged": "C:\\Users\\yerka\\.gradle\\daemon\\8.9\\kz.agrosfera.app-mergeDebugResources-51:\\layout\\fragment_common_diseases.xml",
+        "source": "C:\\Users\\yerka\\.gradle\\daemon\\8.9\\kz.agrosfera.app-main-54:\\layout\\fragment_common_diseases.xml"
     },
     {
-        "merged": "kz.agrosfera.app-mergeDebugResources-51:/layout/item_disease.xml",
-        "source": "kz.agrosfera.app-main-54:/layout/item_disease.xml"
+        "merged": "C:\\Users\\yerka\\.gradle\\daemon\\8.9\\kz.agrosfera.app-mergeDebugResources-51:\\layout\\fragment_knowledge.xml",
+        "source": "C:\\Users\\yerka\\.gradle\\daemon\\8.9\\kz.agrosfera.app-main-54:\\layout\\fragment_knowledge.xml"
     },
     {
-        "merged": "kz.agrosfera.app-mergeDebugResources-51:/layout/fragment_register.xml",
-        "source": "kz.agrosfera.app-main-54:/layout/fragment_register.xml"
+        "merged": "C:\\Users\\yerka\\.gradle\\daemon\\8.9\\kz.agrosfera.app-mergeDebugResources-51:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\yerka\\.gradle\\daemon\\8.9\\kz.agrosfera.app-main-54:\\layout\\activity_main.xml"
     },
     {
-        "merged": "kz.agrosfera.app-mergeDebugResources-51:/layout/activity_main.xml",
-        "source": "kz.agrosfera.app-main-54:/layout/activity_main.xml"
+        "merged": "C:\\Users\\yerka\\.gradle\\daemon\\8.9\\kz.agrosfera.app-mergeDebugResources-51:\\layout\\fragment_diagnose.xml",
+        "source": "C:\\Users\\yerka\\.gradle\\daemon\\8.9\\kz.agrosfera.app-main-54:\\layout\\fragment_diagnose.xml"
     },
     {
-        "merged": "kz.agrosfera.app-mergeDebugResources-51:/layout/fragment_profile.xml",
-        "source": "kz.agrosfera.app-main-54:/layout/fragment_profile.xml"
+        "merged": "C:\\Users\\yerka\\.gradle\\daemon\\8.9\\kz.agrosfera.app-mergeDebugResources-51:\\layout\\item_disease.xml",
+        "source": "C:\\Users\\yerka\\.gradle\\daemon\\8.9\\kz.agrosfera.app-main-54:\\layout\\item_disease.xml"
     },
     {
-        "merged": "kz.agrosfera.app-mergeDebugResources-51:/layout/fragment_common_diseases.xml",
-        "source": "kz.agrosfera.app-main-54:/layout/fragment_common_diseases.xml"
+        "merged": "C:\\Users\\yerka\\.gradle\\daemon\\8.9\\kz.agrosfera.app-mergeDebugResources-51:\\layout\\fragment_home.xml",
+        "source": "C:\\Users\\yerka\\.gradle\\daemon\\8.9\\kz.agrosfera.app-main-54:\\layout\\fragment_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\yerka\\.gradle\\daemon\\8.9\\kz.agrosfera.app-mergeDebugResources-51:\\layout\\fragment_login.xml",
+        "source": "C:\\Users\\yerka\\.gradle\\daemon\\8.9\\kz.agrosfera.app-main-54:\\layout\\fragment_login.xml"
     },
     {
         "merged": "kz.agrosfera.app-mergeDebugResources-51:/layout/fragment_diagnose.xml",
         "source": "kz.agrosfera.app-main-54:/layout/fragment_diagnose.xml"
     },
     {
-        "merged": "kz.agrosfera.app-mergeDebugResources-51:/layout/fragment_login.xml",
-        "source": "kz.agrosfera.app-main-54:/layout/fragment_login.xml"
+        "merged": "C:\\Users\\yerka\\.gradle\\daemon\\8.9\\kz.agrosfera.app-mergeDebugResources-51:\\layout\\fragment_profile.xml",
+        "source": "C:\\Users\\yerka\\.gradle\\daemon\\8.9\\kz.agrosfera.app-main-54:\\layout\\fragment_profile.xml"
     }
 ]

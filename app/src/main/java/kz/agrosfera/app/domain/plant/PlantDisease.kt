@@ -10,6 +10,9 @@ data class PlantDisease(
 )
 
 data class DiagnosisResult(
-    val disease: PlantDisease,
-    val confidencePercent: Int,
+    val classId: String,
+    val displayName: String,
+    val symptoms: String,
+    val prevention: String,
+    val confidencePercent: Int?,
 )

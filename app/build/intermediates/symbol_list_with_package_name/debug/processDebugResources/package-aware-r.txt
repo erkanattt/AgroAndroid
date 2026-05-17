@@ -4015,8 +4015,13 @@ string diagnose_hint
 string diagnose_title
 string diagnosis_confidence
 string diagnosis_demo_note
+string diagnosis_error_generic
+string diagnosis_error_server
+string diagnosis_error_timeout
 string diagnosis_prevention
 string diagnosis_result_title
+string diagnosis_server_offline
+string diagnosis_server_online
 string diagnosis_symptoms
 string error_a11y_label
 string error_icon_content_description
@@ -4041,6 +4046,7 @@ string hide_bottom_view_on_scroll_behavior
 string home_process_hint
 string how_title
 string icon_content_description
+string image_picked_ready
 string item_view_role_description
 string knowledge_block1_text
 string knowledge_block1_title
@@ -4168,6 +4174,7 @@ string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
 string permission_camera_denied
+string permission_gallery_denied
 string pick_gallery
 string profile_email_label
 string profile_guest
@@ -5494,3 +5501,4 @@ styleable ViewStubCompat android_id android_layout android_inflatedId
 styleable ViewTransition android_id SharedValue SharedValueId clearsTag duration ifTagNotSet ifTagSet motionInterpolator motionTarget onStateTransition pathMotionArc setsTag transitionDisable upDuration viewTransitionMode
 styleable include constraintSet
 xml file_paths
+xml network_security_config

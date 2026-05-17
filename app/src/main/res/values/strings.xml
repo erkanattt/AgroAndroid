@@ -45,8 +45,10 @@
     <string name="nav_profile">Профиль</string>
 
     <string name="diagnose_title">Өсімдікті ЖИ арқылы тексеру</string>
-    <string name="diagnose_hint">Суретті галереядан таңдаңыз немесе камерамен түсіріңіз, содан кейін «Талдау» батырмасын басыңыз.</string>
+    <string name="diagnose_hint">«Галерея» батырмасын басып телефондағы фотоны таңдаңыз (немесе суретті басыңыз), содан кейін «Талдау (ЖИ)».</string>
     <string name="pick_gallery">Галерея</string>
+    <string name="image_picked_ready">Фото таңдалды. «Талдау» батырмасын басыңыз.</string>
+    <string name="permission_gallery_denied">Галереяға рұқсат қажет. Параметрлер → AgroSfera → Рұқсаттар.</string>
     <string name="take_photo">Камера</string>
     <string name="analyze">Талдау (ЖИ)</string>
     <string name="analyzing">Талдануда…</string>
@@ -54,7 +56,12 @@
     <string name="diagnosis_confidence">Сенімділік: %1$d%%</string>
     <string name="diagnosis_prevention">Алдын алу және емдеу</string>
     <string name="diagnosis_symptoms">Белгілер</string>
-    <string name="diagnosis_demo_note">Демо режим: нақты ЖИ сервері қосылмаған. Суреттің «белгісі» бойынша каталогтан ауру таңдалады. Нақты диагноз үшін маманға жүгініңіз.</string>
+    <string name="diagnosis_demo_note">Сервер күйі тексерілуде…</string>
+    <string name="diagnosis_server_online">✓ Сервер қосулы: %1$s\nСуретті таңдап «Талдау» батырмасын басыңыз.</string>
+    <string name="diagnosis_server_offline">✗ Сервер жоқ: %1$s\n\n1) PowerShell:\ncd disser-project-flask\\app\npython app.py\n\n2) Эмулятор: 10.0.2.2:5000\nНақты телефон: app/build.gradle ішінде компьютер Wi‑Fi IP қойыңыз (мыс. 192.168.0.5:5000), қайта Build.</string>
+    <string name="diagnosis_error_server">Серверге қосылу мүмкін болмады. Flask-ты іске қосып, эмуляторда 10.0.2.2:5000, телефонда компьютер IP мекенжайын тексеріңіз.</string>
+    <string name="diagnosis_error_timeout">Сервер жауап бермеді. Кейін қайталаңыз.</string>
+    <string name="diagnosis_error_generic">Талдау сәтсіз аяқталды. Сурет пен серверді тексеріңіз.</string>
     <string name="need_image">Алдымен сурет таңдаңыз немесе түсіріңіз.</string>
     <string name="permission_camera_denied">Камера рұқсаты қажет.</string>
 
