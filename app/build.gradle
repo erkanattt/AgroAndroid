@@ -13,7 +13,6 @@ android {
         targetSdk 35
         versionCode 1
         versionName '1.0'
-        // Эмулятор: хост ПК = 10.0.2.2. Нақты телефон: компьютердің Wi‑Fi IP (мыс. 192.168.1.10)
         buildConfigField 'String', 'API_BASE_URL', '"http://10.0.2.2:5000"'
     }
 
@@ -34,6 +33,7 @@ android {
         viewBinding true
         buildConfig true
     }
+    buildToolsVersion '35.0.0'
 }
 
 dependencies {
