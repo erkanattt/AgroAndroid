@@ -1,0 +1,76 @@
+{% extends 'layout.html' %} {% block body %}
+
+
+<div class="row">
+  <div class="col-md-12">
+    <h3 class="text-center">Получите совет по удобрению на основе почвы</h3>
+  </div>
+</div>
+
+
+<div class="row mt-5 mb-5">
+  <div class="col-md-12 mb-5">
+    <form method="POST" action="{{ url_for('fert_recommend') }}">
+
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <label>АЗОТ</label>
+          <input type="number" class="form-control" id="Nitrogen" name="nitrogen" placeholder="пример: 50" required/>
+        </div>    
+        <div class="form-group col-md-4">
+          <label>ФОСФОР</label>
+          <input type="number" class="form-control" id="Phosphorous" name="phosphorous" placeholder="пример: 50" required/>
+        </div>    
+        <div class="form-group col-md-4">
+          <label>КАЛИЙ</label>
+          <input type="number" class="form-control" id="Pottasium" name="pottasium" placeholder="пример: 50" required/>
+        </div>    
+      </div>
+    
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label>ВЫБЕРИТЕ КУЛЬТУРУ</label>
+          <select
+        name="cropname"
+        class="form-control"
+        id="crop"
+        placeholder="Выбрать культуру"
+        style="font-weight: bold"
+        required
+      >
+        <option selected>культура</option>
+        <option>rice</option>
+        <option>maize</option>
+        <option>chickpea</option>
+        <option>kidneybeans</option>
+        <option>pigeonpeas</option>
+        <option>mothbeans</option>
+        <option>mungbean</option>
+        <option>blackgram</option>
+        <option>lentil</option>
+        <option>pomegranate</option>
+        <option>banana</option>
+        <option>mango</option>
+        <option>grapes</option>
+        <option>watermelon</option>
+        <option>muskmelon</option>
+        <option>apple</option>
+        <option>orange</option>
+        <option>papaya</option>
+        <option>coconut</option>
+        <option>cotton</option>
+        <option>jute</option>
+        <option>coffee</option>
+      </select>
+        </div>    
+                
+      </div>
+    
+      
+      
+      <button type="submit" class="btn btn-primary">Предсказать</button>
+    </form>
+  </div>
+</div> 
+
+{% endblock %}

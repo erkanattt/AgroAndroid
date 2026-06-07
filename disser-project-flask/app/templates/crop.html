@@ -1,0 +1,255 @@
+{% extends 'layout.html' %} {% block body %}
+
+
+<div class="row">
+  <div class="col-md-12">
+    <h3 class="text-center">Узнайте, какая культура наиболее подходит для выращивания на вашей ферме</h3>
+  </div>
+</div>
+
+
+
+
+<div class="row mt-5 mb-5">
+  <div class="col-md-12 mb-5">
+    <form method="POST" action="{{ url_for('crop_prediction') }}">
+
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <label>АЗОТ</label>
+          <input type="number" class="form-control" id="Nitrogen" name="nitrogen" placeholder="пример: 50" required/>
+        </div>    
+        <div class="form-group col-md-4">
+          <label>ФОСФОР</label>
+          <input type="number" class="form-control" id="Phosphorous" name="phosphorous" placeholder="пример: 50" required/>
+        </div>    
+        <div class="form-group col-md-4">
+          <label>КАЛИЙ</label>
+          <input type="number" class="form-control" id="Pottasium" name="pottasium" placeholder="пример: 50" required/>
+        </div>    
+      </div>
+    
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <label>УРОВЕНЬ ph</label>
+          <input type="number" class="form-control" id="ph" name="ph" placeholder="пример: 50" required/>
+        </div>    
+        <div class="form-group col-md-4">
+          <label>КОЛИЧЕСТВО ОСАДКОВ (в мм)</label>
+          <input type="number" class="form-control" id="rainfall" name="rainfall" placeholder="пример: 50" required/>
+        </div>          
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <label>ТЕМПЕРАТУРА (api.openweathermap.org)</label>
+          <input type="text" class="form-control" id="t" name="t" placeholder="пример: 50" required/>
+        </div>    
+        <div class="form-group col-md-4">
+          <label>ВЛАЖНОСТЬ (api.openweathermap.org)</label>
+          <input type="text" class="form-control" id="h" name="h" placeholder="пример: 50" required/>
+        </div> 
+        <div class="form-group col-md-4">
+          <label>АТМ. ДАВЛЕНИЕ (api.openweathermap.org)</label>
+          <input type="text" class="form-control" id="pressure" name="pressure" placeholder="пример: 50" required/>
+        </div>          
+      </div>
+    
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <label>ОБЛАСТЬ</label>
+          <select
+            onchange="print_city('state', this.selectedIndex);"
+            id="sts"
+            name="stt"
+            class="form-control"
+            style="font-weight: bold; color: black;"
+            
+            required
+          ></select>
+        </div>    
+        <div class="form-group col-md-4">
+          <label>ГОРОД/РАЙОНА</label>
+          <select
+            id="state"
+            class="form-control"
+            name="city"
+            style="font-weight: bold; color: black;"
+            required
+          ></select>
+          <script language="javascript">
+            print_state("sts");
+          </script>
+        </div>    
+           
+      </div>
+
+      <div class="form-row">
+        <div id="map" style="width: 100%; height: 400px;"></div>
+      </div>
+      
+      <button type="submit" class="btn btn-primary">Предсказать</button>
+    </form>
+  </div>
+</div>
+
+<script type="text/javascript">
+
+  let polygon;
+
+  function setFieldValues(nitrogen, phosphorous, pottasium,ph,rainfall,city_name){
+    $('#Nitrogen').val(nitrogen);
+    $('#Phosphorous').val(phosphorous);
+    $('#Pottasium').val(pottasium);
+    $('#ph').val(ph);
+    $('#rainfall').val(rainfall);
+
+    $.post('/weather',{'city_name':city_name},function(res){
+        t = res[0];
+        h = res[1];
+        press = res[2];
+
+        $('#t').val(t);
+        $('#h').val(h);
+        $('#pressure').val(press);
+      });
+  };
+
+  $(document).ready(function(){
+    
+    $('#sts').change(function(v){
+
+      const stsValue = $(this).val();
+
+      if (polygon) {
+        polygon.remove();
+      }
+
+      if (stsValue == 'Almaty Region'){
+        
+        map.setView([43.213778, 76.893311], 11);
+
+        setFieldValues(12, 34,21,2,145,'Almaty');
+
+
+      }
+    });
+
+    $('#state').change(function(v){
+
+      let stateValue = $(this).val();
+
+      stateValue = stateValue.trim();      
+
+      if (polygon) {
+        polygon.remove();
+      }
+
+      
+
+      if (stateValue == 'Almaty'){
+  
+        map.setView([43.213778, 76.893311], 11);
+        polygon = L.polygon([
+          [43.295996, 76.8116],
+          [43.295996, 77.007294],
+          [43.289999, 77.159042],
+          [43.211479, 77.12883],
+          [43.187452, 77.010727],
+          [43.169426, 76.845932],
+          [43.174935, 76.644058],
+          [43.234995, 76.556168],
+          [43.292497, 76.633759],
+          [43.339958, 76.758728],
+        ]).addTo(map);
+
+        setFieldValues(12, 34,21,2,145,'Almaty');
+      }
+
+      if (stateValue == 'Talgar'){
+  
+        map.setView([43.300896, 77.238007], 13);
+        polygon = L.polygon([
+          [43.315136, 77.179127],
+          [43.316884, 77.307358],
+          [43.283278, 77.318859],
+          [43.280779, 77.165737],
+          [43.315136, 77.179127],
+          
+        ]).addTo(map);
+
+        setFieldValues(12, 34,21,2,145,'Talgar');
+      }
+
+      if (stateValue == 'Zharkent'){
+  
+        map.setView([44.170458, 80.004158], 13);
+        polygon = L.polygon([
+          [44.188678, 79.947853],
+          [44.191263, 80.074368],
+          [44.156173, 80.046558],
+          [44.161469, 79.936695],
+          [44.188678, 79.947853],
+          
+          
+        ]).addTo(map);
+
+        setFieldValues(12, 34,21,2,145,'Zharkent');
+      }
+
+    });
+
+  });
+
+	const map = L.map('map').setView([47.977972, 66.313477], 4);
+
+	const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+		maxZoom: 19,
+		attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+	}).addTo(map);
+
+  /*
+	const marker = L.marker([51.5, -0.09]).addTo(map)
+		.bindPopup('<b>Hello world!</b><br />I am a popup.').openPopup();*/
+/*
+	const circle = L.circle([51.508, -0.11], {
+		color: 'red',
+		fillColor: '#f03',
+		fillOpacity: 0.5,
+		radius: 500
+	}).addTo(map).bindPopup('I am a circle.');*/
+
+	/*const polygon = L.polygon([
+		[51.509, -0.08],
+		[51.503, -0.06],
+		[51.51, -0.047]
+	]).addTo(map).bindPopup('I am a polygon.');*/
+
+
+	const popup = L.popup()
+		.setLatLng([47.977972, 66.313477])
+		.setContent('Казахстан')
+		.openOn(map);
+
+	function onMapClick(e) {
+		popup
+			.setLatLng(e.latlng)
+			.setContent(`You clicked the map at ${e.latlng.toString()}`)
+			.openOn(map);
+	}
+
+	map.on('click', onMapClick);
+/*
+  const polygon1 = L.polygon([
+		[51.509, -0.08],
+		[51.503, -0.06],
+		[51.51, -0.047]
+	]).addTo(map);
+  polygon1.on('click', function () {
+  polygon1.remove();
+  });*/
+
+</script>
+
+
+{% endblock %}

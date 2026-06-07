@@ -1,0 +1,10 @@
+# Windows / Python 3.11+ — ауру API және веб үшін (app/ каталогынан іске қосыңыз)
+flask>=3.0
+markupsafe>=2.1
+numpy
+pandas
+requests
+Pillow
+scikit-learn
+torch
+torchvision
