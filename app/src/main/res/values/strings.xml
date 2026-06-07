@@ -16,8 +16,27 @@
     <string name="feat_info_title">Білім базасы</string>
     <string name="feat_info_desc">Нұсқаулықтар мен мақалалар</string>
 
+    <string name="home_tagline">Ақылды агро көмекші</string>
+    <string name="home_features_title">Мүмкіндіктер</string>
+    <string name="home_diseases_hint">Жиі кездесетін аурулар</string>
+    <string name="home_process_hint">Фото таңдаңыз → PyTorch ResNet9 талдайды → нәтиже мен кеңес.</string>
+
+    <string name="nav_ai">ЖИ</string>
+    <string name="ai_section_title">ЖИ диагностика</string>
+    <string name="ai_model_badge">ResNet9 · PyTorch · 38 класс</string>
+    <string name="ai_step_1">1. Фото</string>
+    <string name="ai_step_2">2. ЖИ</string>
+    <string name="ai_step_3">3. Нәтиже</string>
+    <string name="ai_tap_to_pick">Галереядан фото таңдаңыз</string>
+    <string name="server_status_online">Онлайн</string>
+    <string name="server_status_offline">Офлайн</string>
+    <string name="server_status_checking">…</string>
+    <string name="server_settings_title">ЖИ сервер параметрлері</string>
+    <string name="server_expand">Ашу ▼</string>
+    <string name="server_collapse">Жабу ▲</string>
+    <string name="result_healthy">Сау</string>
+    <string name="result_disease">Ауру анықталды</string>
     <string name="how_title">Қалай жұмыс істейді?</string>
-    <string name="home_process_hint">Суретті жүктеңіз → ЖИ талдайды → нәтиже мен алдын алу кеңестері. Толығырақ төменгі мәзірден «Тексеру» бөлімін ашыңыз.</string>
     <string name="step1_title">Суретке түсіру</string>
     <string name="step2_title">Жүктеу</string>
     <string name="step3_title">ЖИ талдауы</string>
@@ -57,11 +76,17 @@
     <string name="diagnosis_prevention">Алдын алу және емдеу</string>
     <string name="diagnosis_symptoms">Белгілер</string>
     <string name="diagnosis_demo_note">Сервер күйі тексерілуде…</string>
+    <string name="diagnosis_checking_server">ЖИ сервері тексерілуде: %1$s</string>
+    <string name="server_url_hint">ЖИ сервер (компьютер IP)</string>
+    <string name="server_save_and_check">Сақтау және қосылуды тексеру</string>
+    <string name="server_url_empty">Сервер мекенжайын енгізіңіз</string>
+    <string name="server_url_saved">Мекенжай сақталды</string>
     <string name="diagnosis_server_online">✓ Сервер қосулы: %1$s\nСуретті таңдап «Талдау» батырмасын басыңыз.</string>
-    <string name="diagnosis_server_offline">✗ Сервер жоқ: %1$s\n\n1) PowerShell:\ncd disser-project-flask\\app\npython app.py\n\n2) Эмулятор: 10.0.2.2:5000\nНақты телефон: app/build.gradle ішінде компьютер Wi‑Fi IP қойыңыз (мыс. 192.168.0.5:5000), қайта Build.</string>
+    <string name="diagnosis_server_offline">✗ ЖИ серверіне қосылу жоқ: %1$s\n\n① Компьютерде:\ncd disser-project-flask\\app\npython app.py\n\n② ipconfig → IPv4 (мыс. 192.168.0.5)\n③ Жоғарыға http://IP:5000 жазыңыз\n④ «Сақтау және тексеру» басыңыз\n\nЭмулятор: http://10.0.2.2:5000</string>
     <string name="diagnosis_error_server">Серверге қосылу мүмкін болмады. Flask-ты іске қосып, эмуляторда 10.0.2.2:5000, телефонда компьютер IP мекенжайын тексеріңіз.</string>
     <string name="diagnosis_error_timeout">Сервер жауап бермеді. Кейін қайталаңыз.</string>
     <string name="diagnosis_error_generic">Талдау сәтсіз аяқталды. Сурет пен серверді тексеріңіз.</string>
+    <string name="diagnosis_error_detail">Сервер қатесі: %1$s</string>
     <string name="need_image">Алдымен сурет таңдаңыз немесе түсіріңіз.</string>
     <string name="permission_camera_denied">Камера рұқсаты қажет.</string>
 

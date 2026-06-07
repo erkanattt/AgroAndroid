@@ -17,14 +17,14 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import com.google.android.material.snackbar.Snackbar
 import java.io.File
-import kotlinx.coroutines.launch
-import kz.agrosfera.app.AgroApp
-import kz.agrosfera.app.BuildConfig
-import kz.agrosfera.app.R
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import kz.agrosfera.app.AgroApp
+import kz.agrosfera.app.R
 import kz.agrosfera.app.data.remote.DiseaseApiException
 import kz.agrosfera.app.databinding.FragmentDiagnoseBinding
+import kz.agrosfera.app.util.ImageCompressor
 
 class DiagnoseFragment : Fragment() {
 
@@ -33,12 +33,12 @@ class DiagnoseFragment : Fragment() {
 
     private var selectedUri: Uri? = null
     private var cameraUri: Uri? = null
+    private var serverExpanded = false
 
     private val pickVisualMedia = registerForActivityResult(
         ActivityResultContracts.PickVisualMedia(),
     ) { uri -> if (uri != null) onImagePicked(uri) }
 
-    /** Барлық телефон/эмуляторда жұмыс істейді */
     private val pickImageFromGallery = registerForActivityResult(
         ActivityResultContracts.GetContent(),
     ) { uri -> if (uri != null) onImagePicked(uri) }
@@ -82,6 +82,11 @@ class DiagnoseFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val app = requireContext().applicationContext as AgroApp
+        binding.editServerUrl.setText(app.diseaseDiagnosisService.currentBaseUrl())
+
+        binding.headerServerToggle.setOnClickListener { toggleServerSettings() }
+        binding.btnSaveServer.setOnClickListener { saveServerAndCheck() }
         binding.btnGallery.setOnClickListener { openGallery() }
         binding.imagePreview.setOnClickListener { openGallery() }
         binding.btnCamera.setOnClickListener {
@@ -97,21 +102,62 @@ class DiagnoseFragment : Fragment() {
         checkServerStatus()
     }
 
+    private fun toggleServerSettings() {
+        serverExpanded = !serverExpanded
+        binding.layoutServerBody.isVisible = serverExpanded
+        binding.textServerToggle.text = getString(
+            if (serverExpanded) R.string.server_collapse else R.string.server_expand,
+        )
+    }
+
+    private fun saveServerAndCheck() {
+        val url = binding.editServerUrl.text?.toString().orEmpty()
+        if (url.isBlank()) {
+            Snackbar.make(binding.root, R.string.server_url_empty, Snackbar.LENGTH_SHORT).show()
+            return
+        }
+        val app = requireContext().applicationContext as AgroApp
+        app.diseaseDiagnosisService.updateBaseUrl(url)
+        binding.editServerUrl.setText(app.diseaseDiagnosisService.currentBaseUrl())
+        Snackbar.make(binding.root, R.string.server_url_saved, Snackbar.LENGTH_SHORT).show()
+        checkServerStatus()
+    }
+
     private fun checkServerStatus() {
         val app = requireContext().applicationContext as AgroApp
+        val url = app.diseaseDiagnosisService.currentBaseUrl()
+        binding.chipServerStatus.text = getString(R.string.server_status_checking)
+        binding.textDemoNote.text = getString(R.string.diagnosis_checking_server, url)
         viewLifecycleOwner.lifecycleScope.launch {
-            val online = withContext(Dispatchers.IO) { app.diseaseApiClient.pingHealth() }
+            val online = withContext(Dispatchers.IO) { app.diseaseDiagnosisService.pingHealth() }
+            updateServerChip(online)
             binding.textDemoNote.text = if (online) {
-                getString(R.string.diagnosis_server_online, BuildConfig.API_BASE_URL)
+                getString(R.string.diagnosis_server_online, url)
             } else {
-                getString(R.string.diagnosis_server_offline, BuildConfig.API_BASE_URL)
+                getString(R.string.diagnosis_server_offline, url)
             }
         }
+    }
+
+    private fun updateServerChip(online: Boolean) {
+        binding.chipServerStatus.text = getString(
+            if (online) R.string.server_status_online else R.string.server_status_offline,
+        )
+        binding.chipServerStatus.setBackgroundResource(
+            if (online) R.drawable.bg_status_online else R.drawable.bg_status_offline,
+        )
+        binding.chipServerStatus.setTextColor(
+            ContextCompat.getColor(
+                requireContext(),
+                if (online) R.color.success else R.color.danger,
+            ),
+        )
     }
 
     private fun onImagePicked(uri: Uri) {
         selectedUri = uri
         binding.imagePreview.setImageURI(uri)
+        binding.overlayEmptyHint.isVisible = false
         binding.btnAnalyze.isEnabled = true
         binding.cardResult.isVisible = false
         Snackbar.make(binding.root, R.string.image_picked_ready, Snackbar.LENGTH_SHORT).show()
@@ -158,55 +204,73 @@ class DiagnoseFragment : Fragment() {
             return
         }
         val app = requireContext().applicationContext as AgroApp
+        val url = binding.editServerUrl.text?.toString().orEmpty()
+        if (url.isNotBlank()) {
+            app.diseaseDiagnosisService.updateBaseUrl(url)
+        }
         viewLifecycleOwner.lifecycleScope.launch {
             binding.btnAnalyze.isEnabled = false
+            binding.overlayAnalyzing.isVisible = true
             binding.progressAnalyze.isVisible = true
             binding.cardResult.isVisible = false
             try {
                 val (bytes, filename) = readImageBytes(uri)
                 val result = app.predictDiseaseUseCase.predict(bytes, filename)
+                val isHealthy = result.classId.contains("healthy", ignoreCase = true)
+
+                app.diagnosisHistoryStore.save(
+                    result.displayName,
+                    result.confidencePercent,
+                    result.classId,
+                )
+
                 binding.cardResult.isVisible = true
                 binding.textDiseaseName.text = result.displayName
+                binding.textResultBadge.text = getString(
+                    if (isHealthy) R.string.result_healthy else R.string.result_disease,
+                )
+                binding.textResultBadge.setBackgroundResource(
+                    if (isHealthy) R.drawable.bg_badge_healthy else R.drawable.bg_badge_disease,
+                )
+                binding.textResultBadge.setTextColor(
+                    ContextCompat.getColor(
+                        requireContext(),
+                        if (isHealthy) R.color.success else R.color.warning,
+                    ),
+                )
+
                 binding.textConfidence.isVisible = result.confidencePercent != null
+                binding.progressConfidence.isVisible = result.confidencePercent != null
                 if (result.confidencePercent != null) {
                     binding.textConfidence.text = getString(
                         R.string.diagnosis_confidence,
                         result.confidencePercent,
                     )
+                    binding.progressConfidence.progress = result.confidencePercent
                 }
                 binding.textSymptoms.text = result.symptoms
                 binding.textPrevention.text = result.prevention
             } catch (e: DiseaseApiException) {
-                val messageRes = when (e.message) {
-                    "server_unreachable" -> R.string.diagnosis_error_server
-                    "server_timeout" -> R.string.diagnosis_error_timeout
-                    "empty_image" -> R.string.need_image
-                    else -> R.string.diagnosis_error_generic
+                val text = when (e.message) {
+                    "server_unreachable" -> getString(R.string.diagnosis_error_server)
+                    "server_timeout" -> getString(R.string.diagnosis_error_timeout)
+                    "empty_image" -> getString(R.string.need_image)
+                    else -> getString(R.string.diagnosis_error_detail, e.message ?: "?")
                 }
-                Snackbar.make(binding.root, messageRes, Snackbar.LENGTH_LONG).show()
+                Snackbar.make(binding.root, text, Snackbar.LENGTH_LONG).show()
+                checkServerStatus()
             } catch (_: Exception) {
                 Snackbar.make(binding.root, R.string.diagnosis_error_generic, Snackbar.LENGTH_LONG).show()
             } finally {
+                binding.overlayAnalyzing.isVisible = false
                 binding.progressAnalyze.isVisible = false
                 binding.btnAnalyze.isEnabled = true
             }
         }
     }
 
-    private fun readImageBytes(uri: Uri): Pair<ByteArray, String> {
-        val ctx = requireContext()
-        val bytes = ctx.contentResolver.openInputStream(uri)?.use { it.readBytes() }
-            ?: error("cannot_read_image")
-        val name = ctx.contentResolver.query(uri, null, null, null, null)?.use { cursor ->
-            val nameIndex = cursor.getColumnIndex(android.provider.OpenableColumns.DISPLAY_NAME)
-            if (cursor.moveToFirst() && nameIndex >= 0) {
-                cursor.getString(nameIndex)
-            } else {
-                null
-            }
-        } ?: uri.lastPathSegment ?: "leaf.jpg"
-        return bytes to name
-    }
+    private fun readImageBytes(uri: Uri): Pair<ByteArray, String> =
+        ImageCompressor.compressForUpload(requireContext(), uri)
 
     override fun onDestroyView() {
         super.onDestroyView()

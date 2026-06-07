@@ -641,12 +641,16 @@
     <color name="abc_search_url_text_normal">#7fa87f</color>
     <color name="abc_search_url_text_pressed">@android:color/black</color>
     <color name="abc_search_url_text_selected">@android:color/black</color>
-    <color name="accent">#76C043</color>
+    <color name="accent">#7ED957</color>
+    <color name="accent_dark">#4A9E32</color>
     <color name="accent_material_dark">@color/material_deep_teal_200</color>
     <color name="accent_material_light">@color/material_deep_teal_500</color>
+    <color name="accent_muted">#337ED957</color>
+    <color name="ai_glow">#337ED957</color>
     <color name="androidx_core_ripple_material_light">#1f000000</color>
     <color name="androidx_core_secondary_text_default_material_light">#8a000000</color>
-    <color name="background">#0B1610</color>
+    <color name="background">#07120D</color>
+    <color name="background_elevated">#0D1A14</color>
     <color name="background_floating_material_dark">@color/material_grey_800</color>
     <color name="background_floating_material_light">@android:color/white</color>
     <color name="background_material_dark">@color/material_grey_850</color>
@@ -661,13 +665,14 @@
     <color name="button_material_light">#ffd6d7d7</color>
     <color name="call_notification_answer_color">#1d873b</color>
     <color name="call_notification_decline_color">#d93025</color>
-    <color name="card">#152A1E</color>
+    <color name="card">#12261C</color>
     <color name="card_elevated">#1A3324</color>
+    <color name="card_stroke">#2A4535</color>
     <color name="cardview_dark_background">#FF424242</color>
     <color name="cardview_light_background">#FFFFFFFF</color>
     <color name="cardview_shadow_end_color">#03000000</color>
     <color name="cardview_shadow_start_color">#37000000</color>
-    <color name="danger">#E53935</color>
+    <color name="danger">#FF6B6B</color>
     <color name="design_bottom_navigation_shadow_color">#14000000</color>
     <color name="design_dark_default_color_background">#121212</color>
     <color name="design_dark_default_color_error">#CF6679</color>
@@ -711,7 +716,7 @@
     <color name="error_color_material_light">#ff5722</color>
     <color name="foreground_material_dark">@android:color/white</color>
     <color name="foreground_material_light">@android:color/black</color>
-    <color name="hero_overlay">#990B1610</color>
+    <color name="hero_overlay">#9907120D</color>
     <color name="highlighted_text_material_dark">#6680cbc4</color>
     <color name="highlighted_text_material_light">#66009688</color>
     <color name="icon_circle_bg">#1E3D2A</color>
@@ -968,14 +973,17 @@
     <color name="secondary_text_default_material_light">#8a000000</color>
     <color name="secondary_text_disabled_material_dark">#36ffffff</color>
     <color name="secondary_text_disabled_material_light">#24000000</color>
+    <color name="success">#7ED957</color>
     <color name="switch_thumb_disabled_material_dark">#ff616161</color>
     <color name="switch_thumb_disabled_material_light">#ffbdbdbd</color>
     <color name="switch_thumb_normal_material_dark">#ffbdbdbd</color>
     <color name="switch_thumb_normal_material_light">#fff1f1f1</color>
-    <color name="text_primary">#FFFFFF</color>
-    <color name="text_secondary">#B8C4BC</color>
+    <color name="text_muted">#6B8578</color>
+    <color name="text_primary">#F4FAF6</color>
+    <color name="text_secondary">#9DB5A8</color>
     <color name="tooltip_background_dark">#e6616161</color>
     <color name="tooltip_background_light">#e6FFFFFF</color>
+    <color name="warning">#FFB74D</color>
     <dimen name="abc_action_bar_content_inset_material">16dp</dimen>
     <dimen name="abc_action_bar_content_inset_with_nav">72dp</dimen>
     <dimen name="abc_action_bar_default_height_material">56dp</dimen>
@@ -2005,6 +2013,12 @@
     <string name="action_login">Кіру</string>
     <string name="action_logout">Шығу</string>
     <string name="action_register">Тіркелу</string>
+    <string name="ai_model_badge">ResNet9 · PyTorch · 38 класс</string>
+    <string name="ai_section_title">ЖИ диагностика</string>
+    <string name="ai_step_1">1. Фото</string>
+    <string name="ai_step_2">2. ЖИ</string>
+    <string name="ai_step_3">3. Нәтиже</string>
+    <string name="ai_tap_to_pick">Галереядан фото таңдаңыз</string>
     <string name="analyze">Талдау (ЖИ)</string>
     <string name="analyzing">Талдануда…</string>
     <string name="androidx_startup" translatable="false">androidx.startup</string>
@@ -2041,14 +2055,16 @@
     <string name="diag_name">Септориоз</string>
     <string name="diagnose_hint">«Галерея» батырмасын басып телефондағы фотоны таңдаңыз (немесе суретті басыңыз), содан кейін «Талдау (ЖИ)».</string>
     <string name="diagnose_title">Өсімдікті ЖИ арқылы тексеру</string>
+    <string name="diagnosis_checking_server">ЖИ сервері тексерілуде: %1$s</string>
     <string name="diagnosis_confidence">Сенімділік: %1$d%%</string>
     <string name="diagnosis_demo_note">Сервер күйі тексерілуде…</string>
+    <string name="diagnosis_error_detail">Сервер қатесі: %1$s</string>
     <string name="diagnosis_error_generic">Талдау сәтсіз аяқталды. Сурет пен серверді тексеріңіз.</string>
     <string name="diagnosis_error_server">Серверге қосылу мүмкін болмады. Flask-ты іске қосып, эмуляторда 10.0.2.2:5000, телефонда компьютер IP мекенжайын тексеріңіз.</string>
     <string name="diagnosis_error_timeout">Сервер жауап бермеді. Кейін қайталаңыз.</string>
     <string name="diagnosis_prevention">Алдын алу және емдеу</string>
     <string name="diagnosis_result_title">Болжамды нәтиже</string>
-    <string name="diagnosis_server_offline">✗ Сервер жоқ: %1$s\n\n1) PowerShell:\ncd disser-project-flask\\app\npython app.py\n\n2) Эмулятор: 10.0.2.2:5000\nНақты телефон: app/build.gradle ішінде компьютер Wi‑Fi IP қойыңыз (мыс. 192.168.0.5:5000), қайта Build.</string>
+    <string name="diagnosis_server_offline">✗ ЖИ серверіне қосылу жоқ: %1$s\n\n① Компьютерде:\ncd disser-project-flask\\app\npython app.py\n\n② ipconfig → IPv4 (мыс. 192.168.0.5)\n③ Жоғарыға http://IP:5000 жазыңыз\n④ «Сақтау және тексеру» басыңыз\n\nЭмулятор: http://10.0.2.2:5000</string>
     <string name="diagnosis_server_online">✓ Сервер қосулы: %1$s\nСуретті таңдап «Талдау» батырмасын басыңыз.</string>
     <string name="diagnosis_symptoms">Белгілер</string>
     <string description="Screen reader announcement for when a checkbox is on error. [CHAR LIMIT=NONE]" name="error_a11y_label">
@@ -2073,7 +2089,10 @@
     <string name="hero_subtitle">Сурет арқылы жылдам диагноз, алдын алу кеңестері және егістік мониторингі бір қосымшада.</string>
     <string name="hero_title">Жасанды интеллект арқылы өсімдік ауруларын анықтау және алдын алу</string>
     <string name="hide_bottom_view_on_scroll_behavior" translatable="false">com.google.android.material.behavior.HideBottomViewOnScrollBehavior</string>
-    <string name="home_process_hint">Суретті жүктеңіз → ЖИ талдайды → нәтиже мен алдын алу кеңестері. Толығырақ төменгі мәзірден «Тексеру» бөлімін ашыңыз.</string>
+    <string name="home_diseases_hint">Жиі кездесетін аурулар</string>
+    <string name="home_features_title">Мүмкіндіктер</string>
+    <string name="home_process_hint">Фото таңдаңыз → PyTorch ResNet9 талдайды → нәтиже мен кеңес.</string>
+    <string name="home_tagline">Ақылды агро көмекші</string>
     <string name="how_title">Қалай жұмыс істейді?</string>
     <string description="Content description for an icon that appears in the title area of a dialog" name="icon_content_description">Dialog Icon</string>
     <string name="image_picked_ready">Фото таңдалды. «Талдау» батырмасын басыңыз.</string>
@@ -2196,6 +2215,7 @@
     <string name="mtrl_switch_track_path" translatable="false">M0,16 A16,16 0 0,1 16,0 H36 A16,16 0 0,1 36,32 H16 A16,16 0 0,1 0,16</string>
     <string description="Button text to indicate that the widget will ignore the user&apos;s selection [CHAR_LIMIT=16]" name="mtrl_timepicker_cancel">Cancel</string>
     <string description="Button text to indicate that the widget will save the user&apos;s selection [CHAR_LIMIT=16]" name="mtrl_timepicker_confirm">OK</string>
+    <string name="nav_ai">ЖИ</string>
     <string name="nav_app_bar_navigate_up_description">Navigate up</string>
     <string name="nav_app_bar_open_drawer_description">Open navigation drawer</string>
     <string name="nav_check">Тексеру</string>
@@ -2220,12 +2240,24 @@
     <string name="rec2">Фунгицидтермен емдеңіз</string>
     <string name="rec3">Өсімдіктер арасында желдетуді жақсартыңыз</string>
     <string name="register_title">Тіркелу</string>
+    <string name="result_disease">Ауру анықталды</string>
+    <string name="result_healthy">Сау</string>
     <string name="search_menu_title">Search</string>
     <string name="searchbar_scrolling_view_behavior" translatable="false">
     com.google.android.material.search.SearchBar$ScrollingViewBehavior
   </string>
     <string description="Content description for the X button to clear text [CHAR_LIMIT=NONE]" name="searchview_clear_text_content_description">Clear text</string>
     <string description="Content description for the navigation button to return to the previous screen [CHAR_LIMIT=NONE]" name="searchview_navigation_content_description">Back</string>
+    <string name="server_collapse">Жабу ▲</string>
+    <string name="server_expand">Ашу ▼</string>
+    <string name="server_save_and_check">Сақтау және қосылуды тексеру</string>
+    <string name="server_settings_title">ЖИ сервер параметрлері</string>
+    <string name="server_status_checking">…</string>
+    <string name="server_status_offline">Офлайн</string>
+    <string name="server_status_online">Онлайн</string>
+    <string name="server_url_empty">Сервер мекенжайын енгізіңіз</string>
+    <string name="server_url_hint">ЖИ сервер (компьютер IP)</string>
+    <string name="server_url_saved">Мекенжай сақталды</string>
     <string description="Title of the side sheet&apos;s accessibility pane that is spoken by TalkBack when the side sheet appears on screen. [CHAR_LIMIT=NONE]" name="side_sheet_accessibility_pane_title">Side Sheet</string>
     <string name="side_sheet_behavior" translatable="false">com.google.android.material.sidesheet.SideSheetBehavior</string>
     <string name="status_bar_notification_info_overflow">999+</string>
@@ -2241,6 +2273,21 @@
     <string name="summary_spread_value">Жел арқылы</string>
     <string name="summary_temp">18–24°C, ылғалдылық жоғары</string>
     <string name="take_photo">Камера</string>
+    <style name="AgroBody">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/text_secondary</item>
+        <item name="android:lineSpacingExtra">3dp</item>
+    </style>
+    <style name="AgroCardTitle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/text_primary</item>
+    </style>
+    <style name="AgroSectionTitle">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/text_primary</item>
+    </style>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
     <style name="Animation.AppCompat.Dialog" parent="Base.Animation.AppCompat.Dialog"/>
@@ -7213,6 +7260,20 @@
     <item name="colorControlNormal">@color/material_on_surface_emphasis_medium</item>
     <item name="actionMenuTextColor">@color/material_on_surface_emphasis_medium</item>
   </style>
+    <style name="Widget.Agro.Card" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardBackgroundColor">@color/card</item>
+        <item name="cardCornerRadius">20dp</item>
+        <item name="cardElevation">0dp</item>
+        <item name="strokeColor">@color/card_stroke</item>
+        <item name="strokeWidth">1dp</item>
+    </style>
+    <style name="Widget.Agro.PrimaryButton" parent="Widget.Material3.Button">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/background</item>
+        <item name="backgroundTint">@color/accent</item>
+        <item name="cornerRadius">28dp</item>
+    </style>
     <style name="Widget.AppCompat.ActionBar" parent="Base.Widget.AppCompat.ActionBar">
     </style>
     <style name="Widget.AppCompat.ActionBar.Solid" parent="Base.Widget.AppCompat.ActionBar.Solid">

@@ -4,7 +4,9 @@ package kz.agrosfera.app.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -14,6 +16,8 @@ import androidx.viewbinding.ViewBindings;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.card.MaterialCardView;
 import com.google.android.material.progressindicator.CircularProgressIndicator;
+import com.google.android.material.progressindicator.LinearProgressIndicator;
+import com.google.android.material.textfield.TextInputEditText;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -33,13 +37,40 @@ public final class FragmentDiagnoseBinding implements ViewBinding {
   public final MaterialButton btnGallery;
 
   @NonNull
+  public final MaterialButton btnSaveServer;
+
+  @NonNull
   public final MaterialCardView cardResult;
+
+  @NonNull
+  public final MaterialCardView cardServerSettings;
+
+  @NonNull
+  public final TextView chipServerStatus;
+
+  @NonNull
+  public final TextInputEditText editServerUrl;
+
+  @NonNull
+  public final LinearLayout headerServerToggle;
 
   @NonNull
   public final ImageView imagePreview;
 
   @NonNull
+  public final LinearLayout layoutServerBody;
+
+  @NonNull
+  public final FrameLayout overlayAnalyzing;
+
+  @NonNull
+  public final LinearLayout overlayEmptyHint;
+
+  @NonNull
   public final CircularProgressIndicator progressAnalyze;
+
+  @NonNull
+  public final LinearProgressIndicator progressConfidence;
 
   @NonNull
   public final TextView textConfidence;
@@ -54,26 +85,48 @@ public final class FragmentDiagnoseBinding implements ViewBinding {
   public final TextView textPrevention;
 
   @NonNull
+  public final TextView textResultBadge;
+
+  @NonNull
+  public final TextView textServerToggle;
+
+  @NonNull
   public final TextView textSymptoms;
 
   private FragmentDiagnoseBinding(@NonNull NestedScrollView rootView,
       @NonNull MaterialButton btnAnalyze, @NonNull MaterialButton btnCamera,
-      @NonNull MaterialButton btnGallery, @NonNull MaterialCardView cardResult,
-      @NonNull ImageView imagePreview, @NonNull CircularProgressIndicator progressAnalyze,
-      @NonNull TextView textConfidence, @NonNull TextView textDemoNote,
-      @NonNull TextView textDiseaseName, @NonNull TextView textPrevention,
-      @NonNull TextView textSymptoms) {
+      @NonNull MaterialButton btnGallery, @NonNull MaterialButton btnSaveServer,
+      @NonNull MaterialCardView cardResult, @NonNull MaterialCardView cardServerSettings,
+      @NonNull TextView chipServerStatus, @NonNull TextInputEditText editServerUrl,
+      @NonNull LinearLayout headerServerToggle, @NonNull ImageView imagePreview,
+      @NonNull LinearLayout layoutServerBody, @NonNull FrameLayout overlayAnalyzing,
+      @NonNull LinearLayout overlayEmptyHint, @NonNull CircularProgressIndicator progressAnalyze,
+      @NonNull LinearProgressIndicator progressConfidence, @NonNull TextView textConfidence,
+      @NonNull TextView textDemoNote, @NonNull TextView textDiseaseName,
+      @NonNull TextView textPrevention, @NonNull TextView textResultBadge,
+      @NonNull TextView textServerToggle, @NonNull TextView textSymptoms) {
     this.rootView = rootView;
     this.btnAnalyze = btnAnalyze;
     this.btnCamera = btnCamera;
     this.btnGallery = btnGallery;
+    this.btnSaveServer = btnSaveServer;
     this.cardResult = cardResult;
+    this.cardServerSettings = cardServerSettings;
+    this.chipServerStatus = chipServerStatus;
+    this.editServerUrl = editServerUrl;
+    this.headerServerToggle = headerServerToggle;
     this.imagePreview = imagePreview;
+    this.layoutServerBody = layoutServerBody;
+    this.overlayAnalyzing = overlayAnalyzing;
+    this.overlayEmptyHint = overlayEmptyHint;
     this.progressAnalyze = progressAnalyze;
+    this.progressConfidence = progressConfidence;
     this.textConfidence = textConfidence;
     this.textDemoNote = textDemoNote;
     this.textDiseaseName = textDiseaseName;
     this.textPrevention = textPrevention;
+    this.textResultBadge = textResultBadge;
+    this.textServerToggle = textServerToggle;
     this.textSymptoms = textSymptoms;
   }
 
@@ -122,9 +175,39 @@ public final class FragmentDiagnoseBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.btnSaveServer;
+      MaterialButton btnSaveServer = ViewBindings.findChildViewById(rootView, id);
+      if (btnSaveServer == null) {
+        break missingId;
+      }
+
       id = R.id.cardResult;
       MaterialCardView cardResult = ViewBindings.findChildViewById(rootView, id);
       if (cardResult == null) {
+        break missingId;
+      }
+
+      id = R.id.cardServerSettings;
+      MaterialCardView cardServerSettings = ViewBindings.findChildViewById(rootView, id);
+      if (cardServerSettings == null) {
+        break missingId;
+      }
+
+      id = R.id.chipServerStatus;
+      TextView chipServerStatus = ViewBindings.findChildViewById(rootView, id);
+      if (chipServerStatus == null) {
+        break missingId;
+      }
+
+      id = R.id.editServerUrl;
+      TextInputEditText editServerUrl = ViewBindings.findChildViewById(rootView, id);
+      if (editServerUrl == null) {
+        break missingId;
+      }
+
+      id = R.id.headerServerToggle;
+      LinearLayout headerServerToggle = ViewBindings.findChildViewById(rootView, id);
+      if (headerServerToggle == null) {
         break missingId;
       }
 
@@ -134,9 +217,33 @@ public final class FragmentDiagnoseBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.layoutServerBody;
+      LinearLayout layoutServerBody = ViewBindings.findChildViewById(rootView, id);
+      if (layoutServerBody == null) {
+        break missingId;
+      }
+
+      id = R.id.overlayAnalyzing;
+      FrameLayout overlayAnalyzing = ViewBindings.findChildViewById(rootView, id);
+      if (overlayAnalyzing == null) {
+        break missingId;
+      }
+
+      id = R.id.overlayEmptyHint;
+      LinearLayout overlayEmptyHint = ViewBindings.findChildViewById(rootView, id);
+      if (overlayEmptyHint == null) {
+        break missingId;
+      }
+
       id = R.id.progressAnalyze;
       CircularProgressIndicator progressAnalyze = ViewBindings.findChildViewById(rootView, id);
       if (progressAnalyze == null) {
+        break missingId;
+      }
+
+      id = R.id.progressConfidence;
+      LinearProgressIndicator progressConfidence = ViewBindings.findChildViewById(rootView, id);
+      if (progressConfidence == null) {
         break missingId;
       }
 
@@ -164,6 +271,18 @@ public final class FragmentDiagnoseBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.textResultBadge;
+      TextView textResultBadge = ViewBindings.findChildViewById(rootView, id);
+      if (textResultBadge == null) {
+        break missingId;
+      }
+
+      id = R.id.textServerToggle;
+      TextView textServerToggle = ViewBindings.findChildViewById(rootView, id);
+      if (textServerToggle == null) {
+        break missingId;
+      }
+
       id = R.id.textSymptoms;
       TextView textSymptoms = ViewBindings.findChildViewById(rootView, id);
       if (textSymptoms == null) {
@@ -171,8 +290,10 @@ public final class FragmentDiagnoseBinding implements ViewBinding {
       }
 
       return new FragmentDiagnoseBinding((NestedScrollView) rootView, btnAnalyze, btnCamera,
-          btnGallery, cardResult, imagePreview, progressAnalyze, textConfidence, textDemoNote,
-          textDiseaseName, textPrevention, textSymptoms);
+          btnGallery, btnSaveServer, cardResult, cardServerSettings, chipServerStatus,
+          editServerUrl, headerServerToggle, imagePreview, layoutServerBody, overlayAnalyzing,
+          overlayEmptyHint, progressAnalyze, progressConfidence, textConfidence, textDemoNote,
+          textDiseaseName, textPrevention, textResultBadge, textServerToggle, textSymptoms);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

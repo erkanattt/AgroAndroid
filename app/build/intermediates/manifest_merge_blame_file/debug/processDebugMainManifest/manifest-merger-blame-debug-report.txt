@@ -32,154 +32,155 @@
 20-->C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:13:9-35
 21
 22    <permission
-22-->[androidx.core:core:1.15.0] C:\Users\yerka\.gradle\caches\8.9\transforms\18408fadaa261faab4931b1df5c99247\transformed\core-1.15.0\AndroidManifest.xml:22:5-24:47
+22-->[androidx.core:core:1.15.0] C:\Users\yerka\.gradle\caches\9.4.1\transforms\21944828774b909d67570f8561a646fe\transformed\core-1.15.0\AndroidManifest.xml:22:5-24:47
 23        android:name="kz.agrosfera.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-23-->[androidx.core:core:1.15.0] C:\Users\yerka\.gradle\caches\8.9\transforms\18408fadaa261faab4931b1df5c99247\transformed\core-1.15.0\AndroidManifest.xml:23:9-81
+23-->[androidx.core:core:1.15.0] C:\Users\yerka\.gradle\caches\9.4.1\transforms\21944828774b909d67570f8561a646fe\transformed\core-1.15.0\AndroidManifest.xml:23:9-81
 24        android:protectionLevel="signature" />
-24-->[androidx.core:core:1.15.0] C:\Users\yerka\.gradle\caches\8.9\transforms\18408fadaa261faab4931b1df5c99247\transformed\core-1.15.0\AndroidManifest.xml:24:9-44
+24-->[androidx.core:core:1.15.0] C:\Users\yerka\.gradle\caches\9.4.1\transforms\21944828774b909d67570f8561a646fe\transformed\core-1.15.0\AndroidManifest.xml:24:9-44
 25
 26    <uses-permission android:name="kz.agrosfera.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-26-->[androidx.core:core:1.15.0] C:\Users\yerka\.gradle\caches\8.9\transforms\18408fadaa261faab4931b1df5c99247\transformed\core-1.15.0\AndroidManifest.xml:26:5-97
-26-->[androidx.core:core:1.15.0] C:\Users\yerka\.gradle\caches\8.9\transforms\18408fadaa261faab4931b1df5c99247\transformed\core-1.15.0\AndroidManifest.xml:26:22-94
+26-->[androidx.core:core:1.15.0] C:\Users\yerka\.gradle\caches\9.4.1\transforms\21944828774b909d67570f8561a646fe\transformed\core-1.15.0\AndroidManifest.xml:26:5-97
+26-->[androidx.core:core:1.15.0] C:\Users\yerka\.gradle\caches\9.4.1\transforms\21944828774b909d67570f8561a646fe\transformed\core-1.15.0\AndroidManifest.xml:26:22-94
 27
 28    <application
-28-->C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:15:5-44:19
+28-->C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:15:5-45:19
 29        android:name="kz.agrosfera.app.AgroApp"
 29-->C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:16:9-32
 30        android:allowBackup="true"
 30-->C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:17:9-35
 31        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-31-->[androidx.core:core:1.15.0] C:\Users\yerka\.gradle\caches\8.9\transforms\18408fadaa261faab4931b1df5c99247\transformed\core-1.15.0\AndroidManifest.xml:28:18-86
+31-->[androidx.core:core:1.15.0] C:\Users\yerka\.gradle\caches\9.4.1\transforms\21944828774b909d67570f8561a646fe\transformed\core-1.15.0\AndroidManifest.xml:28:18-86
 32        android:debuggable="true"
-33        android:extractNativeLibs="false"
+33        android:extractNativeLibs="true"
+33-->C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:18:9-41
 34        android:icon="@mipmap/ic_launcher"
-34-->C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:18:9-43
+34-->C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:19:9-43
 35        android:label="@string/app_name"
-35-->C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:19:9-41
+35-->C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:20:9-41
 36        android:networkSecurityConfig="@xml/network_security_config"
-36-->C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:21:9-69
+36-->C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:22:9-69
 37        android:roundIcon="@mipmap/ic_launcher_round"
-37-->C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:20:9-54
+37-->C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:21:9-54
 38        android:supportsRtl="true"
-38-->C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:22:9-35
+38-->C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:23:9-35
 39        android:testOnly="true"
 40        android:theme="@style/Theme.AgroSfera"
-40-->C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:23:9-47
+40-->C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:24:9-47
 41        android:usesCleartextTraffic="true" >
-41-->C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:24:9-44
+41-->C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:25:9-44
 42        <provider
 43            android:name="androidx.core.content.FileProvider"
-43-->C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:27:13-62
+43-->C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:28:13-62
 44            android:authorities="kz.agrosfera.app.fileprovider"
-44-->C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:28:13-64
+44-->C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:29:13-64
 45            android:exported="false"
-45-->C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:29:13-37
+45-->C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:30:13-37
 46            android:grantUriPermissions="true" >
-46-->C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:30:13-47
+46-->C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:31:13-47
 47            <meta-data
-47-->C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:31:13-33:54
+47-->C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:32:13-34:54
 48                android:name="android.support.FILE_PROVIDER_PATHS"
-48-->C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:32:17-67
+48-->C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:33:17-67
 49                android:resource="@xml/file_paths" />
-49-->C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:33:17-51
+49-->C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:34:17-51
 50        </provider>
 51
 52        <activity
-52-->C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:35:9-43:20
+52-->C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:36:9-44:20
 53            android:name="kz.agrosfera.app.MainActivity"
-53-->C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:36:13-41
+53-->C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:37:13-41
 54            android:exported="true"
-54-->C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:37:13-36
+54-->C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:38:13-36
 55            android:theme="@style/Theme.AgroSfera" >
-55-->C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:38:13-51
+55-->C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:39:13-51
 56            <intent-filter>
-56-->C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:39:13-42:29
+56-->C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:40:13-43:29
 57                <action android:name="android.intent.action.MAIN" />
-57-->C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:40:17-69
-57-->C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:40:25-66
+57-->C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:41:17-69
+57-->C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:41:25-66
 58
 59                <category android:name="android.intent.category.LAUNCHER" />
-59-->C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:41:17-77
-59-->C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:41:27-74
+59-->C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:42:17-77
+59-->C:\Users\yerka\OneDrive\Desktop\agroAndroid\app\src\main\AndroidManifest.xml:42:27-74
 60            </intent-filter>
 61        </activity>
 62
 63        <provider
-63-->[androidx.emoji2:emoji2:1.3.0] C:\Users\yerka\.gradle\caches\8.9\transforms\1c10d71546c061eff270a3d779a65ebf\transformed\emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
+63-->[androidx.emoji2:emoji2:1.3.0] C:\Users\yerka\.gradle\caches\9.4.1\transforms\7ccb33c9319efaa12a4f274a49cae7b7\transformed\emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
 64            android:name="androidx.startup.InitializationProvider"
-64-->[androidx.emoji2:emoji2:1.3.0] C:\Users\yerka\.gradle\caches\8.9\transforms\1c10d71546c061eff270a3d779a65ebf\transformed\emoji2-1.3.0\AndroidManifest.xml:25:13-67
+64-->[androidx.emoji2:emoji2:1.3.0] C:\Users\yerka\.gradle\caches\9.4.1\transforms\7ccb33c9319efaa12a4f274a49cae7b7\transformed\emoji2-1.3.0\AndroidManifest.xml:25:13-67
 65            android:authorities="kz.agrosfera.app.androidx-startup"
-65-->[androidx.emoji2:emoji2:1.3.0] C:\Users\yerka\.gradle\caches\8.9\transforms\1c10d71546c061eff270a3d779a65ebf\transformed\emoji2-1.3.0\AndroidManifest.xml:26:13-68
+65-->[androidx.emoji2:emoji2:1.3.0] C:\Users\yerka\.gradle\caches\9.4.1\transforms\7ccb33c9319efaa12a4f274a49cae7b7\transformed\emoji2-1.3.0\AndroidManifest.xml:26:13-68
 66            android:exported="false" >
-66-->[androidx.emoji2:emoji2:1.3.0] C:\Users\yerka\.gradle\caches\8.9\transforms\1c10d71546c061eff270a3d779a65ebf\transformed\emoji2-1.3.0\AndroidManifest.xml:27:13-37
+66-->[androidx.emoji2:emoji2:1.3.0] C:\Users\yerka\.gradle\caches\9.4.1\transforms\7ccb33c9319efaa12a4f274a49cae7b7\transformed\emoji2-1.3.0\AndroidManifest.xml:27:13-37
 67            <meta-data
-67-->[androidx.emoji2:emoji2:1.3.0] C:\Users\yerka\.gradle\caches\8.9\transforms\1c10d71546c061eff270a3d779a65ebf\transformed\emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
+67-->[androidx.emoji2:emoji2:1.3.0] C:\Users\yerka\.gradle\caches\9.4.1\transforms\7ccb33c9319efaa12a4f274a49cae7b7\transformed\emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
 68                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-68-->[androidx.emoji2:emoji2:1.3.0] C:\Users\yerka\.gradle\caches\8.9\transforms\1c10d71546c061eff270a3d779a65ebf\transformed\emoji2-1.3.0\AndroidManifest.xml:30:17-75
+68-->[androidx.emoji2:emoji2:1.3.0] C:\Users\yerka\.gradle\caches\9.4.1\transforms\7ccb33c9319efaa12a4f274a49cae7b7\transformed\emoji2-1.3.0\AndroidManifest.xml:30:17-75
 69                android:value="androidx.startup" />
-69-->[androidx.emoji2:emoji2:1.3.0] C:\Users\yerka\.gradle\caches\8.9\transforms\1c10d71546c061eff270a3d779a65ebf\transformed\emoji2-1.3.0\AndroidManifest.xml:31:17-49
+69-->[androidx.emoji2:emoji2:1.3.0] C:\Users\yerka\.gradle\caches\9.4.1\transforms\7ccb33c9319efaa12a4f274a49cae7b7\transformed\emoji2-1.3.0\AndroidManifest.xml:31:17-49
 70            <meta-data
-70-->[androidx.lifecycle:lifecycle-process:2.8.7] C:\Users\yerka\.gradle\caches\8.9\transforms\b072f74fb10a03daed12c9126496aa0a\transformed\lifecycle-process-2.8.7\AndroidManifest.xml:29:13-31:52
+70-->[androidx.lifecycle:lifecycle-process:2.8.7] C:\Users\yerka\.gradle\caches\9.4.1\transforms\482527286200b19951d0e90179417e08\transformed\lifecycle-process-2.8.7\AndroidManifest.xml:29:13-31:52
 71                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-71-->[androidx.lifecycle:lifecycle-process:2.8.7] C:\Users\yerka\.gradle\caches\8.9\transforms\b072f74fb10a03daed12c9126496aa0a\transformed\lifecycle-process-2.8.7\AndroidManifest.xml:30:17-78
+71-->[androidx.lifecycle:lifecycle-process:2.8.7] C:\Users\yerka\.gradle\caches\9.4.1\transforms\482527286200b19951d0e90179417e08\transformed\lifecycle-process-2.8.7\AndroidManifest.xml:30:17-78
 72                android:value="androidx.startup" />
-72-->[androidx.lifecycle:lifecycle-process:2.8.7] C:\Users\yerka\.gradle\caches\8.9\transforms\b072f74fb10a03daed12c9126496aa0a\transformed\lifecycle-process-2.8.7\AndroidManifest.xml:31:17-49
+72-->[androidx.lifecycle:lifecycle-process:2.8.7] C:\Users\yerka\.gradle\caches\9.4.1\transforms\482527286200b19951d0e90179417e08\transformed\lifecycle-process-2.8.7\AndroidManifest.xml:31:17-49
 73            <meta-data
-73-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\yerka\.gradle\caches\8.9\transforms\b3bb083cc807dd9717be059a1f813615\transformed\profileinstaller-1.4.0\AndroidManifest.xml:29:13-31:52
+73-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\yerka\.gradle\caches\9.4.1\transforms\0e0c6678678bc889137065b8edbf9b2f\transformed\profileinstaller-1.4.0\AndroidManifest.xml:29:13-31:52
 74                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-74-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\yerka\.gradle\caches\8.9\transforms\b3bb083cc807dd9717be059a1f813615\transformed\profileinstaller-1.4.0\AndroidManifest.xml:30:17-85
+74-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\yerka\.gradle\caches\9.4.1\transforms\0e0c6678678bc889137065b8edbf9b2f\transformed\profileinstaller-1.4.0\AndroidManifest.xml:30:17-85
 75                android:value="androidx.startup" />
-75-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\yerka\.gradle\caches\8.9\transforms\b3bb083cc807dd9717be059a1f813615\transformed\profileinstaller-1.4.0\AndroidManifest.xml:31:17-49
+75-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\yerka\.gradle\caches\9.4.1\transforms\0e0c6678678bc889137065b8edbf9b2f\transformed\profileinstaller-1.4.0\AndroidManifest.xml:31:17-49
 76        </provider>
 77
 78        <uses-library
-78-->[androidx.window:window:1.0.0] C:\Users\yerka\.gradle\caches\8.9\transforms\c41dc588c27e901d333f9e6d5ca00d2a\transformed\window-1.0.0\AndroidManifest.xml:25:9-27:40
+78-->[androidx.window:window:1.0.0] C:\Users\yerka\.gradle\caches\9.4.1\transforms\255872bfb2bf156c2a08c020705a099f\transformed\window-1.0.0\AndroidManifest.xml:25:9-27:40
 79            android:name="androidx.window.extensions"
-79-->[androidx.window:window:1.0.0] C:\Users\yerka\.gradle\caches\8.9\transforms\c41dc588c27e901d333f9e6d5ca00d2a\transformed\window-1.0.0\AndroidManifest.xml:26:13-54
+79-->[androidx.window:window:1.0.0] C:\Users\yerka\.gradle\caches\9.4.1\transforms\255872bfb2bf156c2a08c020705a099f\transformed\window-1.0.0\AndroidManifest.xml:26:13-54
 80            android:required="false" />
-80-->[androidx.window:window:1.0.0] C:\Users\yerka\.gradle\caches\8.9\transforms\c41dc588c27e901d333f9e6d5ca00d2a\transformed\window-1.0.0\AndroidManifest.xml:27:13-37
+80-->[androidx.window:window:1.0.0] C:\Users\yerka\.gradle\caches\9.4.1\transforms\255872bfb2bf156c2a08c020705a099f\transformed\window-1.0.0\AndroidManifest.xml:27:13-37
 81        <uses-library
-81-->[androidx.window:window:1.0.0] C:\Users\yerka\.gradle\caches\8.9\transforms\c41dc588c27e901d333f9e6d5ca00d2a\transformed\window-1.0.0\AndroidManifest.xml:28:9-30:40
+81-->[androidx.window:window:1.0.0] C:\Users\yerka\.gradle\caches\9.4.1\transforms\255872bfb2bf156c2a08c020705a099f\transformed\window-1.0.0\AndroidManifest.xml:28:9-30:40
 82            android:name="androidx.window.sidecar"
-82-->[androidx.window:window:1.0.0] C:\Users\yerka\.gradle\caches\8.9\transforms\c41dc588c27e901d333f9e6d5ca00d2a\transformed\window-1.0.0\AndroidManifest.xml:29:13-51
+82-->[androidx.window:window:1.0.0] C:\Users\yerka\.gradle\caches\9.4.1\transforms\255872bfb2bf156c2a08c020705a099f\transformed\window-1.0.0\AndroidManifest.xml:29:13-51
 83            android:required="false" />
-83-->[androidx.window:window:1.0.0] C:\Users\yerka\.gradle\caches\8.9\transforms\c41dc588c27e901d333f9e6d5ca00d2a\transformed\window-1.0.0\AndroidManifest.xml:30:13-37
+83-->[androidx.window:window:1.0.0] C:\Users\yerka\.gradle\caches\9.4.1\transforms\255872bfb2bf156c2a08c020705a099f\transformed\window-1.0.0\AndroidManifest.xml:30:13-37
 84
 85        <receiver
-85-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\yerka\.gradle\caches\8.9\transforms\b3bb083cc807dd9717be059a1f813615\transformed\profileinstaller-1.4.0\AndroidManifest.xml:34:9-52:20
+85-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\yerka\.gradle\caches\9.4.1\transforms\0e0c6678678bc889137065b8edbf9b2f\transformed\profileinstaller-1.4.0\AndroidManifest.xml:34:9-52:20
 86            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-86-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\yerka\.gradle\caches\8.9\transforms\b3bb083cc807dd9717be059a1f813615\transformed\profileinstaller-1.4.0\AndroidManifest.xml:35:13-76
+86-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\yerka\.gradle\caches\9.4.1\transforms\0e0c6678678bc889137065b8edbf9b2f\transformed\profileinstaller-1.4.0\AndroidManifest.xml:35:13-76
 87            android:directBootAware="false"
-87-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\yerka\.gradle\caches\8.9\transforms\b3bb083cc807dd9717be059a1f813615\transformed\profileinstaller-1.4.0\AndroidManifest.xml:36:13-44
+87-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\yerka\.gradle\caches\9.4.1\transforms\0e0c6678678bc889137065b8edbf9b2f\transformed\profileinstaller-1.4.0\AndroidManifest.xml:36:13-44
 88            android:enabled="true"
-88-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\yerka\.gradle\caches\8.9\transforms\b3bb083cc807dd9717be059a1f813615\transformed\profileinstaller-1.4.0\AndroidManifest.xml:37:13-35
+88-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\yerka\.gradle\caches\9.4.1\transforms\0e0c6678678bc889137065b8edbf9b2f\transformed\profileinstaller-1.4.0\AndroidManifest.xml:37:13-35
 89            android:exported="true"
-89-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\yerka\.gradle\caches\8.9\transforms\b3bb083cc807dd9717be059a1f813615\transformed\profileinstaller-1.4.0\AndroidManifest.xml:38:13-36
+89-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\yerka\.gradle\caches\9.4.1\transforms\0e0c6678678bc889137065b8edbf9b2f\transformed\profileinstaller-1.4.0\AndroidManifest.xml:38:13-36
 90            android:permission="android.permission.DUMP" >
-90-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\yerka\.gradle\caches\8.9\transforms\b3bb083cc807dd9717be059a1f813615\transformed\profileinstaller-1.4.0\AndroidManifest.xml:39:13-57
+90-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\yerka\.gradle\caches\9.4.1\transforms\0e0c6678678bc889137065b8edbf9b2f\transformed\profileinstaller-1.4.0\AndroidManifest.xml:39:13-57
 91            <intent-filter>
-91-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\yerka\.gradle\caches\8.9\transforms\b3bb083cc807dd9717be059a1f813615\transformed\profileinstaller-1.4.0\AndroidManifest.xml:40:13-42:29
+91-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\yerka\.gradle\caches\9.4.1\transforms\0e0c6678678bc889137065b8edbf9b2f\transformed\profileinstaller-1.4.0\AndroidManifest.xml:40:13-42:29
 92                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-92-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\yerka\.gradle\caches\8.9\transforms\b3bb083cc807dd9717be059a1f813615\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:17-91
-92-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\yerka\.gradle\caches\8.9\transforms\b3bb083cc807dd9717be059a1f813615\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:25-88
+92-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\yerka\.gradle\caches\9.4.1\transforms\0e0c6678678bc889137065b8edbf9b2f\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:17-91
+92-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\yerka\.gradle\caches\9.4.1\transforms\0e0c6678678bc889137065b8edbf9b2f\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:25-88
 93            </intent-filter>
 94            <intent-filter>
-94-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\yerka\.gradle\caches\8.9\transforms\b3bb083cc807dd9717be059a1f813615\transformed\profileinstaller-1.4.0\AndroidManifest.xml:43:13-45:29
+94-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\yerka\.gradle\caches\9.4.1\transforms\0e0c6678678bc889137065b8edbf9b2f\transformed\profileinstaller-1.4.0\AndroidManifest.xml:43:13-45:29
 95                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-95-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\yerka\.gradle\caches\8.9\transforms\b3bb083cc807dd9717be059a1f813615\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:17-85
-95-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\yerka\.gradle\caches\8.9\transforms\b3bb083cc807dd9717be059a1f813615\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:25-82
+95-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\yerka\.gradle\caches\9.4.1\transforms\0e0c6678678bc889137065b8edbf9b2f\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:17-85
+95-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\yerka\.gradle\caches\9.4.1\transforms\0e0c6678678bc889137065b8edbf9b2f\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:25-82
 96            </intent-filter>
 97            <intent-filter>
-97-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\yerka\.gradle\caches\8.9\transforms\b3bb083cc807dd9717be059a1f813615\transformed\profileinstaller-1.4.0\AndroidManifest.xml:46:13-48:29
+97-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\yerka\.gradle\caches\9.4.1\transforms\0e0c6678678bc889137065b8edbf9b2f\transformed\profileinstaller-1.4.0\AndroidManifest.xml:46:13-48:29
 98                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-98-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\yerka\.gradle\caches\8.9\transforms\b3bb083cc807dd9717be059a1f813615\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:17-88
-98-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\yerka\.gradle\caches\8.9\transforms\b3bb083cc807dd9717be059a1f813615\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:25-85
+98-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\yerka\.gradle\caches\9.4.1\transforms\0e0c6678678bc889137065b8edbf9b2f\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:17-88
+98-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\yerka\.gradle\caches\9.4.1\transforms\0e0c6678678bc889137065b8edbf9b2f\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:25-85
 99            </intent-filter>
 100            <intent-filter>
-100-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\yerka\.gradle\caches\8.9\transforms\b3bb083cc807dd9717be059a1f813615\transformed\profileinstaller-1.4.0\AndroidManifest.xml:49:13-51:29
+100-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\yerka\.gradle\caches\9.4.1\transforms\0e0c6678678bc889137065b8edbf9b2f\transformed\profileinstaller-1.4.0\AndroidManifest.xml:49:13-51:29
 101                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-101-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\yerka\.gradle\caches\8.9\transforms\b3bb083cc807dd9717be059a1f813615\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:17-95
-101-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\yerka\.gradle\caches\8.9\transforms\b3bb083cc807dd9717be059a1f813615\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:25-92
+101-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\yerka\.gradle\caches\9.4.1\transforms\0e0c6678678bc889137065b8edbf9b2f\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:17-95
+101-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\yerka\.gradle\caches\9.4.1\transforms\0e0c6678678bc889137065b8edbf9b2f\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:25-92
 102            </intent-filter>
 103        </receiver>
 104    </application>

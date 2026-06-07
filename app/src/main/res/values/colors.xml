@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="background">#0B1610</color>
-    <color name="accent">#76C043</color>
-    <color name="card">#152A1E</color>
+    <color name="background">#07120D</color>
+    <color name="background_elevated">#0D1A14</color>
+    <color name="accent">#7ED957</color>
+    <color name="accent_dark">#4A9E32</color>
+    <color name="accent_muted">#337ED957</color>
+    <color name="card">#12261C</color>
     <color name="card_elevated">#1A3324</color>
-    <color name="text_primary">#FFFFFF</color>
-    <color name="text_secondary">#B8C4BC</color>
-    <color name="danger">#E53935</color>
-    <color name="hero_overlay">#990B1610</color>
+    <color name="card_stroke">#2A4535</color>
+    <color name="text_primary">#F4FAF6</color>
+    <color name="text_secondary">#9DB5A8</color>
+    <color name="text_muted">#6B8578</color>
+    <color name="danger">#FF6B6B</color>
+    <color name="success">#7ED957</color>
+    <color name="warning">#FFB74D</color>
+    <color name="hero_overlay">#9907120D</color>
     <color name="icon_circle_bg">#1E3D2A</color>
+    <color name="ai_glow">#337ED957</color>
 </resources>
