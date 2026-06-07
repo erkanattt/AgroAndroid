@@ -5,11 +5,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.google.android.material.button.MaterialButton;
+import com.google.android.material.card.MaterialCardView;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -28,12 +30,26 @@ public final class FragmentHomeBinding implements ViewBinding {
   @NonNull
   public final MaterialButton btnGoKnowledge;
 
+  @NonNull
+  public final MaterialCardView cardLastDiagnosis;
+
+  @NonNull
+  public final TextView textLastDiagnosisMeta;
+
+  @NonNull
+  public final TextView textLastDiagnosisName;
+
   private FragmentHomeBinding(@NonNull FrameLayout rootView, @NonNull MaterialButton btnCheckPlant,
-      @NonNull MaterialButton btnGoDiseases, @NonNull MaterialButton btnGoKnowledge) {
+      @NonNull MaterialButton btnGoDiseases, @NonNull MaterialButton btnGoKnowledge,
+      @NonNull MaterialCardView cardLastDiagnosis, @NonNull TextView textLastDiagnosisMeta,
+      @NonNull TextView textLastDiagnosisName) {
     this.rootView = rootView;
     this.btnCheckPlant = btnCheckPlant;
     this.btnGoDiseases = btnGoDiseases;
     this.btnGoKnowledge = btnGoKnowledge;
+    this.cardLastDiagnosis = cardLastDiagnosis;
+    this.textLastDiagnosisMeta = textLastDiagnosisMeta;
+    this.textLastDiagnosisName = textLastDiagnosisName;
   }
 
   @Override
@@ -81,8 +97,26 @@ public final class FragmentHomeBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.cardLastDiagnosis;
+      MaterialCardView cardLastDiagnosis = ViewBindings.findChildViewById(rootView, id);
+      if (cardLastDiagnosis == null) {
+        break missingId;
+      }
+
+      id = R.id.textLastDiagnosisMeta;
+      TextView textLastDiagnosisMeta = ViewBindings.findChildViewById(rootView, id);
+      if (textLastDiagnosisMeta == null) {
+        break missingId;
+      }
+
+      id = R.id.textLastDiagnosisName;
+      TextView textLastDiagnosisName = ViewBindings.findChildViewById(rootView, id);
+      if (textLastDiagnosisName == null) {
+        break missingId;
+      }
+
       return new FragmentHomeBinding((FrameLayout) rootView, btnCheckPlant, btnGoDiseases,
-          btnGoKnowledge);
+          btnGoKnowledge, cardLastDiagnosis, textLastDiagnosisMeta, textLastDiagnosisName);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

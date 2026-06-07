@@ -5,25 +5,23 @@
     android:layout_height="match_parent"
     android:background="@color/background"
     android:orientation="vertical"
-    android:paddingTop="12dp"
+    android:paddingTop="8dp"
     tools:context=".ui.diseases.CommonDiseasesFragment">
 
     <TextView
+        style="@style/AgroSectionTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingHorizontal="16dp"
-        android:text="@string/common_diseases_title"
-        android:textColor="@color/text_primary"
-        android:textSize="20sp"
-        android:textStyle="bold" />
+        android:paddingHorizontal="20dp"
+        android:text="@string/common_diseases_title" />
 
     <TextView
+        style="@style/AgroBody"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="6dp"
-        android:paddingHorizontal="16dp"
+        android:paddingHorizontal="20dp"
         android:text="@string/common_diseases_subtitle"
-        android:textColor="@color/text_secondary"
         android:textSize="13sp" />
 
     <androidx.recyclerview.widget.RecyclerView
