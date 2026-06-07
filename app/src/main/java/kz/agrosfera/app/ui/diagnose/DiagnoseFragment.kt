@@ -29,6 +29,9 @@ import kz.agrosfera.app.data.remote.DiseaseApiException
 import kz.agrosfera.app.databinding.FragmentDiagnoseBinding
 import kz.agrosfera.app.ui.plants.RecentDiagnosisAdapter
 import kz.agrosfera.app.ui.treatment.TreatmentFragment
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.repeatOnLifecycle
+import kz.agrosfera.app.ui.auth.AuthNavArgs
 import kz.agrosfera.app.util.ImageCompressor
 
 class DiagnoseFragment : Fragment() {
@@ -103,6 +106,30 @@ class DiagnoseFragment : Fragment() {
                 ),
             )
         }
+
+        binding.panelLocked.btnLogin.setOnClickListener {
+            findNavController().navigate(
+                R.id.action_diagnose_to_login,
+                bundleOf(AuthNavArgs.REDIRECT_AI to true),
+            )
+        }
+        binding.panelLocked.btnRegister.setOnClickListener {
+            findNavController().navigate(
+                R.id.action_diagnose_to_register,
+                bundleOf(AuthNavArgs.REDIRECT_AI to true),
+            )
+        }
+
+        viewLifecycleOwner.lifecycleScope.launch {
+            viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
+                app.authRepository.session.collect { session ->
+                    val loggedIn = session != null
+                    binding.panelLocked.root.isVisible = !loggedIn
+                    binding.panelDiagnose.isVisible = loggedIn
+                }
+            }
+        }
+
         checkServerStatus()
         loadRecent()
     }

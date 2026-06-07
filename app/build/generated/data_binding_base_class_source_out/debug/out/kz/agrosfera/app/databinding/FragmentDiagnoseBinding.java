@@ -26,7 +26,7 @@ import kz.agrosfera.app.R;
 
 public final class FragmentDiagnoseBinding implements ViewBinding {
   @NonNull
-  private final NestedScrollView rootView;
+  private final FrameLayout rootView;
 
   @NonNull
   public final MaterialButton btnAnalyze;
@@ -71,6 +71,12 @@ public final class FragmentDiagnoseBinding implements ViewBinding {
   public final LinearLayout overlayEmptyHint;
 
   @NonNull
+  public final NestedScrollView panelDiagnose;
+
+  @NonNull
+  public final PanelAiLockedBinding panelLocked;
+
+  @NonNull
   public final CircularProgressIndicator progressAnalyze;
 
   @NonNull
@@ -103,15 +109,15 @@ public final class FragmentDiagnoseBinding implements ViewBinding {
   @NonNull
   public final TextView textSymptomsList;
 
-  private FragmentDiagnoseBinding(@NonNull NestedScrollView rootView,
-      @NonNull MaterialButton btnAnalyze, @NonNull MaterialButton btnCamera,
-      @NonNull MaterialButton btnGallery, @NonNull MaterialButton btnSaveServer,
-      @NonNull MaterialButton btnTreatment, @NonNull MaterialCardView cardResult,
-      @NonNull MaterialCardView cardServerSettings, @NonNull TextView chipServerStatus,
-      @NonNull TextInputEditText editServerUrl, @NonNull LinearLayout headerServerToggle,
-      @NonNull ImageView imagePreview, @NonNull LinearLayout layoutServerBody,
-      @NonNull FrameLayout overlayAnalyzing, @NonNull LinearLayout overlayEmptyHint,
-      @NonNull CircularProgressIndicator progressAnalyze,
+  private FragmentDiagnoseBinding(@NonNull FrameLayout rootView, @NonNull MaterialButton btnAnalyze,
+      @NonNull MaterialButton btnCamera, @NonNull MaterialButton btnGallery,
+      @NonNull MaterialButton btnSaveServer, @NonNull MaterialButton btnTreatment,
+      @NonNull MaterialCardView cardResult, @NonNull MaterialCardView cardServerSettings,
+      @NonNull TextView chipServerStatus, @NonNull TextInputEditText editServerUrl,
+      @NonNull LinearLayout headerServerToggle, @NonNull ImageView imagePreview,
+      @NonNull LinearLayout layoutServerBody, @NonNull FrameLayout overlayAnalyzing,
+      @NonNull LinearLayout overlayEmptyHint, @NonNull NestedScrollView panelDiagnose,
+      @NonNull PanelAiLockedBinding panelLocked, @NonNull CircularProgressIndicator progressAnalyze,
       @NonNull LinearProgressIndicator progressConfidence, @NonNull RecyclerView recyclerRecent,
       @NonNull TextView textConfidence, @NonNull TextView textDemoNote,
       @NonNull TextView textDiseaseName, @NonNull TextView textRecentEmpty,
@@ -132,6 +138,8 @@ public final class FragmentDiagnoseBinding implements ViewBinding {
     this.layoutServerBody = layoutServerBody;
     this.overlayAnalyzing = overlayAnalyzing;
     this.overlayEmptyHint = overlayEmptyHint;
+    this.panelDiagnose = panelDiagnose;
+    this.panelLocked = panelLocked;
     this.progressAnalyze = progressAnalyze;
     this.progressConfidence = progressConfidence;
     this.recyclerRecent = recyclerRecent;
@@ -147,7 +155,7 @@ public final class FragmentDiagnoseBinding implements ViewBinding {
 
   @Override
   @NonNull
-  public NestedScrollView getRoot() {
+  public FrameLayout getRoot() {
     return rootView;
   }
 
@@ -256,6 +264,19 @@ public final class FragmentDiagnoseBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.panelDiagnose;
+      NestedScrollView panelDiagnose = ViewBindings.findChildViewById(rootView, id);
+      if (panelDiagnose == null) {
+        break missingId;
+      }
+
+      id = R.id.panelLocked;
+      View panelLocked = ViewBindings.findChildViewById(rootView, id);
+      if (panelLocked == null) {
+        break missingId;
+      }
+      PanelAiLockedBinding binding_panelLocked = PanelAiLockedBinding.bind(panelLocked);
+
       id = R.id.progressAnalyze;
       CircularProgressIndicator progressAnalyze = ViewBindings.findChildViewById(rootView, id);
       if (progressAnalyze == null) {
@@ -322,12 +343,12 @@ public final class FragmentDiagnoseBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentDiagnoseBinding((NestedScrollView) rootView, btnAnalyze, btnCamera,
-          btnGallery, btnSaveServer, btnTreatment, cardResult, cardServerSettings, chipServerStatus,
+      return new FragmentDiagnoseBinding((FrameLayout) rootView, btnAnalyze, btnCamera, btnGallery,
+          btnSaveServer, btnTreatment, cardResult, cardServerSettings, chipServerStatus,
           editServerUrl, headerServerToggle, imagePreview, layoutServerBody, overlayAnalyzing,
-          overlayEmptyHint, progressAnalyze, progressConfidence, recyclerRecent, textConfidence,
-          textDemoNote, textDiseaseName, textRecentEmpty, textResultBadge, textServerToggle,
-          textSymptoms, textSymptomsList);
+          overlayEmptyHint, panelDiagnose, binding_panelLocked, progressAnalyze, progressConfidence,
+          recyclerRecent, textConfidence, textDemoNote, textDiseaseName, textRecentEmpty,
+          textResultBadge, textServerToggle, textSymptoms, textSymptomsList);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

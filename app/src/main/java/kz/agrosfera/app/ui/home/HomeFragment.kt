@@ -10,11 +10,14 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import kz.agrosfera.app.AgroApp
 import kz.agrosfera.app.MainActivity
 import kz.agrosfera.app.R
 import kz.agrosfera.app.databinding.FragmentHomeBinding
 import kz.agrosfera.app.domain.plant.GardenPlantCatalog
+import kz.agrosfera.app.domain.weather.KazakhstanCityCatalog
+import kz.agrosfera.app.domain.weather.WeatherInfo
 import kz.agrosfera.app.ui.plants.PlantChipAdapter
 import kotlinx.coroutines.launch
 
@@ -42,6 +45,9 @@ class HomeFragment : Fragment() {
             (requireActivity() as MainActivity).selectTab(R.id.nav_check)
         }
 
+        binding.btnSelectCity.setOnClickListener { showCityPicker() }
+        binding.cardWeather.setOnClickListener { showCityPicker() }
+
         val app = requireContext().applicationContext as AgroApp
         viewLifecycleOwner.lifecycleScope.launch {
             viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
@@ -54,12 +60,83 @@ class HomeFragment : Fragment() {
                 }
             }
         }
+
+        viewLifecycleOwner.lifecycleScope.launch {
+            viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
+                app.weatherRepository.selectedCityId.collect { cityId ->
+                    val city = KazakhstanCityCatalog.byId(cityId)
+                        ?: KazakhstanCityCatalog.defaultCity()
+                    binding.textWeatherCity.text =
+                        getString(R.string.weather_format_city, city.name)
+                    loadWeather(cityId)
+                }
+            }
+        }
+
         showLastDiagnosis()
     }
 
     override fun onResume() {
         super.onResume()
         showLastDiagnosis()
+        refreshWeatherIfPossible()
+    }
+
+    private fun refreshWeatherIfPossible() {
+        val app = requireContext().applicationContext as AgroApp
+        viewLifecycleOwner.lifecycleScope.launch {
+            val cityId = app.weatherRepository.getSelectedCityId()
+            loadWeather(cityId)
+        }
+    }
+
+    private fun loadWeather(cityId: String) {
+        val app = requireContext().applicationContext as AgroApp
+        viewLifecycleOwner.lifecycleScope.launch {
+            binding.progressWeather.isVisible = true
+            binding.textWeatherDetails.text = getString(R.string.weather_loading)
+            val result = app.weatherRepository.fetchCurrentWeather(cityId)
+            binding.progressWeather.isVisible = false
+            result.fold(
+                onSuccess = { info -> renderWeather(info) },
+                onFailure = {
+                    binding.textWeatherDetails.text = getString(R.string.weather_error)
+                    binding.textWeatherTemp.text = "--"
+                },
+            )
+        }
+    }
+
+    private fun renderWeather(info: WeatherInfo) {
+        binding.textWeatherCity.text = getString(R.string.weather_format_city, info.cityName)
+        binding.textWeatherTemp.text = getString(R.string.weather_format_temp, info.temperatureC)
+        binding.textWeatherDetails.text = getString(
+            R.string.weather_format_details,
+            info.conditionLabel,
+            info.humidityPercent,
+            info.windSpeedMs,
+        )
+        binding.textWeatherEmoji.text = info.conditionEmoji
+    }
+
+    private fun showCityPicker() {
+        val cities = KazakhstanCityCatalog.cities
+        val names = cities.map { it.name }.toTypedArray()
+        val app = requireContext().applicationContext as AgroApp
+        viewLifecycleOwner.lifecycleScope.launch {
+            val currentId = app.weatherRepository.getSelectedCityId()
+            val selectedIndex = cities.indexOfFirst { it.id == currentId }.coerceAtLeast(0)
+            MaterialAlertDialogBuilder(requireContext())
+                .setTitle(R.string.weather_select_city_title)
+                .setSingleChoiceItems(names, selectedIndex) { dialog, which ->
+                    viewLifecycleOwner.lifecycleScope.launch {
+                        app.weatherRepository.setSelectedCityId(cities[which].id)
+                    }
+                    dialog.dismiss()
+                }
+                .setNegativeButton(android.R.string.cancel, null)
+                .show()
+        }
     }
 
     private fun showLastDiagnosis() {

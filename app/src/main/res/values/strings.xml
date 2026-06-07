@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">AgroSfera</string>
+    <string name="app_name">AgroSphere</string>
     <string name="hero_title">Жасанды интеллект арқылы өсімдік ауруларын анықтау және алдын алу</string>
     <string name="hero_subtitle">Сурет арқылы жылдам диагноз, алдын алу кеңестері және егістік мониторингі бір қосымшада.</string>
     <string name="cta_check_plant">Өсімдікті тексеру</string>
@@ -60,7 +60,8 @@
     <string name="nav_home">Басты</string>
     <string name="nav_plants">Өсімдіктер</string>
     <string name="nav_identify">Анықтау</string>
-    <string name="nav_tips">Кеңестер</string>
+    <string name="nav_tips">Аурулар</string>
+    <string name="nav_categories">Аурулар</string>
     <string name="nav_profile">Профиль</string>
 
     <string name="home_greeting_guest">Сәлем, фермер!</string>
@@ -71,7 +72,7 @@
     <string name="home_start">Бастау</string>
     <string name="home_my_plants">Менің өсімдіктерім</string>
     <string name="weather_city">Алматы, Қазақстан</string>
-    <string name="weather_temp">+25°C</string>
+    <string name="weather_temp">--</string>
     <string name="weather_details">Күн ашық · Ылғалдылық 45% · Жел 3 м/с</string>
 
     <string name="identify_title">Ауруды анықтау</string>
@@ -104,7 +105,7 @@
     <string name="diagnose_hint">«Галерея» батырмасын басып телефондағы фотоны таңдаңыз (немесе суретті басыңыз), содан кейін «Талдау (ЖИ)».</string>
     <string name="pick_gallery">Галерея</string>
     <string name="image_picked_ready">Фото таңдалды. «Талдау» батырмасын басыңыз.</string>
-    <string name="permission_gallery_denied">Галереяға рұқсат қажет. Параметрлер → AgroSfera → Рұқсаттар.</string>
+    <string name="permission_gallery_denied">Галереяға рұқсат қажет. Параметрлер → AgroSphere → Рұқсаттар.</string>
     <string name="take_photo">Камера</string>
     <string name="analyze">Талдау (ЖИ)</string>
     <string name="analyzing">Талдануда…</string>
@@ -156,4 +157,23 @@
     <string name="auth_error_invalid">Пошта немесе құпия сөз қате.</string>
     <string name="auth_success_register">Тіркелу сәтті аяқталды.</string>
     <string name="auth_success_login">Қош келдіңіз!</string>
+
+    <string name="weather_select_city">Қala таңдау</string>
+    <string name="weather_select_city_title">Қазақстан қаласын таңдаңыз</string>
+    <string name="weather_loading">Ауа-райы жүктелуде…</string>
+    <string name="weather_error">Ауа-райын алу мүмкін болмады</string>
+    <string name="weather_format_details">%1$s · Ылғalдылық %2$d%% · Жел %3$.0f м/с</string>
+    <string name="weather_format_city">%1$s, Қазақстан</string>
+    <string name="weather_format_temp">%1$+d°C</string>
+
+    <string name="categories_title">Өсімдіктер</string>
+    <string name="categories_subtitle">Қызanақ, қияр сияқты өсімдікті таңдап, жиі кездесетін ауруларды оқыңыз</string>
+    <string name="category_disease_count">%1$d ауру</string>
+    <string name="category_diseases_title">Жиі кездесетін аурулар</string>
+    <string name="category_diseases_hint">Осы өсімдікте жиі кездесетін аурулар. Карточканы басып, толық ақпаратты оқыңыз</string>
+    <string name="disease_detail_title">Ауру туралы</string>
+    <string name="disease_rank_label">Жиілік рейтингі: #%1$d</string>
+
+    <string name="ai_locked_title">ЖИ диагностика — тек тіркелгендерге</string>
+    <string name="ai_locked_message">Жасанды интеллект арқылы ауруды анықтау үшін аккаунтқа кіріңіз немесе тіркеліңіз. Аурулар каталогын оқуға тіркелу қажет емес.</string>
 </resources>

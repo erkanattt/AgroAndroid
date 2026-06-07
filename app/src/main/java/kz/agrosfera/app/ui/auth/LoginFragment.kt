@@ -11,7 +11,9 @@ import com.google.android.material.snackbar.Snackbar
 import kotlinx.coroutines.launch
 import kz.agrosfera.app.AgroApp
 import kz.agrosfera.app.R
+import kz.agrosfera.app.MainActivity
 import kz.agrosfera.app.databinding.FragmentLoginBinding
+import kz.agrosfera.app.ui.auth.AuthNavArgs
 
 class LoginFragment : Fragment() {
 
@@ -42,7 +44,11 @@ class LoginFragment : Fragment() {
                 val result = auth.login(email, password)
                 if (result.isSuccess) {
                     Snackbar.make(binding.root, R.string.auth_success_login, Snackbar.LENGTH_SHORT).show()
+                    val redirectAi = arguments?.getBoolean(AuthNavArgs.REDIRECT_AI) == true
                     findNavController().popBackStack()
+                    if (redirectAi) {
+                        (requireActivity() as MainActivity).selectTab(R.id.nav_check)
+                    }
                 } else {
                     Snackbar.make(binding.root, R.string.auth_error_invalid, Snackbar.LENGTH_SHORT).show()
                 }

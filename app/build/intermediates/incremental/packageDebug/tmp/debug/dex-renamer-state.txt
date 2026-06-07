@@ -1,4 +1,4 @@
-#Sun Jun 07 23:53:42 QYZT 2026
+#Mon Jun 08 00:24:09 QYZT 2026
 base.0=C\:\\Users\\yerka\\OneDrive\\Desktop\\agroAndroid\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 base.1=C\:\\Users\\yerka\\OneDrive\\Desktop\\agroAndroid\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
 base.10=C\:\\Users\\yerka\\OneDrive\\Desktop\\agroAndroid\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\9\\classes.dex

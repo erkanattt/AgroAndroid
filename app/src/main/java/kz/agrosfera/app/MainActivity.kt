@@ -4,16 +4,23 @@ import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.annotation.IdRes
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.os.bundleOf
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.isVisible
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.lifecycleScope
+import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.ui.setupWithNavController
+import androidx.navigation.ui.NavigationUI
+import kotlinx.coroutines.launch
 import kz.agrosfera.app.databinding.ActivityMainBinding
+import kz.agrosfera.app.ui.auth.AuthNavArgs
 
 class MainActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityMainBinding
+    private var isLoggedIn = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,10 +34,30 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
+        val app = application as AgroApp
+        lifecycleScope.launch {
+            repeatOnLifecycle(Lifecycle.State.STARTED) {
+                app.authRepository.session.collect { session ->
+                    isLoggedIn = session != null
+                }
+            }
+        }
+
         val navHost =
             supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         val navController = navHost.navController
-        binding.bottomNav.setupWithNavController(navController)
+
+        binding.bottomNav.setOnItemSelectedListener { item ->
+            if (item.itemId == R.id.nav_check && !isLoggedIn) {
+                navController.navigate(
+                    R.id.loginFragment,
+                    bundleOf(AuthNavArgs.REDIRECT_AI to true),
+                )
+                return@setOnItemSelectedListener false
+            }
+            NavigationUI.onNavDestinationSelected(item, navController)
+            true
+        }
         binding.bottomNav.selectedItemId = R.id.nav_home
 
         val mainDestinations = setOf(
@@ -46,7 +73,18 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun selectTab(@IdRes menuItemId: Int) {
+        if (menuItemId == R.id.nav_check && !isLoggedIn) {
+            val navHost =
+                supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+            navHost.navController.navigate(
+                R.id.loginFragment,
+                bundleOf(AuthNavArgs.REDIRECT_AI to true),
+            )
+            return
+        }
         val item = binding.bottomNav.menu.findItem(menuItemId) ?: return
         binding.bottomNav.selectedItemId = item.itemId
     }
+
+    fun isUserLoggedIn(): Boolean = isLoggedIn
 }
