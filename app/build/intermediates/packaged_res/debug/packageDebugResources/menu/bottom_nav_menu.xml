@@ -5,17 +5,17 @@
         android:icon="@drawable/ic_home"
         android:title="@string/nav_home" />
     <item
-        android:id="@+id/nav_check"
-        android:icon="@drawable/ic_nav_camera"
-        android:title="@string/nav_ai" />
-    <item
         android:id="@+id/nav_field"
         android:icon="@drawable/ic_agriculture"
-        android:title="@string/nav_field" />
+        android:title="@string/nav_plants" />
+    <item
+        android:id="@+id/nav_check"
+        android:icon="@drawable/ic_nav_camera"
+        android:title="@string/nav_identify" />
     <item
         android:id="@+id/nav_knowledge"
-        android:icon="@drawable/ic_book_white"
-        android:title="@string/nav_knowledge" />
+        android:icon="@drawable/ic_book"
+        android:title="@string/nav_tips" />
     <item
         android:id="@+id/nav_profile"
         android:icon="@drawable/ic_person"

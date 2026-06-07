@@ -6,6 +6,7 @@ import androidx.annotation.IdRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.isVisible
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import kz.agrosfera.app.databinding.ActivityMainBinding
@@ -31,6 +32,17 @@ class MainActivity : AppCompatActivity() {
         val navController = navHost.navController
         binding.bottomNav.setupWithNavController(navController)
         binding.bottomNav.selectedItemId = R.id.nav_home
+
+        val mainDestinations = setOf(
+            R.id.nav_home,
+            R.id.nav_check,
+            R.id.nav_field,
+            R.id.nav_knowledge,
+            R.id.nav_profile,
+        )
+        navController.addOnDestinationChangedListener { _, destination, _ ->
+            binding.bottomNav.isVisible = destination.id in mainDestinations
+        }
     }
 
     fun selectTab(@IdRes menuItemId: Int) {

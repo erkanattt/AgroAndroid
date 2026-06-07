@@ -57,11 +57,48 @@
     <string name="summary_conditions">Тәуліктік жағдай</string>
     <string name="summary_temp">18–24°C, ылғалдылық жоғары</string>
 
-    <string name="nav_home">Басты бет</string>
-    <string name="nav_check">Тексеру</string>
-    <string name="nav_field">Егістік</string>
-    <string name="nav_knowledge">Білім</string>
+    <string name="nav_home">Басты</string>
+    <string name="nav_plants">Өсімдіктер</string>
+    <string name="nav_identify">Анықтау</string>
+    <string name="nav_tips">Кеңестер</string>
     <string name="nav_profile">Профиль</string>
+
+    <string name="home_greeting_guest">Сәлем, фермер!</string>
+    <string name="home_greeting_name">Сәлем, %1$s!</string>
+    <string name="home_subtitle">Өсімдіктеріңізді қорғаңыз, өнімді арттырыңыз</string>
+    <string name="home_identify_title">Ауруды анықтау</string>
+    <string name="home_identify_desc">ЖИ суретті талдап, ауруды анықтайды</string>
+    <string name="home_start">Бастау</string>
+    <string name="home_my_plants">Менің өсімдіктерім</string>
+    <string name="weather_city">Алматы, Қазақстан</string>
+    <string name="weather_temp">+25°C</string>
+    <string name="weather_details">Күн ашық · Ылғалдылық 45% · Жел 3 м/с</string>
+
+    <string name="identify_title">Ауруды анықтау</string>
+    <string name="identify_subtitle">Өсімдіктің фотосын түсіріңіз немесе галереядан таңдаңыз</string>
+    <string name="pick_gallery_full">Галереядан таңдау</string>
+    <string name="take_photo_full">Суретке түсіру</string>
+    <string name="recent_identifications">Соңғы анықтаулар</string>
+    <string name="recent_empty">Әлі анықтау жоқ. Фото жүктеп, ЖИ талдауын бастаңыз.</string>
+    <string name="result_title">Нәтиже</string>
+    <string name="about_disease">Ауру туралы</string>
+    <string name="treatment_title">Емдеу жолдары</string>
+    <string name="treatment_screen_title">Ұсынылған емдеу әдістері</string>
+    <string name="treatment_chemical">Химиялық препараттар</string>
+    <string name="treatment_chemical_text">• Ридомил Голд\n• Манкоцеб\n• Топаз\n\nМаман кеңесімен дозалауды сақтаңыз.</string>
+    <string name="treatment_folk">Халықтық әдістер</string>
+    <string name="treatment_folk_text">• Сarımsaq науасы\n• Сüt сүт/сарысу ерітіндісі\n• Зола ерітіндісі</string>
+    <string name="treatment_agro">Агrotexникалық шаралар</string>
+    <string name="treatment_agro_default">Зақымдалған жапырақтарды жойыңыз. Ауыспалы егіс жоспарлаңыз. Тамшы суару қолданыңыз.</string>
+    <string name="treatment_warning">Химиялық препараттарды қолданар алдында нұсқаулықпен танысыңыз және қорғану құралдарын пайдаланыңыз.</string>
+
+    <string name="garden_title">Менің бақшам</string>
+    <string name="garden_add">+ Қосу</string>
+    <string name="garden_add_soon">Жakında қосылады</string>
+    <string name="plant_variety">Сорт: %1$s</string>
+    <string name="plant_last_check">Соңғы тексеру: %1$s</string>
+
+    <string name="knowledge_screen_title">Агро кеңестер</string>
 
     <string name="diagnose_title">Өсімдікті ЖИ арқылы тексеру</string>
     <string name="diagnose_hint">«Галерея» батырмасын басып телефондағы фотоны таңдаңыз (немесе суретті басыңыз), содан кейін «Талдау (ЖИ)».</string>
@@ -93,7 +130,6 @@
     <string name="common_diseases_title">Жиі кездесетін аурулар</string>
     <string name="common_diseases_subtitle">Егістікте жиі кездесетін патологиялар тізімі. Толығырақ карточканы басыңыз.</string>
 
-    <string name="knowledge_screen_title">Агро білім</string>
     <string name="knowledge_intro">Алдын алу — емдеуден арзан. Төмендегі қағидаларды сақтаңыз.</string>
     <string name="knowledge_block1_title">Суру және ылғал</string>
     <string name="knowledge_block1_text">Тамшы суару артық ылғалды азайтады. Жапырақтарды құрғақтандыру уақытын қалдырыңыз.</string>

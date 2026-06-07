@@ -1,22 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="accent">#7ED957</color>
-    <color name="accent_dark">#4A9E32</color>
-    <color name="accent_muted">#337ED957</color>
-    <color name="ai_glow">#337ED957</color>
-    <color name="background">#07120D</color>
-    <color name="background_elevated">#0D1A14</color>
-    <color name="card">#12261C</color>
-    <color name="card_elevated">#1A3324</color>
-    <color name="card_stroke">#2A4535</color>
-    <color name="danger">#FF6B6B</color>
-    <color name="hero_overlay">#9907120D</color>
-    <color name="icon_circle_bg">#1E3D2A</color>
-    <color name="success">#7ED957</color>
-    <color name="text_muted">#6B8578</color>
-    <color name="text_primary">#F4FAF6</color>
-    <color name="text_secondary">#9DB5A8</color>
-    <color name="warning">#FFB74D</color>
+    <color name="accent">#4CAF50</color>
+    <color name="accent_dark">#388E3C</color>
+    <color name="accent_light">#E8F5E9</color>
+    <color name="accent_muted">#334CAF50</color>
+    <color name="ai_glow">#334CAF50</color>
+    <color name="background">#F4F8F4</color>
+    <color name="card">#FFFFFF</color>
+    <color name="card_elevated">#FFFFFF</color>
+    <color name="card_stroke">#E0E8E0</color>
+    <color name="danger">#E53935</color>
+    <color name="hero_overlay">#00000000</color>
+    <color name="icon_circle_bg">#E8F5E9</color>
+    <color name="shadow">#1A000000</color>
+    <color name="success">#4CAF50</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="text_muted">#9AA89C</color>
+    <color name="text_primary">#1A2E1C</color>
+    <color name="text_secondary">#5F6F61</color>
+    <color name="warning">#FF9800</color>
+    <color name="weather_sky">#E3F2FD</color>
+    <string name="about_disease">Ауру туралы</string>
     <string name="action_login">Кіру</string>
     <string name="action_logout">Шығу</string>
     <string name="action_register">Тіркелу</string>
@@ -66,13 +70,25 @@
     <string name="field_name">Аты-жөні</string>
     <string name="field_password">Құпия сөз</string>
     <string name="field_password_confirm">Құпия сөзді растау</string>
+    <string name="garden_add">+ Қосу</string>
+    <string name="garden_add_soon">Жakında қосылады</string>
+    <string name="garden_title">Менің бақшам</string>
     <string name="hero_subtitle">Сурет арқылы жылдам диагноз, алдын алу кеңестері және егістік мониторингі бір қосымшада.</string>
     <string name="hero_title">Жасанды интеллект арқылы өсімдік ауруларын анықтау және алдын алу</string>
     <string name="home_diseases_hint">Жиі кездесетін аурулар</string>
     <string name="home_features_title">Мүмкіндіктер</string>
+    <string name="home_greeting_guest">Сәлем, фермер!</string>
+    <string name="home_greeting_name">Сәлем, %1$s!</string>
+    <string name="home_identify_desc">ЖИ суретті талдап, ауруды анықтайды</string>
+    <string name="home_identify_title">Ауруды анықтау</string>
+    <string name="home_my_plants">Менің өсімдіктерім</string>
     <string name="home_process_hint">Фото таңдаңыз → PyTorch ResNet9 талдайды → нәтиже мен кеңес.</string>
+    <string name="home_start">Бастау</string>
+    <string name="home_subtitle">Өсімдіктеріңізді қорғаңыз, өнімді арттырыңыз</string>
     <string name="home_tagline">Ақылды агро көмекші</string>
     <string name="how_title">Қалай жұмыс істейді?</string>
+    <string name="identify_subtitle">Өсімдіктің фотосын түсіріңіз немесе галереядан таңдаңыз</string>
+    <string name="identify_title">Ауруды анықтау</string>
     <string name="image_picked_ready">Фото таңдалды. «Талдау» батырмасын басыңыз.</string>
     <string name="knowledge_block1_text">Тамшы суару артық ылғалды азайтады. Жапырақтарды құрғақтандыру уақытын қалдырыңыз.</string>
     <string name="knowledge_block1_title">Суру және ылғал</string>
@@ -81,21 +97,24 @@
     <string name="knowledge_block3_text">Қайшы, пырақ пен қолғаптарды залалсыз өсімдіктерден кейін дезинфекциялаңыз.</string>
     <string name="knowledge_block3_title">Таза құрал</string>
     <string name="knowledge_intro">Алдын алу — емдеуден арзан. Төмендегі қағидаларды сақтаңыз.</string>
-    <string name="knowledge_screen_title">Агро білім</string>
+    <string name="knowledge_screen_title">Агро кеңестер</string>
     <string name="latest_title">Соңғы диагноз</string>
     <string name="login_title">Кіру</string>
     <string name="logo_agro">AGRO</string>
     <string name="logo_sfera">SFERA</string>
     <string name="nav_ai">ЖИ</string>
-    <string name="nav_check">Тексеру</string>
-    <string name="nav_field">Егістік</string>
-    <string name="nav_home">Басты бет</string>
-    <string name="nav_knowledge">Білім</string>
+    <string name="nav_home">Басты</string>
+    <string name="nav_identify">Анықтау</string>
+    <string name="nav_plants">Өсімдіктер</string>
     <string name="nav_profile">Профиль</string>
+    <string name="nav_tips">Кеңестер</string>
     <string name="need_image">Алдымен сурет таңдаңыз немесе түсіріңіз.</string>
     <string name="permission_camera_denied">Камера рұқсаты қажет.</string>
     <string name="permission_gallery_denied">Галереяға рұқсат қажет. Параметрлер → AgroSfera → Рұқсаттар.</string>
     <string name="pick_gallery">Галерея</string>
+    <string name="pick_gallery_full">Галереядан таңдау</string>
+    <string name="plant_last_check">Соңғы тексеру: %1$s</string>
+    <string name="plant_variety">Сорт: %1$s</string>
     <string name="profile_email_label">Пошта: %1$s</string>
     <string name="profile_guest">Қонақ режимі</string>
     <string name="profile_hello">Сәлем, %1$s!</string>
@@ -103,9 +122,12 @@
     <string name="rec1">Зақымдалған жапырақтарды алып тастаңыз</string>
     <string name="rec2">Фунгицидтермен емдеңіз</string>
     <string name="rec3">Өсімдіктер арасында желдетуді жақсартыңыз</string>
+    <string name="recent_empty">Әлі анықтау жоқ. Фото жүктеп, ЖИ талдауын бастаңыз.</string>
+    <string name="recent_identifications">Соңғы анықтаулар</string>
     <string name="register_title">Тіркелу</string>
     <string name="result_disease">Ауру анықталды</string>
     <string name="result_healthy">Сау</string>
+    <string name="result_title">Нәтиже</string>
     <string name="server_collapse">Жабу ▲</string>
     <string name="server_expand">Ашу ▼</string>
     <string name="server_save_and_check">Сақтау және қосылуды тексеру</string>
@@ -128,6 +150,19 @@
     <string name="summary_spread_value">Жел арқылы</string>
     <string name="summary_temp">18–24°C, ылғалдылық жоғары</string>
     <string name="take_photo">Камера</string>
+    <string name="take_photo_full">Суретке түсіру</string>
+    <string name="treatment_agro">Агrotexникалық шаралар</string>
+    <string name="treatment_agro_default">Зақымдалған жапырақтарды жойыңыз. Ауыспалы егіс жоспарлаңыз. Тамшы суару қолданыңыз.</string>
+    <string name="treatment_chemical">Химиялық препараттар</string>
+    <string name="treatment_chemical_text">• Ридомил Голд\n• Манкоцеб\n• Топаз\n\nМаман кеңесімен дозалауды сақтаңыз.</string>
+    <string name="treatment_folk">Халықтық әдістер</string>
+    <string name="treatment_folk_text">• Сarımsaq науасы\n• Сüt сүт/сарысу ерітіндісі\n• Зола ерітіндісі</string>
+    <string name="treatment_screen_title">Ұсынылған емдеу әдістері</string>
+    <string name="treatment_title">Емдеу жолдары</string>
+    <string name="treatment_warning">Химиялық препараттарды қолданар алдында нұсқаулықпен танысыңыз және қорғану құралдарын пайдаланыңыз.</string>
+    <string name="weather_city">Алматы, Қазақстан</string>
+    <string name="weather_details">Күн ашық · Ылғалдылық 45% · Жел 3 м/с</string>
+    <string name="weather_temp">+25°C</string>
     <style name="AgroBody">
         <item name="android:textSize">14sp</item>
         <item name="android:textColor">@color/text_secondary</item>
@@ -143,14 +178,15 @@
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">@color/text_primary</item>
     </style>
-    <style name="Theme.AgroSfera" parent="Theme.Material3.Dark.NoActionBar">
+    <style name="Theme.AgroSfera" parent="Theme.Material3.Light.NoActionBar">
         <item name="colorPrimary">@color/accent</item>
-        <item name="colorOnPrimary">@color/background</item>
-        <item name="android:statusBarColor">@android:color/transparent</item>
-        <item name="android:navigationBarColor">@color/background</item>
-        <item name="android:windowLightStatusBar">false</item>
+        <item name="colorOnPrimary">@color/surface</item>
+        <item name="colorPrimaryContainer">@color/accent_light</item>
+        <item name="android:statusBarColor">@color/background</item>
+        <item name="android:navigationBarColor">@color/surface</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:colorBackground">@color/background</item>
-        <item name="colorSurface">@color/card</item>
+        <item name="colorSurface">@color/surface</item>
         <item name="colorOnSurface">@color/text_primary</item>
     </style>
     <style name="Widget.Agro.Card" parent="Widget.Material3.CardView.Elevated">
@@ -163,7 +199,7 @@
     <style name="Widget.Agro.PrimaryButton" parent="Widget.Material3.Button">
         <item name="android:textAllCaps">false</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:textColor">@color/background</item>
+        <item name="android:textColor">@color/surface</item>
         <item name="backgroundTint">@color/accent</item>
         <item name="cornerRadius">28dp</item>
     </style>

@@ -29,7 +29,7 @@
     <style name="Widget.Agro.PrimaryButton" parent="Widget.Material3.Button">
         <item name="android:textAllCaps">false</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:textColor">@color/background</item>
+        <item name="android:textColor">@color/surface</item>
         <item name="backgroundTint">@color/accent</item>
         <item name="cornerRadius">28dp</item>
     </style>

@@ -14,19 +14,23 @@
     <fragment
         android:id="@+id/nav_check"
         android:name="kz.agrosfera.app.ui.diagnose.DiagnoseFragment"
-        android:label="@string/nav_check"
-        tools:layout="@layout/fragment_diagnose" />
+        android:label="@string/nav_identify"
+        tools:layout="@layout/fragment_diagnose">
+        <action
+            android:id="@+id/action_diagnose_to_treatment"
+            app:destination="@id/treatmentFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_field"
-        android:name="kz.agrosfera.app.ui.diseases.CommonDiseasesFragment"
-        android:label="@string/nav_field"
-        tools:layout="@layout/fragment_common_diseases" />
+        android:name="kz.agrosfera.app.ui.plants.PlantsFragment"
+        android:label="@string/nav_plants"
+        tools:layout="@layout/fragment_plants" />
 
     <fragment
         android:id="@+id/nav_knowledge"
         android:name="kz.agrosfera.app.ui.knowledge.KnowledgeFragment"
-        android:label="@string/nav_knowledge"
+        android:label="@string/nav_tips"
         tools:layout="@layout/fragment_knowledge" />
 
     <fragment
@@ -41,6 +45,12 @@
             android:id="@+id/action_profile_to_register"
             app:destination="@id/registerFragment" />
     </fragment>
+
+    <fragment
+        android:id="@+id/treatmentFragment"
+        android:name="kz.agrosfera.app.ui.treatment.TreatmentFragment"
+        android:label="@string/treatment_title"
+        tools:layout="@layout/fragment_treatment" />
 
     <fragment
         android:id="@+id/loginFragment"

@@ -1,206 +1,242 @@
 [
     {
-        "merged": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-debug-52:\\drawable_bg_leaf_preview.xml.flat",
-        "source": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-main-54:\\drawable\\bg_leaf_preview.xml"
+        "merged": "kz.agrosfera.app-debug-52:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "kz.agrosfera.app-main-54:/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
-        "merged": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-debug-52:\\drawable_bg_image_preview_frame.xml.flat",
-        "source": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-main-54:\\drawable\\bg_image_preview_frame.xml"
+        "merged": "kz.agrosfera.app-debug-52:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "kz.agrosfera.app-main-54:/mipmap-anydpi-v26/ic_launcher_round.xml"
     },
     {
-        "merged": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-debug-52:\\drawable_ic_person.xml.flat",
-        "source": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-main-54:\\drawable\\ic_person.xml"
+        "merged": "kz.agrosfera.app-debug-52:/drawable_bg_badge_healthy.xml.flat",
+        "source": "kz.agrosfera.app-main-54:/drawable/bg_badge_healthy.xml"
     },
     {
-        "merged": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-debug-52:\\layout_fragment_diagnose.xml.flat",
-        "source": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-main-54:\\layout\\fragment_diagnose.xml"
+        "merged": "kz.agrosfera.app-debug-52:/layout_item_plant_garden.xml.flat",
+        "source": "kz.agrosfera.app-main-54:/layout/item_plant_garden.xml"
     },
     {
-        "merged": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-debug-52:\\drawable_bg_ai_hero.xml.flat",
-        "source": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-main-54:\\drawable\\bg_ai_hero.xml"
+        "merged": "kz.agrosfera.app-debug-52:/drawable_ic_book.xml.flat",
+        "source": "kz.agrosfera.app-main-54:/drawable/ic_book.xml"
     },
     {
-        "merged": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-debug-52:\\drawable_ic_cloud_upload.xml.flat",
-        "source": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-main-54:\\drawable\\ic_cloud_upload.xml"
-    },
-    {
-        "merged": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-debug-52:\\layout_item_disease.xml.flat",
-        "source": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-main-54:\\layout\\item_disease.xml"
-    },
-    {
-        "merged": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-debug-52:\\menu_bottom_nav_menu.xml.flat",
-        "source": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-main-54:\\menu\\bottom_nav_menu.xml"
-    },
-    {
-        "merged": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-debug-52:\\drawable_ic_assignment.xml.flat",
-        "source": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-main-54:\\drawable\\ic_assignment.xml"
-    },
-    {
-        "merged": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-debug-52:\\navigation_nav_main.xml.flat",
-        "source": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-main-54:\\navigation\\nav_main.xml"
-    },
-    {
-        "merged": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-debug-52:\\drawable_ic_leaf_white.xml.flat",
-        "source": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-main-54:\\drawable\\ic_leaf_white.xml"
-    },
-    {
-        "merged": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-debug-52:\\drawable_bg_logo_circle.xml.flat",
-        "source": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-main-54:\\drawable\\bg_logo_circle.xml"
-    },
-    {
-        "merged": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-debug-52:\\layout_fragment_profile.xml.flat",
-        "source": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-main-54:\\layout\\fragment_profile.xml"
-    },
-    {
-        "merged": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-debug-52:\\drawable_bg_badge_healthy.xml.flat",
-        "source": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-main-54:\\drawable\\bg_badge_healthy.xml"
-    },
-    {
-        "merged": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-debug-52:\\layout_activity_main.xml.flat",
-        "source": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-main-54:\\layout\\activity_main.xml"
-    },
-    {
-        "merged": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-debug-52:\\drawable_bg_bottom_nav.xml.flat",
-        "source": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-main-54:\\drawable\\bg_bottom_nav.xml"
-    },
-    {
-        "merged": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-debug-52:\\drawable_ic_agriculture.xml.flat",
-        "source": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-main-54:\\drawable\\ic_agriculture.xml"
-    },
-    {
-        "merged": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-debug-52:\\drawable_bg_badge_danger.xml.flat",
-        "source": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-main-54:\\drawable\\bg_badge_danger.xml"
+        "merged": "kz.agrosfera.app-debug-52:/drawable_bg_status_offline.xml.flat",
+        "source": "kz.agrosfera.app-main-54:/drawable/bg_status_offline.xml"
     },
     {
         "merged": "kz.agrosfera.app-debug-52:/layout_fragment_home.xml.flat",
         "source": "kz.agrosfera.app-main-54:/layout/fragment_home.xml"
     },
     {
-        "merged": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-debug-52:\\layout_fragment_common_diseases.xml.flat",
-        "source": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-main-54:\\layout\\fragment_common_diseases.xml"
+        "merged": "kz.agrosfera.app-debug-52:/navigation_nav_main.xml.flat",
+        "source": "kz.agrosfera.app-main-54:/navigation/nav_main.xml"
     },
     {
-        "merged": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-debug-52:\\layout_fragment_register.xml.flat",
-        "source": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-main-54:\\layout\\fragment_register.xml"
+        "merged": "kz.agrosfera.app-debug-52:/color_bottom_nav_color.xml.flat",
+        "source": "kz.agrosfera.app-main-54:/color/bottom_nav_color.xml"
     },
     {
-        "merged": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-debug-52:\\layout_fragment_login.xml.flat",
-        "source": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-main-54:\\layout\\fragment_login.xml"
+        "merged": "kz.agrosfera.app-debug-52:/drawable_bg_card_white.xml.flat",
+        "source": "kz.agrosfera.app-main-54:/drawable/bg_card_white.xml"
     },
     {
-        "merged": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-debug-52:\\drawable_ic_book.xml.flat",
-        "source": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-main-54:\\drawable\\ic_book.xml"
+        "merged": "kz.agrosfera.app-debug-52:/drawable_ic_thermometer.xml.flat",
+        "source": "kz.agrosfera.app-main-54:/drawable/ic_thermometer.xml"
     },
     {
-        "merged": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-debug-52:\\drawable_bg_status_offline.xml.flat",
-        "source": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-main-54:\\drawable\\bg_status_offline.xml"
+        "merged": "kz.agrosfera.app-debug-52:/drawable_ic_shield.xml.flat",
+        "source": "kz.agrosfera.app-main-54:/drawable/ic_shield.xml"
     },
     {
-        "merged": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-debug-52:\\drawable_ic_home.xml.flat",
-        "source": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-main-54:\\drawable\\ic_home.xml"
+        "merged": "kz.agrosfera.app-debug-52:/drawable_bg_weather_card.xml.flat",
+        "source": "kz.agrosfera.app-main-54:/drawable/bg_weather_card.xml"
     },
     {
-        "merged": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-debug-52:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-main-54:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+        "merged": "kz.agrosfera.app-debug-52:/layout_item_recent_diagnosis.xml.flat",
+        "source": "kz.agrosfera.app-main-54:/layout/item_recent_diagnosis.xml"
     },
     {
-        "merged": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-debug-52:\\drawable_bg_badge_disease.xml.flat",
-        "source": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-main-54:\\drawable\\bg_badge_disease.xml"
+        "merged": "kz.agrosfera.app-debug-52:/drawable_ic_sun.xml.flat",
+        "source": "kz.agrosfera.app-main-54:/drawable/ic_sun.xml"
     },
     {
-        "merged": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-debug-52:\\layout_fragment_knowledge.xml.flat",
-        "source": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-main-54:\\layout\\fragment_knowledge.xml"
+        "merged": "kz.agrosfera.app-debug-52:/drawable_ic_menu.xml.flat",
+        "source": "kz.agrosfera.app-main-54:/drawable/ic_menu.xml"
+    },
+    {
+        "merged": "kz.agrosfera.app-debug-52:/layout_item_disease.xml.flat",
+        "source": "kz.agrosfera.app-main-54:/layout/item_disease.xml"
+    },
+    {
+        "merged": "kz.agrosfera.app-debug-52:/drawable_ic_book_white.xml.flat",
+        "source": "kz.agrosfera.app-main-54:/drawable/ic_book_white.xml"
+    },
+    {
+        "merged": "kz.agrosfera.app-debug-52:/xml_file_paths.xml.flat",
+        "source": "kz.agrosfera.app-main-54:/xml/file_paths.xml"
+    },
+    {
+        "merged": "kz.agrosfera.app-debug-52:/xml_network_security_config.xml.flat",
+        "source": "kz.agrosfera.app-main-54:/xml/network_security_config.xml"
+    },
+    {
+        "merged": "kz.agrosfera.app-debug-52:/layout_fragment_profile.xml.flat",
+        "source": "kz.agrosfera.app-main-54:/layout/fragment_profile.xml"
+    },
+    {
+        "merged": "kz.agrosfera.app-debug-52:/drawable_ic_camera.xml.flat",
+        "source": "kz.agrosfera.app-main-54:/drawable/ic_camera.xml"
+    },
+    {
+        "merged": "kz.agrosfera.app-debug-52:/drawable_ic_chart_up.xml.flat",
+        "source": "kz.agrosfera.app-main-54:/drawable/ic_chart_up.xml"
+    },
+    {
+        "merged": "kz.agrosfera.app-debug-52:/drawable_ic_warning.xml.flat",
+        "source": "kz.agrosfera.app-main-54:/drawable/ic_warning.xml"
+    },
+    {
+        "merged": "kz.agrosfera.app-debug-52:/drawable_bg_rounded_menu.xml.flat",
+        "source": "kz.agrosfera.app-main-54:/drawable/bg_rounded_menu.xml"
+    },
+    {
+        "merged": "kz.agrosfera.app-debug-52:/drawable_bg_plant_grape.xml.flat",
+        "source": "kz.agrosfera.app-main-54:/drawable/bg_plant_grape.xml"
+    },
+    {
+        "merged": "kz.agrosfera.app-debug-52:/drawable_bg_hero.xml.flat",
+        "source": "kz.agrosfera.app-main-54:/drawable/bg_hero.xml"
     },
     {
         "merged": "kz.agrosfera.app-debug-52:/layout_fragment_diagnose.xml.flat",
         "source": "kz.agrosfera.app-main-54:/layout/fragment_diagnose.xml"
     },
     {
-        "merged": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-debug-52:\\drawable_ic_thermometer.xml.flat",
-        "source": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-main-54:\\drawable\\ic_thermometer.xml"
+        "merged": "kz.agrosfera.app-debug-52:/menu_bottom_nav_menu.xml.flat",
+        "source": "kz.agrosfera.app-main-54:/menu/bottom_nav_menu.xml"
     },
     {
-        "merged": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-debug-52:\\drawable_ic_nav_camera.xml.flat",
-        "source": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-main-54:\\drawable\\ic_nav_camera.xml"
+        "merged": "kz.agrosfera.app-debug-52:/drawable_ic_person.xml.flat",
+        "source": "kz.agrosfera.app-main-54:/drawable/ic_person.xml"
     },
     {
-        "merged": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-debug-52:\\drawable_ic_check_small.xml.flat",
-        "source": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-main-54:\\drawable\\ic_check_small.xml"
+        "merged": "kz.agrosfera.app-debug-52:/layout_fragment_login.xml.flat",
+        "source": "kz.agrosfera.app-main-54:/layout/fragment_login.xml"
     },
     {
-        "merged": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-debug-52:\\drawable_ic_camera.xml.flat",
-        "source": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-main-54:\\drawable\\ic_camera.xml"
+        "merged": "kz.agrosfera.app-debug-52:/drawable_bg_plant_apple.xml.flat",
+        "source": "kz.agrosfera.app-main-54:/drawable/bg_plant_apple.xml"
     },
     {
-        "merged": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-debug-52:\\drawable_bg_hero.xml.flat",
-        "source": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-main-54:\\drawable\\bg_hero.xml"
+        "merged": "kz.agrosfera.app-debug-52:/drawable_ic_cloud_upload.xml.flat",
+        "source": "kz.agrosfera.app-main-54:/drawable/ic_cloud_upload.xml"
     },
     {
-        "merged": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-debug-52:\\xml_network_security_config.xml.flat",
-        "source": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-main-54:\\xml\\network_security_config.xml"
+        "merged": "kz.agrosfera.app-debug-52:/drawable_bg_logo_circle.xml.flat",
+        "source": "kz.agrosfera.app-main-54:/drawable/bg_logo_circle.xml"
     },
     {
-        "merged": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-debug-52:\\drawable_bg_status_online.xml.flat",
-        "source": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-main-54:\\drawable\\bg_status_online.xml"
+        "merged": "kz.agrosfera.app-debug-52:/drawable_bg_leaf_preview.xml.flat",
+        "source": "kz.agrosfera.app-main-54:/drawable/bg_leaf_preview.xml"
     },
     {
-        "merged": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-debug-52:\\drawable_ic_shield.xml.flat",
-        "source": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-main-54:\\drawable\\ic_shield.xml"
+        "merged": "kz.agrosfera.app-debug-52:/drawable_ic_agriculture.xml.flat",
+        "source": "kz.agrosfera.app-main-54:/drawable/ic_agriculture.xml"
     },
     {
-        "merged": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-debug-52:\\drawable_ic_warning.xml.flat",
-        "source": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-main-54:\\drawable\\ic_warning.xml"
+        "merged": "kz.agrosfera.app-debug-52:/drawable_bg_warning_box.xml.flat",
+        "source": "kz.agrosfera.app-main-54:/drawable/bg_warning_box.xml"
     },
     {
-        "merged": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-debug-52:\\drawable_ic_menu.xml.flat",
-        "source": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-main-54:\\drawable\\ic_menu.xml"
+        "merged": "kz.agrosfera.app-debug-52:/layout_fragment_plants.xml.flat",
+        "source": "kz.agrosfera.app-main-54:/layout/fragment_plants.xml"
     },
     {
-        "merged": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-debug-52:\\drawable_ic_cloud_small.xml.flat",
-        "source": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-main-54:\\drawable\\ic_cloud_small.xml"
+        "merged": "kz.agrosfera.app-debug-52:/drawable_bg_step_circle.xml.flat",
+        "source": "kz.agrosfera.app-main-54:/drawable/bg_step_circle.xml"
     },
     {
-        "merged": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-debug-52:\\color_bottom_nav_color.xml.flat",
-        "source": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-main-54:\\color\\bottom_nav_color.xml"
+        "merged": "kz.agrosfera.app-debug-52:/layout_activity_main.xml.flat",
+        "source": "kz.agrosfera.app-main-54:/layout/activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-debug-52:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-main-54:\\mipmap-anydpi-v26\\ic_launcher.xml"
+        "merged": "kz.agrosfera.app-debug-52:/drawable_bg_image_preview_frame.xml.flat",
+        "source": "kz.agrosfera.app-main-54:/drawable/bg_image_preview_frame.xml"
     },
     {
-        "merged": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-debug-52:\\drawable_ic_book_white.xml.flat",
-        "source": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-main-54:\\drawable\\ic_book_white.xml"
+        "merged": "kz.agrosfera.app-debug-52:/layout_item_plant_chip.xml.flat",
+        "source": "kz.agrosfera.app-main-54:/layout/item_plant_chip.xml"
+    },
+    {
+        "merged": "kz.agrosfera.app-debug-52:/drawable_ic_nav_camera.xml.flat",
+        "source": "kz.agrosfera.app-main-54:/drawable/ic_nav_camera.xml"
+    },
+    {
+        "merged": "kz.agrosfera.app-debug-52:/layout_fragment_register.xml.flat",
+        "source": "kz.agrosfera.app-main-54:/layout/fragment_register.xml"
+    },
+    {
+        "merged": "kz.agrosfera.app-debug-52:/drawable_bg_plant_tomato.xml.flat",
+        "source": "kz.agrosfera.app-main-54:/drawable/bg_plant_tomato.xml"
+    },
+    {
+        "merged": "kz.agrosfera.app-debug-52:/drawable_bg_badge_danger.xml.flat",
+        "source": "kz.agrosfera.app-main-54:/drawable/bg_badge_danger.xml"
     },
     {
         "merged": "kz.agrosfera.app-debug-52:/layout_fragment_common_diseases.xml.flat",
         "source": "kz.agrosfera.app-main-54:/layout/fragment_common_diseases.xml"
     },
     {
+        "merged": "kz.agrosfera.app-debug-52:/drawable_bg_badge_disease.xml.flat",
+        "source": "kz.agrosfera.app-main-54:/drawable/bg_badge_disease.xml"
+    },
+    {
         "merged": "kz.agrosfera.app-debug-52:/layout_fragment_knowledge.xml.flat",
         "source": "kz.agrosfera.app-main-54:/layout/fragment_knowledge.xml"
     },
     {
-        "merged": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-debug-52:\\drawable_bg_rounded_menu.xml.flat",
-        "source": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-main-54:\\drawable\\bg_rounded_menu.xml"
+        "merged": "kz.agrosfera.app-debug-52:/layout_fragment_treatment.xml.flat",
+        "source": "kz.agrosfera.app-main-54:/layout/fragment_treatment.xml"
     },
     {
-        "merged": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-debug-52:\\layout_fragment_home.xml.flat",
-        "source": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-main-54:\\layout\\fragment_home.xml"
+        "merged": "kz.agrosfera.app-debug-52:/drawable_ic_ai_chip.xml.flat",
+        "source": "kz.agrosfera.app-main-54:/drawable/ic_ai_chip.xml"
     },
     {
-        "merged": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-debug-52:\\drawable_bg_step_circle.xml.flat",
-        "source": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-main-54:\\drawable\\bg_step_circle.xml"
+        "merged": "kz.agrosfera.app-debug-52:/drawable_bg_ai_hero.xml.flat",
+        "source": "kz.agrosfera.app-main-54:/drawable/bg_ai_hero.xml"
     },
     {
-        "merged": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-debug-52:\\xml_file_paths.xml.flat",
-        "source": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-main-54:\\xml\\file_paths.xml"
+        "merged": "kz.agrosfera.app-debug-52:/drawable_ic_cloud_small.xml.flat",
+        "source": "kz.agrosfera.app-main-54:/drawable/ic_cloud_small.xml"
     },
     {
-        "merged": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-debug-52:\\drawable_ic_ai_chip.xml.flat",
-        "source": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-main-54:\\drawable\\ic_ai_chip.xml"
+        "merged": "kz.agrosfera.app-debug-52:/drawable_ic_home.xml.flat",
+        "source": "kz.agrosfera.app-main-54:/drawable/ic_home.xml"
     },
     {
-        "merged": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-debug-52:\\drawable_ic_chart_up.xml.flat",
-        "source": "C:\\Users\\yerka\\.gradle\\daemon\\9.4.1\\kz.agrosfera.app-main-54:\\drawable\\ic_chart_up.xml"
+        "merged": "kz.agrosfera.app-debug-52:/drawable_bg_bottom_nav.xml.flat",
+        "source": "kz.agrosfera.app-main-54:/drawable/bg_bottom_nav.xml"
+    },
+    {
+        "merged": "kz.agrosfera.app-debug-52:/drawable_ic_assignment.xml.flat",
+        "source": "kz.agrosfera.app-main-54:/drawable/ic_assignment.xml"
+    },
+    {
+        "merged": "kz.agrosfera.app-debug-52:/drawable_bg_plant_cucumber.xml.flat",
+        "source": "kz.agrosfera.app-main-54:/drawable/bg_plant_cucumber.xml"
+    },
+    {
+        "merged": "kz.agrosfera.app-debug-52:/drawable_ic_check_small.xml.flat",
+        "source": "kz.agrosfera.app-main-54:/drawable/ic_check_small.xml"
+    },
+    {
+        "merged": "kz.agrosfera.app-debug-52:/drawable_ic_leaf_white.xml.flat",
+        "source": "kz.agrosfera.app-main-54:/drawable/ic_leaf_white.xml"
+    },
+    {
+        "merged": "kz.agrosfera.app-debug-52:/drawable_bg_status_online.xml.flat",
+        "source": "kz.agrosfera.app-main-54:/drawable/bg_status_online.xml"
     }
 ]

@@ -4,10 +4,11 @@ package kz.agrosfera.app.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.FrameLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.google.android.material.button.MaterialButton;
@@ -19,19 +20,19 @@ import kz.agrosfera.app.R;
 
 public final class FragmentHomeBinding implements ViewBinding {
   @NonNull
-  private final FrameLayout rootView;
+  private final ScrollView rootView;
 
   @NonNull
   public final MaterialButton btnCheckPlant;
 
   @NonNull
-  public final MaterialButton btnGoDiseases;
-
-  @NonNull
-  public final MaterialButton btnGoKnowledge;
-
-  @NonNull
   public final MaterialCardView cardLastDiagnosis;
+
+  @NonNull
+  public final RecyclerView recyclerMyPlants;
+
+  @NonNull
+  public final TextView textGreeting;
 
   @NonNull
   public final TextView textLastDiagnosisMeta;
@@ -39,22 +40,22 @@ public final class FragmentHomeBinding implements ViewBinding {
   @NonNull
   public final TextView textLastDiagnosisName;
 
-  private FragmentHomeBinding(@NonNull FrameLayout rootView, @NonNull MaterialButton btnCheckPlant,
-      @NonNull MaterialButton btnGoDiseases, @NonNull MaterialButton btnGoKnowledge,
-      @NonNull MaterialCardView cardLastDiagnosis, @NonNull TextView textLastDiagnosisMeta,
+  private FragmentHomeBinding(@NonNull ScrollView rootView, @NonNull MaterialButton btnCheckPlant,
+      @NonNull MaterialCardView cardLastDiagnosis, @NonNull RecyclerView recyclerMyPlants,
+      @NonNull TextView textGreeting, @NonNull TextView textLastDiagnosisMeta,
       @NonNull TextView textLastDiagnosisName) {
     this.rootView = rootView;
     this.btnCheckPlant = btnCheckPlant;
-    this.btnGoDiseases = btnGoDiseases;
-    this.btnGoKnowledge = btnGoKnowledge;
     this.cardLastDiagnosis = cardLastDiagnosis;
+    this.recyclerMyPlants = recyclerMyPlants;
+    this.textGreeting = textGreeting;
     this.textLastDiagnosisMeta = textLastDiagnosisMeta;
     this.textLastDiagnosisName = textLastDiagnosisName;
   }
 
   @Override
   @NonNull
-  public FrameLayout getRoot() {
+  public ScrollView getRoot() {
     return rootView;
   }
 
@@ -85,21 +86,21 @@ public final class FragmentHomeBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.btnGoDiseases;
-      MaterialButton btnGoDiseases = ViewBindings.findChildViewById(rootView, id);
-      if (btnGoDiseases == null) {
-        break missingId;
-      }
-
-      id = R.id.btnGoKnowledge;
-      MaterialButton btnGoKnowledge = ViewBindings.findChildViewById(rootView, id);
-      if (btnGoKnowledge == null) {
-        break missingId;
-      }
-
       id = R.id.cardLastDiagnosis;
       MaterialCardView cardLastDiagnosis = ViewBindings.findChildViewById(rootView, id);
       if (cardLastDiagnosis == null) {
+        break missingId;
+      }
+
+      id = R.id.recyclerMyPlants;
+      RecyclerView recyclerMyPlants = ViewBindings.findChildViewById(rootView, id);
+      if (recyclerMyPlants == null) {
+        break missingId;
+      }
+
+      id = R.id.textGreeting;
+      TextView textGreeting = ViewBindings.findChildViewById(rootView, id);
+      if (textGreeting == null) {
         break missingId;
       }
 
@@ -115,8 +116,8 @@ public final class FragmentHomeBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentHomeBinding((FrameLayout) rootView, btnCheckPlant, btnGoDiseases,
-          btnGoKnowledge, cardLastDiagnosis, textLastDiagnosisMeta, textLastDiagnosisName);
+      return new FragmentHomeBinding((ScrollView) rootView, btnCheckPlant, cardLastDiagnosis,
+          recyclerMyPlants, textGreeting, textLastDiagnosisMeta, textLastDiagnosisName);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

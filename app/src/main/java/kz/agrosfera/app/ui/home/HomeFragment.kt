@@ -6,10 +6,17 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.lifecycleScope
+import androidx.lifecycle.repeatOnLifecycle
+import androidx.recyclerview.widget.LinearLayoutManager
 import kz.agrosfera.app.AgroApp
 import kz.agrosfera.app.MainActivity
 import kz.agrosfera.app.R
 import kz.agrosfera.app.databinding.FragmentHomeBinding
+import kz.agrosfera.app.domain.plant.GardenPlantCatalog
+import kz.agrosfera.app.ui.plants.PlantChipAdapter
+import kotlinx.coroutines.launch
 
 class HomeFragment : Fragment() {
 
@@ -27,14 +34,25 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.recyclerMyPlants.layoutManager =
+            LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+        binding.recyclerMyPlants.adapter = PlantChipAdapter(GardenPlantCatalog.plants)
+
         binding.btnCheckPlant.setOnClickListener {
             (requireActivity() as MainActivity).selectTab(R.id.nav_check)
         }
-        binding.btnGoDiseases.setOnClickListener {
-            (requireActivity() as MainActivity).selectTab(R.id.nav_field)
-        }
-        binding.btnGoKnowledge.setOnClickListener {
-            (requireActivity() as MainActivity).selectTab(R.id.nav_knowledge)
+
+        val app = requireContext().applicationContext as AgroApp
+        viewLifecycleOwner.lifecycleScope.launch {
+            viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
+                app.authRepository.session.collect { session ->
+                    binding.textGreeting.text = if (session != null) {
+                        getString(R.string.home_greeting_name, session.name)
+                    } else {
+                        getString(R.string.home_greeting_guest)
+                    }
+                }
+            }
         }
         showLastDiagnosis()
     }
@@ -50,10 +68,9 @@ class HomeFragment : Fragment() {
         binding.cardLastDiagnosis.isVisible = last != null
         if (last == null) return
         binding.textLastDiagnosisName.text = last.displayName
-        val confText = last.confidencePercent?.let {
+        binding.textLastDiagnosisMeta.text = last.confidencePercent?.let {
             getString(R.string.diagnosis_confidence, it)
         } ?: ""
-        binding.textLastDiagnosisMeta.text = confText
     }
 
     override fun onDestroyView() {
