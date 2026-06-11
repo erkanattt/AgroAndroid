@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'com.google.devtools.ksp'
 }
 
 def localProps = new Properties()
@@ -8,8 +9,8 @@ def localFile = rootProject.file('local.properties')
 if (localFile.exists()) {
     localFile.withInputStream { localProps.load(it) }
 }
-// Эмулятор: 10.0.2.2 | Нақты телефон: local.properties → api.base.url=http://СІЗДІҢ_IP:5000
 def apiBaseUrl = localProps.getProperty('api.base.url', 'http://10.0.2.2:5000')
+def geminiApiKey = localProps.getProperty('gemini.api.key', '')
 
 android {
     namespace 'kz.agrosfera.app'
@@ -22,6 +23,7 @@ android {
         versionCode 1
         versionName '1.0'
         buildConfigField 'String', 'API_BASE_URL', "\"${apiBaseUrl}\""
+        buildConfigField 'String', 'GEMINI_API_KEY', "\"${geminiApiKey}\""
 
         ndk {
             abiFilters 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64'
@@ -69,4 +71,7 @@ dependencies {
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.9.0'
     implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.8.7'
     implementation 'com.squareup.okhttp3:okhttp:4.12.0'
+    implementation 'androidx.room:room-runtime:2.7.2'
+    implementation 'androidx.room:room-ktx:2.7.2'
+    ksp 'androidx.room:room-compiler:2.7.2'
 }

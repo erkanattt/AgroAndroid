@@ -10,10 +10,9 @@ import androidx.navigation.fragment.findNavController
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.coroutines.launch
 import kz.agrosfera.app.AgroApp
-import kz.agrosfera.app.R
 import kz.agrosfera.app.MainActivity
+import kz.agrosfera.app.R
 import kz.agrosfera.app.databinding.FragmentRegisterBinding
-import kz.agrosfera.app.ui.auth.AuthNavArgs
 
 class RegisterFragment : Fragment() {
 
@@ -35,6 +34,7 @@ class RegisterFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.btnSubmit.setOnClickListener {
             val name = binding.inputName.text?.toString().orEmpty()
+            val phone = binding.inputPhone.text?.toString().orEmpty()
             val email = binding.inputEmail.text?.toString().orEmpty()
             val password = binding.inputPassword.text?.toString().orEmpty()
             val confirm = binding.inputPasswordConfirm.text?.toString().orEmpty()
@@ -47,14 +47,24 @@ class RegisterFragment : Fragment() {
                 return@setOnClickListener
             }
             viewLifecycleOwner.lifecycleScope.launch {
-                auth.register(name, email, password)
+                auth.register(name, email, password, phone)
                 Snackbar.make(binding.root, R.string.auth_success_register, Snackbar.LENGTH_SHORT).show()
-                val redirectAi = arguments?.getBoolean(AuthNavArgs.REDIRECT_AI) == true
                 findNavController().popBackStack()
-                if (redirectAi) {
-                    (requireActivity() as MainActivity).selectTab(R.id.nav_check)
-                }
+                redirectAfterAuth()
             }
+        }
+    }
+
+    private fun redirectAfterAuth() {
+        val tab = arguments?.getInt(AuthNavArgs.REDIRECT_TAB, 0) ?: 0
+        if (tab != 0) {
+            (requireActivity() as MainActivity).selectTab(tab)
+            return
+        }
+        if (arguments?.getBoolean(AuthNavArgs.REDIRECT_AI) == true) {
+            (requireActivity() as MainActivity).selectTab(R.id.nav_check)
+        } else if (arguments?.getBoolean(AuthNavArgs.REDIRECT_CHAT) == true) {
+            (requireActivity() as MainActivity).selectTab(R.id.nav_chat)
         }
     }
 

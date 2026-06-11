@@ -99,7 +99,7 @@
     <string name="plant_variety">Сорт: %1$s</string>
     <string name="plant_last_check">Соңғы тексеру: %1$s</string>
 
-    <string name="knowledge_screen_title">Агро кеңестер</string>
+    <string name="knowledge_screen_title">Аурулар туралы ақпарат</string>
 
     <string name="diagnose_title">Өсімдікті ЖИ арқылы тексеру</string>
     <string name="diagnose_hint">«Галерея» батырмасын басып телефондағы фотоны таңдаңыз (немесе суретті басыңыз), содан кейін «Талдау (ЖИ)».</string>
@@ -121,7 +121,7 @@
     <string name="server_url_saved">Мекенжай сақталды</string>
     <string name="diagnosis_server_online">✓ Сервер қосулы: %1$s\nСуретті таңдап «Талдау» батырмасын басыңыз.</string>
     <string name="diagnosis_server_offline">✗ ЖИ серверіне қосылу жоқ: %1$s\n\n① Компьютерде:\ncd disser-project-flask\\app\npython app.py\n\n② ipconfig → IPv4 (мыс. 192.168.0.5)\n③ Жоғарыға http://IP:5000 жазыңыз\n④ «Сақтау және тексеру» басыңыз\n\nЭмулятор: http://10.0.2.2:5000</string>
-    <string name="diagnosis_error_server">Серверге қосылу мүмкін болмады. Flask-ты іске қосып, эмуляторда 10.0.2.2:5000, телефонда компьютер IP мекенжайын тексеріңіз.</string>
+    <string name="diagnosis_error_server">ЖИ серверіне қосылу мүмкін болмады. Компьютерде сервер іске қосылғанын және телефонмен бір желіге қосылғанын тексеріңіз.</string>
     <string name="diagnosis_error_timeout">Сервер жауап бермеді. Кейін қайталаңыз.</string>
     <string name="diagnosis_error_generic">Талдау сәтсіз аяқталды. Сурет пен серверді тексеріңіз.</string>
     <string name="diagnosis_error_detail">Сервер қатесі: %1$s</string>
@@ -158,11 +158,11 @@
     <string name="auth_success_register">Тіркелу сәтті аяқталды.</string>
     <string name="auth_success_login">Қош келдіңіз!</string>
 
-    <string name="weather_select_city">Қala таңдау</string>
+    <string name="weather_select_city">Қала таңдау</string>
     <string name="weather_select_city_title">Қазақстан қаласын таңдаңыз</string>
     <string name="weather_loading">Ауа-райы жүктелуде…</string>
     <string name="weather_error">Ауа-райын алу мүмкін болмады</string>
-    <string name="weather_format_details">%1$s · Ылғalдылық %2$d%% · Жел %3$.0f м/с</string>
+    <string name="weather_format_details">%1$s · Ылғалдылық %2$d%% · Жел %3$.0f м/с</string>
     <string name="weather_format_city">%1$s, Қазақстан</string>
     <string name="weather_format_temp">%1$+d°C</string>
 
@@ -176,4 +176,44 @@
 
     <string name="ai_locked_title">ЖИ диагностика — тек тіркелгендерге</string>
     <string name="ai_locked_message">Жасанды интеллект арқылы ауруды анықтау үшін аккаунтқа кіріңіз немесе тіркеліңіз. Аурулар каталогын оқуға тіркелу қажет емес.</string>
+
+    <string name="nav_chat">Чат</string>
+    <string name="nav_info">Ақпарат</string>
+
+    <string name="home_hero_title">Ауруды анықтаңыз</string>
+    <string name="home_hero_subtitle">Жасанды интеллект арқылы өсімдік ауруларын анықтаңыз</string>
+    <string name="home_scan">Сканерлеу</string>
+    <string name="home_main_menu">Негізгі мәзір</string>
+    <string name="home_see_all">Барлығын көру</string>
+
+    <string name="menu_identify">Ауруды анықтау</string>
+    <string name="menu_chat">Чат-бот</string>
+    <string name="menu_disease_info">Аурулар туралы ақпарат</string>
+    <string name="menu_calendar">Егістік күнтізбесі</string>
+    <string name="menu_tips">Кеңестер</string>
+    <string name="menu_profile">Профиль</string>
+    <string name="feature_soon">Жақында қосылады</string>
+
+    <string name="chat_title">AI Чат-бот</string>
+    <string name="chat_input_hint">Хабар жазыңыз…</string>
+    <string name="chat_welcome">Сәлеметсіз бе! Мен сіздің агроном көмекшіңізбін. Өсімдік аурулары, алдын алу және егістік жұмыстары туралы сұрақ қойыңыз.</string>
+    <string name="chat_gemini_missing">Gemini API кілті қойылмаған. local.properties файлына gemini.api.key=... жазыңыз.</string>
+    <string name="chat_error">Чат қатесі: %1$s</string>
+
+    <string name="search_hint">Іздеу…</string>
+    <string name="filter_all">Барлығы</string>
+    <string name="filter_vegetables">Көкөністер</string>
+    <string name="filter_fruit">Жеміс ағаштары</string>
+
+    <string name="action_save">Сақтау</string>
+    <string name="action_saved">Сақталды</string>
+    <string name="diagnosis_saved">Диагноз базаға сақталды</string>
+
+    <string name="field_phone">Телефон</string>
+    <string name="profile_phone_label">Телефон: %1$s</string>
+    <string name="profile_support">Қолдау орталығы</string>
+    <string name="profile_language">Тіл</string>
+    <string name="profile_language_value">Қазақша</string>
+    <string name="profile_my_fields">Менің егістіктерім</string>
+    <string name="profile_personal">Жеке мәліметтер</string>
 </resources>

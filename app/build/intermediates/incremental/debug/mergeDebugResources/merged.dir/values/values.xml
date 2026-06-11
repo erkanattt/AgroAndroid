@@ -641,20 +641,21 @@
     <color name="abc_search_url_text_normal">#7fa87f</color>
     <color name="abc_search_url_text_pressed">@android:color/black</color>
     <color name="abc_search_url_text_selected">@android:color/black</color>
-    <color name="accent">#4CAF50</color>
-    <color name="accent_dark">#388E3C</color>
-    <color name="accent_light">#E8F5E9</color>
+    <color name="accent">#8BC34A</color>
+    <color name="accent_dark">#689F38</color>
+    <color name="accent_light">#1E3A28</color>
     <color name="accent_material_dark">@color/material_deep_teal_200</color>
     <color name="accent_material_light">@color/material_deep_teal_500</color>
-    <color name="accent_muted">#334CAF50</color>
-    <color name="ai_glow">#334CAF50</color>
+    <color name="accent_muted">#338BC34A</color>
+    <color name="ai_glow">#338BC34A</color>
     <color name="androidx_core_ripple_material_light">#1f000000</color>
     <color name="androidx_core_secondary_text_default_material_light">#8a000000</color>
-    <color name="background">#F4F8F4</color>
+    <color name="background">#0B1A13</color>
     <color name="background_floating_material_dark">@color/material_grey_800</color>
     <color name="background_floating_material_light">@android:color/white</color>
     <color name="background_material_dark">@color/material_grey_850</color>
     <color name="background_material_light">@color/material_grey_50</color>
+    <color name="bottom_nav_bg">#0F2118</color>
     <color name="bright_foreground_disabled_material_dark">#80ffffff</color>
     <color name="bright_foreground_disabled_material_light">#80000000</color>
     <color name="bright_foreground_inverse_material_dark">@color/bright_foreground_material_light</color>
@@ -665,14 +666,16 @@
     <color name="button_material_light">#ffd6d7d7</color>
     <color name="call_notification_answer_color">#1d873b</color>
     <color name="call_notification_decline_color">#d93025</color>
-    <color name="card">#FFFFFF</color>
-    <color name="card_elevated">#FFFFFF</color>
-    <color name="card_stroke">#E0E8E0</color>
+    <color name="card">#1A3328</color>
+    <color name="card_elevated">#1F3D30</color>
+    <color name="card_stroke">#2A4A38</color>
     <color name="cardview_dark_background">#FF424242</color>
     <color name="cardview_light_background">#FFFFFFFF</color>
     <color name="cardview_shadow_end_color">#03000000</color>
     <color name="cardview_shadow_start_color">#37000000</color>
-    <color name="danger">#E53935</color>
+    <color name="chat_bot_bubble">#1A3328</color>
+    <color name="chat_user_bubble">#2E5A3C</color>
+    <color name="danger">#EF5350</color>
     <color name="design_bottom_navigation_shadow_color">#14000000</color>
     <color name="design_dark_default_color_background">#121212</color>
     <color name="design_dark_default_color_error">#CF6679</color>
@@ -716,10 +719,10 @@
     <color name="error_color_material_light">#ff5722</color>
     <color name="foreground_material_dark">@android:color/white</color>
     <color name="foreground_material_light">@android:color/black</color>
-    <color name="hero_overlay">#00000000</color>
+    <color name="hero_overlay">#80000000</color>
     <color name="highlighted_text_material_dark">#6680cbc4</color>
     <color name="highlighted_text_material_light">#66009688</color>
-    <color name="icon_circle_bg">#E8F5E9</color>
+    <color name="icon_circle_bg">#1E3A28</color>
     <color name="m3_ref_palette_black">#ff000000</color>
     <color name="m3_ref_palette_error0">#ff000000</color>
     <color name="m3_ref_palette_error10">#ff410e0b</color>
@@ -973,20 +976,21 @@
     <color name="secondary_text_default_material_light">#8a000000</color>
     <color name="secondary_text_disabled_material_dark">#36ffffff</color>
     <color name="secondary_text_disabled_material_light">#24000000</color>
-    <color name="shadow">#1A000000</color>
-    <color name="success">#4CAF50</color>
-    <color name="surface">#FFFFFF</color>
+    <color name="shadow">#66000000</color>
+    <color name="success">#8BC34A</color>
+    <color name="surface">#142820</color>
+    <color name="surface_elevated">#1A3328</color>
     <color name="switch_thumb_disabled_material_dark">#ff616161</color>
     <color name="switch_thumb_disabled_material_light">#ffbdbdbd</color>
     <color name="switch_thumb_normal_material_dark">#ffbdbdbd</color>
     <color name="switch_thumb_normal_material_light">#fff1f1f1</color>
-    <color name="text_muted">#9AA89C</color>
-    <color name="text_primary">#1A2E1C</color>
-    <color name="text_secondary">#5F6F61</color>
+    <color name="text_muted">#6B7C72</color>
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#B0BEB4</color>
     <color name="tooltip_background_dark">#e6616161</color>
     <color name="tooltip_background_light">#e6FFFFFF</color>
-    <color name="warning">#FF9800</color>
-    <color name="weather_sky">#E3F2FD</color>
+    <color name="warning">#FFB74D</color>
+    <color name="weather_sky">#1A2E3A</color>
     <dimen name="abc_action_bar_content_inset_material">16dp</dimen>
     <dimen name="abc_action_bar_content_inset_with_nav">72dp</dimen>
     <dimen name="abc_action_bar_default_height_material">56dp</dimen>
@@ -1830,8 +1834,10 @@
     <item name="accessibility_custom_action_9" type="id"/>
     <item name="action_bar_activity_content" type="id"/>
     <item name="action_bar_spinner" type="id"/>
+    <item name="action_calendar" type="id"/>
     <item name="action_menu_divider" type="id"/>
     <item name="action_menu_presenter" type="id"/>
+    <item name="action_tips" type="id"/>
     <item name="androidx_window_activity_scope" type="id"/>
     <item name="fragment_container_view_tag" type="id"/>
     <item name="ghost_view" type="id"/>
@@ -2017,6 +2023,8 @@
     <string name="action_login">Кіру</string>
     <string name="action_logout">Шығу</string>
     <string name="action_register">Тіркелу</string>
+    <string name="action_save">Сақтау</string>
+    <string name="action_saved">Сақталды</string>
     <string name="ai_locked_message">Жасанды интеллект арқылы ауруды анықтау үшін аккаунтқа кіріңіз немесе тіркеліңіз. Аурулар каталогын оқуға тіркелу қажет емес.</string>
     <string name="ai_locked_title">ЖИ диагностика — тек тіркелгендерге</string>
     <string name="ai_model_badge">ResNet9 · PyTorch · 38 класс</string>
@@ -2056,6 +2064,11 @@
     <string name="character_counter_content_description">Characters entered %1$d of %2$d</string>
     <string name="character_counter_overflowed_content_description">Character limit exceeded %1$d of %2$d</string>
     <string name="character_counter_pattern" translatable="false">%1$d/%2$d</string>
+    <string name="chat_error">Чат қатесі: %1$s</string>
+    <string name="chat_gemini_missing">Gemini API кілті қойылмаған. local.properties файлына gemini.api.key=... жазыңыз.</string>
+    <string name="chat_input_hint">Хабар жазыңыз…</string>
+    <string name="chat_title">AI Чат-бот</string>
+    <string name="chat_welcome">Сәлеметсіз бе! Мен сіздің агроном көмекшіңізбін. Өсімдік аурулары, алдын алу және егістік жұмыстары туралы сұрақ қойыңыз.</string>
     <string name="clear_text_end_icon_content_description">Clear text</string>
     <string name="common_diseases_subtitle">Егістікте жиі кездесетін патологиялар тізімі. Толығырақ карточканы басыңыз.</string>
     <string name="common_diseases_title">Жиі кездесетін аурулар</string>
@@ -2071,10 +2084,11 @@
     <string name="diagnosis_demo_note">Сервер күйі тексерілуде…</string>
     <string name="diagnosis_error_detail">Сервер қатесі: %1$s</string>
     <string name="diagnosis_error_generic">Талдау сәтсіз аяқталды. Сурет пен серверді тексеріңіз.</string>
-    <string name="diagnosis_error_server">Серверге қосылу мүмкін болмады. Flask-ты іске қосып, эмуляторда 10.0.2.2:5000, телефонда компьютер IP мекенжайын тексеріңіз.</string>
+    <string name="diagnosis_error_server">ЖИ серверіне қосылу мүмкін болмады. Компьютерде сервер іске қосылғанын және телефонмен бір желіге қосылғанын тексеріңіз.</string>
     <string name="diagnosis_error_timeout">Сервер жауап бермеді. Кейін қайталаңыз.</string>
     <string name="diagnosis_prevention">Алдын алу және емдеу</string>
     <string name="diagnosis_result_title">Болжамды нәтиже</string>
+    <string name="diagnosis_saved">Диагноз базаға сақталды</string>
     <string name="diagnosis_server_offline">✗ ЖИ серверіне қосылу жоқ: %1$s\n\n① Компьютерде:\ncd disser-project-flask\\app\npython app.py\n\n② ipconfig → IPv4 (мыс. 192.168.0.5)\n③ Жоғарыға http://IP:5000 жазыңыз\n④ «Сақтау және тексеру» басыңыз\n\nЭмулятор: http://10.0.2.2:5000</string>
     <string name="diagnosis_server_online">✓ Сервер қосулы: %1$s\nСуретті таңдап «Талдау» батырмасын басыңыз.</string>
     <string name="diagnosis_symptoms">Белгілер</string>
@@ -2095,10 +2109,15 @@
     <string name="feat_prevent_title">Алдын алу</string>
     <string name="feat_yield_desc">Динамика және болжам</string>
     <string name="feat_yield_title">Өнім бақылау</string>
+    <string name="feature_soon">Жақында қосылады</string>
     <string name="field_email">Пошта</string>
     <string name="field_name">Аты-жөні</string>
     <string name="field_password">Құпия сөз</string>
     <string name="field_password_confirm">Құпия сөзді растау</string>
+    <string name="field_phone">Телефон</string>
+    <string name="filter_all">Барлығы</string>
+    <string name="filter_fruit">Жеміс ағаштары</string>
+    <string name="filter_vegetables">Көкөністер</string>
     <string name="garden_add">+ Қосу</string>
     <string name="garden_add_soon">Жakında қосылады</string>
     <string name="garden_title">Менің бақшам</string>
@@ -2109,10 +2128,15 @@
     <string name="home_features_title">Мүмкіндіктер</string>
     <string name="home_greeting_guest">Сәлем, фермер!</string>
     <string name="home_greeting_name">Сәлем, %1$s!</string>
+    <string name="home_hero_subtitle">Жасанды интеллект арқылы өсімдік ауруларын анықтаңыз</string>
+    <string name="home_hero_title">Ауруды анықтаңыз</string>
     <string name="home_identify_desc">ЖИ суретті талдап, ауруды анықтайды</string>
     <string name="home_identify_title">Ауруды анықтау</string>
+    <string name="home_main_menu">Негізгі мәзір</string>
     <string name="home_my_plants">Менің өсімдіктерім</string>
     <string name="home_process_hint">Фото таңдаңыз → PyTorch ResNet9 талдайды → нәтиже мен кеңес.</string>
+    <string name="home_scan">Сканерлеу</string>
+    <string name="home_see_all">Барлығын көру</string>
     <string name="home_start">Бастау</string>
     <string name="home_subtitle">Өсімдіктеріңізді қорғаңыз, өнімді арттырыңыз</string>
     <string name="home_tagline">Ақылды агро көмекші</string>
@@ -2129,7 +2153,7 @@
     <string name="knowledge_block3_text">Қайшы, пырақ пен қолғаптарды залалсыз өсімдіктерден кейін дезинфекциялаңыз.</string>
     <string name="knowledge_block3_title">Таза құрал</string>
     <string name="knowledge_intro">Алдын алу — емдеуден арзан. Төмендегі қағидаларды сақтаңыз.</string>
-    <string name="knowledge_screen_title">Агро кеңестер</string>
+    <string name="knowledge_screen_title">Аурулар туралы ақпарат</string>
     <string name="latest_title">Соңғы диагноз</string>
     <string name="login_title">Кіру</string>
     <string name="logo_agro">AGRO</string>
@@ -2172,6 +2196,12 @@
     <string description="Suffix for time in 12-hour standard, after noon. [CHAR_LIMIT=2]" name="material_timepicker_pm">PM</string>
     <string description="Title for the dialog with a time picker. [CHAR_LIMIT=32]" name="material_timepicker_select_time">Select time</string>
     <string name="material_timepicker_text_input_mode_description">Switch to text input mode for the time input.</string>
+    <string name="menu_calendar">Егістік күнтізбесі</string>
+    <string name="menu_chat">Чат-бот</string>
+    <string name="menu_disease_info">Аурулар туралы ақпарат</string>
+    <string name="menu_identify">Ауруды анықтау</string>
+    <string name="menu_profile">Профиль</string>
+    <string name="menu_tips">Кеңестер</string>
     <string description="Content description for new notification (no number count) [CHAR_LIMIT=NONE]" name="mtrl_badge_numberless_content_description">New notification</string>
     <string name="mtrl_checkbox_button_icon_path_checked" translatable="false">M14,18.2 11.4,15.6 10,17 14,21 22,13 20.6,11.6z</string>
     <string name="mtrl_checkbox_button_icon_path_group_name" translatable="false">icon</string>
@@ -2244,8 +2274,10 @@
     <string name="nav_app_bar_navigate_up_description">Navigate up</string>
     <string name="nav_app_bar_open_drawer_description">Open navigation drawer</string>
     <string name="nav_categories">Аурулар</string>
+    <string name="nav_chat">Чат</string>
     <string name="nav_home">Басты</string>
     <string name="nav_identify">Анықтау</string>
+    <string name="nav_info">Ақпарат</string>
     <string name="nav_plants">Өсімдіктер</string>
     <string name="nav_profile">Профиль</string>
     <string name="nav_tips">Аурулар</string>
@@ -2264,6 +2296,12 @@
     <string name="profile_email_label">Пошта: %1$s</string>
     <string name="profile_guest">Қонақ режимі</string>
     <string name="profile_hello">Сәлем, %1$s!</string>
+    <string name="profile_language">Тіл</string>
+    <string name="profile_language_value">Қазақша</string>
+    <string name="profile_my_fields">Менің егістіктерім</string>
+    <string name="profile_personal">Жеке мәліметтер</string>
+    <string name="profile_phone_label">Телефон: %1$s</string>
+    <string name="profile_support">Қолдау орталығы</string>
     <string name="profile_title">Профиль</string>
     <string name="rec1">Зақымдалған жапырақтарды алып тастаңыз</string>
     <string name="rec2">Фунгицидтермен емдеңіз</string>
@@ -2274,6 +2312,7 @@
     <string name="result_disease">Ауру анықталды</string>
     <string name="result_healthy">Сау</string>
     <string name="result_title">Нәтиже</string>
+    <string name="search_hint">Іздеу…</string>
     <string name="search_menu_title">Search</string>
     <string name="searchbar_scrolling_view_behavior" translatable="false">
     com.google.android.material.search.SearchBar$ScrollingViewBehavior
@@ -2319,10 +2358,10 @@
     <string name="weather_details">Күн ашық · Ылғалдылық 45% · Жел 3 м/с</string>
     <string name="weather_error">Ауа-райын алу мүмкін болмады</string>
     <string name="weather_format_city">%1$s, Қазақстан</string>
-    <string name="weather_format_details">%1$s · Ылғalдылық %2$d%% · Жел %3$.0f м/с</string>
+    <string name="weather_format_details">%1$s · Ылғалдылық %2$d%% · Жел %3$.0f м/с</string>
     <string name="weather_format_temp">%1$+d°C</string>
     <string name="weather_loading">Ауа-райы жүктелуде…</string>
-    <string name="weather_select_city">Қala таңдау</string>
+    <string name="weather_select_city">Қала таңдау</string>
     <string name="weather_select_city_title">Қазақстан қаласын таңдаңыз</string>
     <string name="weather_temp">--</string>
     <style name="AgroBody">
@@ -6553,16 +6592,19 @@
     </style>
     <style name="TextAppearance.Widget.AppCompat.Toolbar.Title" parent="Base.TextAppearance.Widget.AppCompat.Toolbar.Title">
     </style>
-    <style name="Theme.AgroSfera" parent="Theme.Material3.Light.NoActionBar">
+    <style name="Theme.AgroSphere" parent="Theme.Material3.Dark.NoActionBar">
         <item name="colorPrimary">@color/accent</item>
-        <item name="colorOnPrimary">@color/surface</item>
+        <item name="colorOnPrimary">@color/background</item>
         <item name="colorPrimaryContainer">@color/accent_light</item>
+        <item name="colorOnPrimaryContainer">@color/accent</item>
         <item name="android:statusBarColor">@color/background</item>
-        <item name="android:navigationBarColor">@color/surface</item>
-        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:navigationBarColor">@color/bottom_nav_bg</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:colorBackground">@color/background</item>
         <item name="colorSurface">@color/surface</item>
         <item name="colorOnSurface">@color/text_primary</item>
+        <item name="colorSurfaceVariant">@color/surface_elevated</item>
+        <item name="colorOutline">@color/card_stroke</item>
     </style>
     <style name="Theme.AppCompat" parent="Base.Theme.AppCompat"/>
     <style name="Theme.AppCompat.CompactMenu" parent="Base.Theme.AppCompat.CompactMenu"/>

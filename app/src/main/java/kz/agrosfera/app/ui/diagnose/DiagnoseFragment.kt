@@ -15,22 +15,19 @@ import androidx.core.content.FileProvider
 import androidx.core.os.bundleOf
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
+import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.findNavController
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.snackbar.Snackbar
 import java.io.File
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
+import kotlinx.coroutines.flow.first
 import kz.agrosfera.app.AgroApp
 import kz.agrosfera.app.R
 import kz.agrosfera.app.data.remote.DiseaseApiException
 import kz.agrosfera.app.databinding.FragmentDiagnoseBinding
-import kz.agrosfera.app.ui.plants.RecentDiagnosisAdapter
-import kz.agrosfera.app.ui.treatment.TreatmentFragment
-import androidx.lifecycle.Lifecycle
-import androidx.lifecycle.repeatOnLifecycle
+import kz.agrosfera.app.domain.plant.DiagnosisResult
 import kz.agrosfera.app.ui.auth.AuthNavArgs
 import kz.agrosfera.app.util.ImageCompressor
 
@@ -41,9 +38,8 @@ class DiagnoseFragment : Fragment() {
 
     private var selectedUri: Uri? = null
     private var cameraUri: Uri? = null
-    private var serverExpanded = false
-    private var lastPrevention = ""
-    private var lastDiseaseName = ""
+    private var pendingResult: DiagnosisResult? = null
+    private var savedToDb = false
 
     private val pickVisualMedia = registerForActivityResult(
         ActivityResultContracts.PickVisualMedia(),
@@ -83,11 +79,7 @@ class DiagnoseFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val app = requireContext().applicationContext as AgroApp
-        binding.editServerUrl.setText(app.diseaseDiagnosisService.currentBaseUrl())
-        binding.recyclerRecent.layoutManager = LinearLayoutManager(requireContext())
 
-        binding.headerServerToggle.setOnClickListener { toggleServerSettings() }
-        binding.btnSaveServer.setOnClickListener { saveServerAndCheck() }
         binding.btnGallery.setOnClickListener { openGallery() }
         binding.imagePreview.setOnClickListener { openGallery() }
         binding.btnCamera.setOnClickListener {
@@ -97,26 +89,24 @@ class DiagnoseFragment : Fragment() {
             else requestCameraPermission.launch(Manifest.permission.CAMERA)
         }
         binding.btnAnalyze.setOnClickListener { analyze() }
-        binding.btnTreatment.setOnClickListener {
-            findNavController().navigate(
-                R.id.action_diagnose_to_treatment,
-                bundleOf(
-                    TreatmentFragment.ARG_DISEASE to lastDiseaseName,
-                    TreatmentFragment.ARG_PREVENTION to lastPrevention,
-                ),
-            )
-        }
+        binding.btnSave.setOnClickListener { saveResult() }
 
         binding.panelLocked.btnLogin.setOnClickListener {
             findNavController().navigate(
                 R.id.action_diagnose_to_login,
-                bundleOf(AuthNavArgs.REDIRECT_AI to true),
+                bundleOf(
+                    AuthNavArgs.REDIRECT_AI to true,
+                    AuthNavArgs.REDIRECT_TAB to R.id.nav_check,
+                ),
             )
         }
         binding.panelLocked.btnRegister.setOnClickListener {
             findNavController().navigate(
                 R.id.action_diagnose_to_register,
-                bundleOf(AuthNavArgs.REDIRECT_AI to true),
+                bundleOf(
+                    AuthNavArgs.REDIRECT_AI to true,
+                    AuthNavArgs.REDIRECT_TAB to R.id.nav_check,
+                ),
             )
         }
 
@@ -130,67 +120,6 @@ class DiagnoseFragment : Fragment() {
             }
         }
 
-        checkServerStatus()
-        loadRecent()
-    }
-
-    override fun onResume() {
-        super.onResume()
-        loadRecent()
-    }
-
-    private fun loadRecent() {
-        val app = requireContext().applicationContext as AgroApp
-        val recent = app.diagnosisHistoryStore.getRecent(5)
-        binding.recyclerRecent.isVisible = recent.isNotEmpty()
-        binding.textRecentEmpty.isVisible = recent.isEmpty()
-        if (recent.isNotEmpty()) {
-            binding.recyclerRecent.adapter = RecentDiagnosisAdapter(recent)
-        }
-    }
-
-    private fun toggleServerSettings() {
-        serverExpanded = !serverExpanded
-        binding.layoutServerBody.isVisible = serverExpanded
-        binding.textServerToggle.text = getString(
-            if (serverExpanded) R.string.server_collapse else R.string.server_expand,
-        )
-    }
-
-    private fun saveServerAndCheck() {
-        val url = binding.editServerUrl.text?.toString().orEmpty()
-        if (url.isBlank()) {
-            Snackbar.make(binding.root, R.string.server_url_empty, Snackbar.LENGTH_SHORT).show()
-            return
-        }
-        val app = requireContext().applicationContext as AgroApp
-        app.diseaseDiagnosisService.updateBaseUrl(url)
-        binding.editServerUrl.setText(app.diseaseDiagnosisService.currentBaseUrl())
-        Snackbar.make(binding.root, R.string.server_url_saved, Snackbar.LENGTH_SHORT).show()
-        checkServerStatus()
-    }
-
-    private fun checkServerStatus() {
-        val app = requireContext().applicationContext as AgroApp
-        viewLifecycleOwner.lifecycleScope.launch {
-            val online = withContext(Dispatchers.IO) { app.diseaseDiagnosisService.pingHealth() }
-            updateServerChip(online)
-        }
-    }
-
-    private fun updateServerChip(online: Boolean) {
-        binding.chipServerStatus.text = getString(
-            if (online) R.string.server_status_online else R.string.server_status_offline,
-        )
-        binding.chipServerStatus.setBackgroundResource(
-            if (online) R.drawable.bg_status_online else R.drawable.bg_status_offline,
-        )
-        binding.chipServerStatus.setTextColor(
-            ContextCompat.getColor(
-                requireContext(),
-                if (online) R.color.accent_dark else R.color.danger,
-            ),
-        )
     }
 
     private fun onImagePicked(uri: Uri) {
@@ -199,6 +128,8 @@ class DiagnoseFragment : Fragment() {
         binding.overlayEmptyHint.isVisible = false
         binding.btnAnalyze.isEnabled = true
         binding.cardResult.isVisible = false
+        pendingResult = null
+        savedToDb = false
     }
 
     private fun openGallery() {
@@ -236,55 +167,16 @@ class DiagnoseFragment : Fragment() {
             return
         }
         val app = requireContext().applicationContext as AgroApp
-        binding.editServerUrl.text?.toString()?.trim()?.takeIf { it.isNotBlank() }?.let {
-            app.diseaseDiagnosisService.updateBaseUrl(it)
-        }
         viewLifecycleOwner.lifecycleScope.launch {
             binding.btnAnalyze.isEnabled = false
             binding.overlayAnalyzing.isVisible = true
             binding.cardResult.isVisible = false
+            savedToDb = false
             try {
                 val (bytes, filename) = ImageCompressor.compressForUpload(requireContext(), uri)
                 val result = app.predictDiseaseUseCase.predict(bytes, filename)
-                val isHealthy = result.classId.contains("healthy", ignoreCase = true)
-
-                lastDiseaseName = result.displayName
-                lastPrevention = result.prevention
-
-                app.diagnosisHistoryStore.save(
-                    result.displayName,
-                    result.confidencePercent,
-                    result.classId,
-                    result.symptoms,
-                    result.prevention,
-                )
-                loadRecent()
-
-                binding.cardResult.isVisible = true
-                binding.textDiseaseName.text = result.displayName
-                binding.textResultBadge.text = getString(
-                    if (isHealthy) R.string.result_healthy else R.string.result_disease,
-                )
-                binding.textResultBadge.setBackgroundResource(
-                    if (isHealthy) R.drawable.bg_badge_healthy else R.drawable.bg_badge_disease,
-                )
-                binding.textResultBadge.setTextColor(
-                    ContextCompat.getColor(
-                        requireContext(),
-                        if (isHealthy) R.color.accent_dark else R.color.warning,
-                    ),
-                )
-                binding.textSymptoms.text = result.symptoms
-                binding.textConfidence.isVisible = result.confidencePercent != null
-                binding.progressConfidence.isVisible = result.confidencePercent != null
-                if (result.confidencePercent != null) {
-                    binding.textConfidence.text = getString(
-                        R.string.diagnosis_confidence,
-                        result.confidencePercent,
-                    )
-                    binding.progressConfidence.progress = result.confidencePercent
-                }
-                binding.btnTreatment.isVisible = !isHealthy
+                pendingResult = result
+                showResult(result)
             } catch (e: DiseaseApiException) {
                 val text = when (e.message) {
                     "server_unreachable" -> getString(R.string.diagnosis_error_server)
@@ -293,13 +185,58 @@ class DiagnoseFragment : Fragment() {
                     else -> getString(R.string.diagnosis_error_detail, e.message ?: "?")
                 }
                 Snackbar.make(binding.root, text, Snackbar.LENGTH_LONG).show()
-                checkServerStatus()
             } catch (_: Exception) {
                 Snackbar.make(binding.root, R.string.diagnosis_error_generic, Snackbar.LENGTH_LONG).show()
             } finally {
                 binding.overlayAnalyzing.isVisible = false
                 binding.btnAnalyze.isEnabled = true
             }
+        }
+    }
+
+    private fun showResult(result: DiagnosisResult) {
+        val isHealthy = result.classId.contains("healthy", ignoreCase = true)
+        binding.cardResult.isVisible = true
+        binding.textDiseaseName.text = result.displayName
+        binding.textResultBadge.text = getString(
+            if (isHealthy) R.string.result_healthy else R.string.result_disease,
+        )
+        binding.textResultBadge.setBackgroundResource(
+            if (isHealthy) R.drawable.bg_badge_healthy else R.drawable.bg_badge_disease,
+        )
+        binding.textSymptoms.text = result.symptoms
+        binding.textPrevention.text = result.prevention
+        binding.textConfidence.isVisible = result.confidencePercent != null
+        binding.progressConfidence.isVisible = result.confidencePercent != null
+        if (result.confidencePercent != null) {
+            binding.textConfidence.text = getString(
+                R.string.diagnosis_confidence,
+                result.confidencePercent,
+            )
+            binding.progressConfidence.progress = result.confidencePercent
+        }
+        binding.btnSave.isEnabled = !savedToDb
+        binding.btnSave.text = getString(R.string.action_save)
+    }
+
+    private fun saveResult() {
+        val result = pendingResult ?: return
+        if (savedToDb) return
+        val app = requireContext().applicationContext as AgroApp
+        viewLifecycleOwner.lifecycleScope.launch {
+            val email = app.authRepository.session.first()?.email
+            app.diagnosisRepository.save(
+                displayName = result.displayName,
+                classId = result.classId,
+                confidencePercent = result.confidencePercent,
+                symptoms = result.symptoms,
+                prevention = result.prevention,
+                userEmail = email,
+            )
+            savedToDb = true
+            binding.btnSave.text = getString(R.string.action_saved)
+            binding.btnSave.isEnabled = false
+            Snackbar.make(binding.root, R.string.diagnosis_saved, Snackbar.LENGTH_SHORT).show()
         }
     }
 

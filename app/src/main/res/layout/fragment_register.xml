@@ -42,6 +42,23 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
+            android:hint="@string/field_phone"
+            app:boxBackgroundColor="@color/card"
+            app:boxStrokeColor="@color/accent"
+            app:hintTextColor="@color/text_secondary">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:textColor="@color/text_primary" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
             android:hint="@string/field_email"
             app:boxBackgroundColor="@color/card"
             app:boxStrokeColor="@color/accent"

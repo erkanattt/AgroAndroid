@@ -4,16 +4,14 @@ package kz.agrosfera.app.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ScrollView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.widget.NestedScrollView;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.google.android.material.button.MaterialButton;
-import com.google.android.material.card.MaterialCardView;
-import com.google.android.material.progressindicator.LinearProgressIndicator;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -21,73 +19,37 @@ import kz.agrosfera.app.R;
 
 public final class FragmentHomeBinding implements ViewBinding {
   @NonNull
-  private final ScrollView rootView;
+  private final NestedScrollView rootView;
 
   @NonNull
-  public final MaterialButton btnCheckPlant;
+  public final MaterialButton btnScan;
 
   @NonNull
-  public final MaterialButton btnSelectCity;
+  public final RecyclerView recyclerMenu;
 
   @NonNull
-  public final MaterialCardView cardLastDiagnosis;
+  public final RecyclerView recyclerRecent;
 
   @NonNull
-  public final MaterialCardView cardWeather;
+  public final TextView textRecentEmpty;
 
   @NonNull
-  public final LinearProgressIndicator progressWeather;
+  public final TextView textSeeAll;
 
-  @NonNull
-  public final RecyclerView recyclerMyPlants;
-
-  @NonNull
-  public final TextView textGreeting;
-
-  @NonNull
-  public final TextView textLastDiagnosisMeta;
-
-  @NonNull
-  public final TextView textLastDiagnosisName;
-
-  @NonNull
-  public final TextView textWeatherCity;
-
-  @NonNull
-  public final TextView textWeatherDetails;
-
-  @NonNull
-  public final TextView textWeatherEmoji;
-
-  @NonNull
-  public final TextView textWeatherTemp;
-
-  private FragmentHomeBinding(@NonNull ScrollView rootView, @NonNull MaterialButton btnCheckPlant,
-      @NonNull MaterialButton btnSelectCity, @NonNull MaterialCardView cardLastDiagnosis,
-      @NonNull MaterialCardView cardWeather, @NonNull LinearProgressIndicator progressWeather,
-      @NonNull RecyclerView recyclerMyPlants, @NonNull TextView textGreeting,
-      @NonNull TextView textLastDiagnosisMeta, @NonNull TextView textLastDiagnosisName,
-      @NonNull TextView textWeatherCity, @NonNull TextView textWeatherDetails,
-      @NonNull TextView textWeatherEmoji, @NonNull TextView textWeatherTemp) {
+  private FragmentHomeBinding(@NonNull NestedScrollView rootView, @NonNull MaterialButton btnScan,
+      @NonNull RecyclerView recyclerMenu, @NonNull RecyclerView recyclerRecent,
+      @NonNull TextView textRecentEmpty, @NonNull TextView textSeeAll) {
     this.rootView = rootView;
-    this.btnCheckPlant = btnCheckPlant;
-    this.btnSelectCity = btnSelectCity;
-    this.cardLastDiagnosis = cardLastDiagnosis;
-    this.cardWeather = cardWeather;
-    this.progressWeather = progressWeather;
-    this.recyclerMyPlants = recyclerMyPlants;
-    this.textGreeting = textGreeting;
-    this.textLastDiagnosisMeta = textLastDiagnosisMeta;
-    this.textLastDiagnosisName = textLastDiagnosisName;
-    this.textWeatherCity = textWeatherCity;
-    this.textWeatherDetails = textWeatherDetails;
-    this.textWeatherEmoji = textWeatherEmoji;
-    this.textWeatherTemp = textWeatherTemp;
+    this.btnScan = btnScan;
+    this.recyclerMenu = recyclerMenu;
+    this.recyclerRecent = recyclerRecent;
+    this.textRecentEmpty = textRecentEmpty;
+    this.textSeeAll = textSeeAll;
   }
 
   @Override
   @NonNull
-  public ScrollView getRoot() {
+  public NestedScrollView getRoot() {
     return rootView;
   }
 
@@ -112,88 +74,38 @@ public final class FragmentHomeBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.btnCheckPlant;
-      MaterialButton btnCheckPlant = ViewBindings.findChildViewById(rootView, id);
-      if (btnCheckPlant == null) {
+      id = R.id.btnScan;
+      MaterialButton btnScan = ViewBindings.findChildViewById(rootView, id);
+      if (btnScan == null) {
         break missingId;
       }
 
-      id = R.id.btnSelectCity;
-      MaterialButton btnSelectCity = ViewBindings.findChildViewById(rootView, id);
-      if (btnSelectCity == null) {
+      id = R.id.recyclerMenu;
+      RecyclerView recyclerMenu = ViewBindings.findChildViewById(rootView, id);
+      if (recyclerMenu == null) {
         break missingId;
       }
 
-      id = R.id.cardLastDiagnosis;
-      MaterialCardView cardLastDiagnosis = ViewBindings.findChildViewById(rootView, id);
-      if (cardLastDiagnosis == null) {
+      id = R.id.recyclerRecent;
+      RecyclerView recyclerRecent = ViewBindings.findChildViewById(rootView, id);
+      if (recyclerRecent == null) {
         break missingId;
       }
 
-      id = R.id.cardWeather;
-      MaterialCardView cardWeather = ViewBindings.findChildViewById(rootView, id);
-      if (cardWeather == null) {
+      id = R.id.textRecentEmpty;
+      TextView textRecentEmpty = ViewBindings.findChildViewById(rootView, id);
+      if (textRecentEmpty == null) {
         break missingId;
       }
 
-      id = R.id.progressWeather;
-      LinearProgressIndicator progressWeather = ViewBindings.findChildViewById(rootView, id);
-      if (progressWeather == null) {
+      id = R.id.textSeeAll;
+      TextView textSeeAll = ViewBindings.findChildViewById(rootView, id);
+      if (textSeeAll == null) {
         break missingId;
       }
 
-      id = R.id.recyclerMyPlants;
-      RecyclerView recyclerMyPlants = ViewBindings.findChildViewById(rootView, id);
-      if (recyclerMyPlants == null) {
-        break missingId;
-      }
-
-      id = R.id.textGreeting;
-      TextView textGreeting = ViewBindings.findChildViewById(rootView, id);
-      if (textGreeting == null) {
-        break missingId;
-      }
-
-      id = R.id.textLastDiagnosisMeta;
-      TextView textLastDiagnosisMeta = ViewBindings.findChildViewById(rootView, id);
-      if (textLastDiagnosisMeta == null) {
-        break missingId;
-      }
-
-      id = R.id.textLastDiagnosisName;
-      TextView textLastDiagnosisName = ViewBindings.findChildViewById(rootView, id);
-      if (textLastDiagnosisName == null) {
-        break missingId;
-      }
-
-      id = R.id.textWeatherCity;
-      TextView textWeatherCity = ViewBindings.findChildViewById(rootView, id);
-      if (textWeatherCity == null) {
-        break missingId;
-      }
-
-      id = R.id.textWeatherDetails;
-      TextView textWeatherDetails = ViewBindings.findChildViewById(rootView, id);
-      if (textWeatherDetails == null) {
-        break missingId;
-      }
-
-      id = R.id.textWeatherEmoji;
-      TextView textWeatherEmoji = ViewBindings.findChildViewById(rootView, id);
-      if (textWeatherEmoji == null) {
-        break missingId;
-      }
-
-      id = R.id.textWeatherTemp;
-      TextView textWeatherTemp = ViewBindings.findChildViewById(rootView, id);
-      if (textWeatherTemp == null) {
-        break missingId;
-      }
-
-      return new FragmentHomeBinding((ScrollView) rootView, btnCheckPlant, btnSelectCity,
-          cardLastDiagnosis, cardWeather, progressWeather, recyclerMyPlants, textGreeting,
-          textLastDiagnosisMeta, textLastDiagnosisName, textWeatherCity, textWeatherDetails,
-          textWeatherEmoji, textWeatherTemp);
+      return new FragmentHomeBinding((NestedScrollView) rootView, btnScan, recyclerMenu,
+          recyclerRecent, textRecentEmpty, textSeeAll);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

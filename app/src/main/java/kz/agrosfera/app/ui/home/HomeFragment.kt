@@ -9,16 +9,13 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import com.google.android.material.snackbar.Snackbar
 import kz.agrosfera.app.AgroApp
 import kz.agrosfera.app.MainActivity
 import kz.agrosfera.app.R
 import kz.agrosfera.app.databinding.FragmentHomeBinding
-import kz.agrosfera.app.domain.plant.GardenPlantCatalog
-import kz.agrosfera.app.domain.weather.KazakhstanCityCatalog
-import kz.agrosfera.app.domain.weather.WeatherInfo
-import kz.agrosfera.app.ui.plants.PlantChipAdapter
 import kotlinx.coroutines.launch
 
 class HomeFragment : Fragment() {
@@ -37,117 +34,38 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.recyclerMyPlants.layoutManager =
-            LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
-        binding.recyclerMyPlants.adapter = PlantChipAdapter(GardenPlantCatalog.plants)
+        val app = requireContext().applicationContext as AgroApp
 
-        binding.btnCheckPlant.setOnClickListener {
+        binding.recyclerMenu.layoutManager = GridLayoutManager(requireContext(), 3)
+        binding.recyclerMenu.adapter = HomeMenuAdapter(HomeMenuCatalog.items) { item ->
+            when (item.action) {
+                R.id.action_calendar, R.id.action_tips ->
+                    Snackbar.make(binding.root, R.string.feature_soon, Snackbar.LENGTH_SHORT).show()
+                else -> (requireActivity() as MainActivity).selectTab(item.action)
+            }
+        }
+
+        binding.btnScan.setOnClickListener {
             (requireActivity() as MainActivity).selectTab(R.id.nav_check)
         }
 
-        binding.btnSelectCity.setOnClickListener { showCityPicker() }
-        binding.cardWeather.setOnClickListener { showCityPicker() }
+        binding.textSeeAll.setOnClickListener {
+            (requireActivity() as MainActivity).selectTab(R.id.nav_check)
+        }
 
-        val app = requireContext().applicationContext as AgroApp
+        binding.recyclerRecent.layoutManager = LinearLayoutManager(requireContext())
+
         viewLifecycleOwner.lifecycleScope.launch {
             viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
-                app.authRepository.session.collect { session ->
-                    binding.textGreeting.text = if (session != null) {
-                        getString(R.string.home_greeting_name, session.name)
-                    } else {
-                        getString(R.string.home_greeting_guest)
+                app.diagnosisRepository.observeRecent(5).collect { recent ->
+                    binding.recyclerRecent.isVisible = recent.isNotEmpty()
+                    binding.textRecentEmpty.isVisible = recent.isEmpty()
+                    if (recent.isNotEmpty()) {
+                        binding.recyclerRecent.adapter = HomeRecentAdapter(recent)
                     }
                 }
             }
         }
-
-        viewLifecycleOwner.lifecycleScope.launch {
-            viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
-                app.weatherRepository.selectedCityId.collect { cityId ->
-                    val city = KazakhstanCityCatalog.byId(cityId)
-                        ?: KazakhstanCityCatalog.defaultCity()
-                    binding.textWeatherCity.text =
-                        getString(R.string.weather_format_city, city.name)
-                    loadWeather(cityId)
-                }
-            }
-        }
-
-        showLastDiagnosis()
-    }
-
-    override fun onResume() {
-        super.onResume()
-        showLastDiagnosis()
-        refreshWeatherIfPossible()
-    }
-
-    private fun refreshWeatherIfPossible() {
-        val app = requireContext().applicationContext as AgroApp
-        viewLifecycleOwner.lifecycleScope.launch {
-            val cityId = app.weatherRepository.getSelectedCityId()
-            loadWeather(cityId)
-        }
-    }
-
-    private fun loadWeather(cityId: String) {
-        val app = requireContext().applicationContext as AgroApp
-        viewLifecycleOwner.lifecycleScope.launch {
-            binding.progressWeather.isVisible = true
-            binding.textWeatherDetails.text = getString(R.string.weather_loading)
-            val result = app.weatherRepository.fetchCurrentWeather(cityId)
-            binding.progressWeather.isVisible = false
-            result.fold(
-                onSuccess = { info -> renderWeather(info) },
-                onFailure = {
-                    binding.textWeatherDetails.text = getString(R.string.weather_error)
-                    binding.textWeatherTemp.text = "--"
-                },
-            )
-        }
-    }
-
-    private fun renderWeather(info: WeatherInfo) {
-        binding.textWeatherCity.text = getString(R.string.weather_format_city, info.cityName)
-        binding.textWeatherTemp.text = getString(R.string.weather_format_temp, info.temperatureC)
-        binding.textWeatherDetails.text = getString(
-            R.string.weather_format_details,
-            info.conditionLabel,
-            info.humidityPercent,
-            info.windSpeedMs,
-        )
-        binding.textWeatherEmoji.text = info.conditionEmoji
-    }
-
-    private fun showCityPicker() {
-        val cities = KazakhstanCityCatalog.cities
-        val names = cities.map { it.name }.toTypedArray()
-        val app = requireContext().applicationContext as AgroApp
-        viewLifecycleOwner.lifecycleScope.launch {
-            val currentId = app.weatherRepository.getSelectedCityId()
-            val selectedIndex = cities.indexOfFirst { it.id == currentId }.coerceAtLeast(0)
-            MaterialAlertDialogBuilder(requireContext())
-                .setTitle(R.string.weather_select_city_title)
-                .setSingleChoiceItems(names, selectedIndex) { dialog, which ->
-                    viewLifecycleOwner.lifecycleScope.launch {
-                        app.weatherRepository.setSelectedCityId(cities[which].id)
-                    }
-                    dialog.dismiss()
-                }
-                .setNegativeButton(android.R.string.cancel, null)
-                .show()
-        }
-    }
-
-    private fun showLastDiagnosis() {
-        val app = requireContext().applicationContext as AgroApp
-        val last = app.diagnosisHistoryStore.getLast()
-        binding.cardLastDiagnosis.isVisible = last != null
-        if (last == null) return
-        binding.textLastDiagnosisName.text = last.displayName
-        binding.textLastDiagnosisMeta.text = last.confidencePercent?.let {
-            getString(R.string.diagnosis_confidence, it)
-        } ?: ""
     }
 
     override fun onDestroyView() {

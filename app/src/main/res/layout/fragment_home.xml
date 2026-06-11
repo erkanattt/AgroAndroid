@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -16,275 +16,170 @@
         android:paddingTop="12dp"
         android:paddingBottom="24dp">
 
-        <!-- Header logo -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
-            <FrameLayout
-                android:layout_width="44dp"
-                android:layout_height="44dp"
-                android:background="@drawable/bg_logo_circle">
-
-                <ImageView
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:layout_gravity="center"
-                    android:contentDescription="@null"
-                    android:src="@drawable/ic_agriculture"
-                    app:tint="@color/accent" />
-            </FrameLayout>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:text="@string/app_name"
-                android:textColor="@color/accent_dark"
-                android:textSize="22sp"
-                android:textStyle="bold" />
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/textGreeting"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="@string/home_greeting_guest"
-            android:textColor="@color/text_primary"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:text="@string/home_subtitle"
-            android:textColor="@color/text_secondary"
-            android:textSize="14sp" />
-
-        <!-- Hero identify card -->
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            app:cardBackgroundColor="@color/accent_light"
-            app:cardCornerRadius="20dp"
-            app:cardElevation="0dp"
-            app:strokeWidth="0dp">
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_menu"
+                app:tint="@color/text_primary" />
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_weight="1"
                 android:gravity="center_vertical"
-                android:orientation="horizontal"
-                android:padding="20dp">
+                android:orientation="horizontal">
 
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
+                <FrameLayout
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:background="@drawable/bg_logo_circle">
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/home_identify_title"
-                        android:textColor="@color/text_primary"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="6dp"
-                        android:text="@string/home_identify_desc"
-                        android:textColor="@color/text_secondary"
-                        android:textSize="13sp" />
-
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/btnCheckPlant"
-                        android:layout_width="wrap_content"
-                        android:layout_height="44dp"
-                        android:layout_marginTop="14dp"
-                        android:paddingHorizontal="24dp"
-                        android:text="@string/home_start"
-                        android:textAllCaps="false"
-                        android:textColor="@color/surface"
-                        app:backgroundTint="@color/accent"
-                        app:cornerRadius="22dp" />
-                </LinearLayout>
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="@null"
+                        android:src="@drawable/ic_agriculture"
+                        app:tint="@color/accent" />
+                </FrameLayout>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
-                    android:text="🌿"
-                    android:textSize="48sp" />
+                    android:text="@string/app_name"
+                    android:textColor="@color/accent"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
             </LinearLayout>
-        </com.google.android.material.card.MaterialCardView>
 
-        <!-- My plants -->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:text="@string/home_my_plants"
-            android:textColor="@color/text_primary"
-            android:textSize="16sp"
-            android:textStyle="bold" />
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_notifications"
+                app:tint="@color/text_secondary" />
+        </LinearLayout>
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerMyPlants"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:clipToPadding="false"
-            android:orientation="horizontal"
-            android:paddingEnd="4dp"
-            tools:itemCount="3"
-            tools:listitem="@layout/item_plant_chip" />
-
-        <!-- Weather -->
         <com.google.android.material.card.MaterialCardView
-            android:id="@+id/cardWeather"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            app:cardBackgroundColor="@color/surface"
-            app:cardCornerRadius="16dp"
-            app:cardElevation="2dp"
+            app:cardBackgroundColor="@color/surface_elevated"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp"
             app:strokeColor="@color/card_stroke"
             app:strokeWidth="1dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/bg_weather_card"
+                android:background="@drawable/bg_hero_dark"
                 android:orientation="vertical"
-                android:padding="16dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/textWeatherEmoji"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:gravity="center"
-                        android:text="🌤️"
-                        android:textSize="28sp" />
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="14dp"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:id="@+id/textWeatherCity"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/weather_city"
-                            android:textColor="@color/text_primary"
-                            android:textSize="15sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/textWeatherDetails"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="2dp"
-                            android:text="@string/weather_loading"
-                            android:textColor="@color/text_secondary"
-                            android:textSize="13sp" />
-                    </LinearLayout>
-
-                    <TextView
-                        android:id="@+id/textWeatherTemp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/weather_temp"
-                        android:textColor="@color/accent_dark"
-                        android:textSize="28sp"
-                        android:textStyle="bold" />
-                </LinearLayout>
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnSelectCity"
-                    style="@style/Widget.Material3.Button.TextButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="end"
-                    android:layout_marginTop="4dp"
-                    android:minHeight="36dp"
-                    android:text="@string/weather_select_city"
-                    android:textAllCaps="false"
-                    android:textColor="@color/accent_dark" />
-
-                <com.google.android.material.progressindicator.LinearProgressIndicator
-                    android:id="@+id/progressWeather"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:indeterminate="true"
-                    android:visibility="gone"
-                    app:indicatorColor="@color/accent"
-                    app:trackColor="@color/accent_light" />
-            </LinearLayout>
-        </com.google.android.material.card.MaterialCardView>
-
-        <!-- Last diagnosis -->
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/cardLastDiagnosis"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:visibility="gone"
-            app:cardBackgroundColor="@color/surface"
-            app:cardCornerRadius="16dp"
-            app:cardElevation="2dp"
-            tools:visibility="visible">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="16dp">
+                android:padding="20dp">
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/latest_title"
-                    android:textColor="@color/text_muted"
-                    android:textSize="12sp"
+                    android:text="@string/home_hero_title"
+                    android:textColor="@color/text_primary"
+                    android:textSize="22sp"
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/textLastDiagnosisName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:textColor="@color/accent_dark"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    tools:text="Қызанақ — фитофтороз" />
-
-                <TextView
-                    android:id="@+id/textLastDiagnosisMeta"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/home_hero_subtitle"
                     android:textColor="@color/text_secondary"
-                    android:textSize="13sp"
-                    tools:text="Сенімділік: 92%" />
+                    android:textSize="14sp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnScan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="16dp"
+                    android:paddingHorizontal="24dp"
+                    android:text="@string/home_scan"
+                    android:textAllCaps="false"
+                    android:textColor="@color/background"
+                    app:backgroundTint="@color/accent"
+                    app:cornerRadius="24dp"
+                    app:icon="@drawable/ic_nav_camera"
+                    app:iconTint="@color/background" />
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/home_main_menu"
+            android:textColor="@color/text_primary"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:nestedScrollingEnabled="false"
+            tools:itemCount="6"
+            tools:listitem="@layout/item_menu_grid" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/recent_identifications"
+                android:textColor="@color/text_primary"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textSeeAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/home_see_all"
+                android:textColor="@color/accent"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerRecent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:nestedScrollingEnabled="false"
+            tools:listitem="@layout/item_recent_home" />
+
+        <TextView
+            android:id="@+id/textRecentEmpty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="@string/recent_empty"
+            android:textColor="@color/text_muted"
+            android:textSize="14sp"
+            android:visibility="gone"
+            tools:visibility="visible" />
     </LinearLayout>
-</ScrollView>
+</androidx.core.widget.NestedScrollView>

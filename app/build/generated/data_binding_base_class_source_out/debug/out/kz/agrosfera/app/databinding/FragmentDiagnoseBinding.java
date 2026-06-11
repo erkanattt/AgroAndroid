@@ -6,19 +6,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.widget.NestedScrollView;
-import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.card.MaterialCardView;
-import com.google.android.material.progressindicator.CircularProgressIndicator;
 import com.google.android.material.progressindicator.LinearProgressIndicator;
-import com.google.android.material.textfield.TextInputEditText;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -38,37 +34,22 @@ public final class FragmentDiagnoseBinding implements ViewBinding {
   public final MaterialButton btnGallery;
 
   @NonNull
-  public final MaterialButton btnSaveServer;
-
-  @NonNull
-  public final MaterialButton btnTreatment;
+  public final MaterialButton btnSave;
 
   @NonNull
   public final MaterialCardView cardResult;
 
   @NonNull
-  public final MaterialCardView cardServerSettings;
-
-  @NonNull
-  public final TextView chipServerStatus;
-
-  @NonNull
-  public final TextInputEditText editServerUrl;
-
-  @NonNull
-  public final LinearLayout headerServerToggle;
-
-  @NonNull
   public final ImageView imagePreview;
-
-  @NonNull
-  public final LinearLayout layoutServerBody;
 
   @NonNull
   public final FrameLayout overlayAnalyzing;
 
   @NonNull
-  public final LinearLayout overlayEmptyHint;
+  public final TextView overlayEmptyHint;
+
+  @NonNull
+  public final View overlayScanFrame;
 
   @NonNull
   public final NestedScrollView panelDiagnose;
@@ -77,80 +58,50 @@ public final class FragmentDiagnoseBinding implements ViewBinding {
   public final PanelAiLockedBinding panelLocked;
 
   @NonNull
-  public final CircularProgressIndicator progressAnalyze;
-
-  @NonNull
   public final LinearProgressIndicator progressConfidence;
-
-  @NonNull
-  public final RecyclerView recyclerRecent;
 
   @NonNull
   public final TextView textConfidence;
 
   @NonNull
-  public final TextView textDemoNote;
-
-  @NonNull
   public final TextView textDiseaseName;
 
   @NonNull
-  public final TextView textRecentEmpty;
+  public final TextView textPrevention;
 
   @NonNull
   public final TextView textResultBadge;
 
   @NonNull
-  public final TextView textServerToggle;
-
-  @NonNull
   public final TextView textSymptoms;
-
-  @NonNull
-  public final TextView textSymptomsList;
 
   private FragmentDiagnoseBinding(@NonNull FrameLayout rootView, @NonNull MaterialButton btnAnalyze,
       @NonNull MaterialButton btnCamera, @NonNull MaterialButton btnGallery,
-      @NonNull MaterialButton btnSaveServer, @NonNull MaterialButton btnTreatment,
-      @NonNull MaterialCardView cardResult, @NonNull MaterialCardView cardServerSettings,
-      @NonNull TextView chipServerStatus, @NonNull TextInputEditText editServerUrl,
-      @NonNull LinearLayout headerServerToggle, @NonNull ImageView imagePreview,
-      @NonNull LinearLayout layoutServerBody, @NonNull FrameLayout overlayAnalyzing,
-      @NonNull LinearLayout overlayEmptyHint, @NonNull NestedScrollView panelDiagnose,
-      @NonNull PanelAiLockedBinding panelLocked, @NonNull CircularProgressIndicator progressAnalyze,
-      @NonNull LinearProgressIndicator progressConfidence, @NonNull RecyclerView recyclerRecent,
-      @NonNull TextView textConfidence, @NonNull TextView textDemoNote,
-      @NonNull TextView textDiseaseName, @NonNull TextView textRecentEmpty,
-      @NonNull TextView textResultBadge, @NonNull TextView textServerToggle,
-      @NonNull TextView textSymptoms, @NonNull TextView textSymptomsList) {
+      @NonNull MaterialButton btnSave, @NonNull MaterialCardView cardResult,
+      @NonNull ImageView imagePreview, @NonNull FrameLayout overlayAnalyzing,
+      @NonNull TextView overlayEmptyHint, @NonNull View overlayScanFrame,
+      @NonNull NestedScrollView panelDiagnose, @NonNull PanelAiLockedBinding panelLocked,
+      @NonNull LinearProgressIndicator progressConfidence, @NonNull TextView textConfidence,
+      @NonNull TextView textDiseaseName, @NonNull TextView textPrevention,
+      @NonNull TextView textResultBadge, @NonNull TextView textSymptoms) {
     this.rootView = rootView;
     this.btnAnalyze = btnAnalyze;
     this.btnCamera = btnCamera;
     this.btnGallery = btnGallery;
-    this.btnSaveServer = btnSaveServer;
-    this.btnTreatment = btnTreatment;
+    this.btnSave = btnSave;
     this.cardResult = cardResult;
-    this.cardServerSettings = cardServerSettings;
-    this.chipServerStatus = chipServerStatus;
-    this.editServerUrl = editServerUrl;
-    this.headerServerToggle = headerServerToggle;
     this.imagePreview = imagePreview;
-    this.layoutServerBody = layoutServerBody;
     this.overlayAnalyzing = overlayAnalyzing;
     this.overlayEmptyHint = overlayEmptyHint;
+    this.overlayScanFrame = overlayScanFrame;
     this.panelDiagnose = panelDiagnose;
     this.panelLocked = panelLocked;
-    this.progressAnalyze = progressAnalyze;
     this.progressConfidence = progressConfidence;
-    this.recyclerRecent = recyclerRecent;
     this.textConfidence = textConfidence;
-    this.textDemoNote = textDemoNote;
     this.textDiseaseName = textDiseaseName;
-    this.textRecentEmpty = textRecentEmpty;
+    this.textPrevention = textPrevention;
     this.textResultBadge = textResultBadge;
-    this.textServerToggle = textServerToggle;
     this.textSymptoms = textSymptoms;
-    this.textSymptomsList = textSymptomsList;
   }
 
   @Override
@@ -198,15 +149,9 @@ public final class FragmentDiagnoseBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.btnSaveServer;
-      MaterialButton btnSaveServer = ViewBindings.findChildViewById(rootView, id);
-      if (btnSaveServer == null) {
-        break missingId;
-      }
-
-      id = R.id.btnTreatment;
-      MaterialButton btnTreatment = ViewBindings.findChildViewById(rootView, id);
-      if (btnTreatment == null) {
+      id = R.id.btnSave;
+      MaterialButton btnSave = ViewBindings.findChildViewById(rootView, id);
+      if (btnSave == null) {
         break missingId;
       }
 
@@ -216,39 +161,9 @@ public final class FragmentDiagnoseBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.cardServerSettings;
-      MaterialCardView cardServerSettings = ViewBindings.findChildViewById(rootView, id);
-      if (cardServerSettings == null) {
-        break missingId;
-      }
-
-      id = R.id.chipServerStatus;
-      TextView chipServerStatus = ViewBindings.findChildViewById(rootView, id);
-      if (chipServerStatus == null) {
-        break missingId;
-      }
-
-      id = R.id.editServerUrl;
-      TextInputEditText editServerUrl = ViewBindings.findChildViewById(rootView, id);
-      if (editServerUrl == null) {
-        break missingId;
-      }
-
-      id = R.id.headerServerToggle;
-      LinearLayout headerServerToggle = ViewBindings.findChildViewById(rootView, id);
-      if (headerServerToggle == null) {
-        break missingId;
-      }
-
       id = R.id.imagePreview;
       ImageView imagePreview = ViewBindings.findChildViewById(rootView, id);
       if (imagePreview == null) {
-        break missingId;
-      }
-
-      id = R.id.layoutServerBody;
-      LinearLayout layoutServerBody = ViewBindings.findChildViewById(rootView, id);
-      if (layoutServerBody == null) {
         break missingId;
       }
 
@@ -259,8 +174,14 @@ public final class FragmentDiagnoseBinding implements ViewBinding {
       }
 
       id = R.id.overlayEmptyHint;
-      LinearLayout overlayEmptyHint = ViewBindings.findChildViewById(rootView, id);
+      TextView overlayEmptyHint = ViewBindings.findChildViewById(rootView, id);
       if (overlayEmptyHint == null) {
+        break missingId;
+      }
+
+      id = R.id.overlayScanFrame;
+      View overlayScanFrame = ViewBindings.findChildViewById(rootView, id);
+      if (overlayScanFrame == null) {
         break missingId;
       }
 
@@ -277,21 +198,9 @@ public final class FragmentDiagnoseBinding implements ViewBinding {
       }
       PanelAiLockedBinding binding_panelLocked = PanelAiLockedBinding.bind(panelLocked);
 
-      id = R.id.progressAnalyze;
-      CircularProgressIndicator progressAnalyze = ViewBindings.findChildViewById(rootView, id);
-      if (progressAnalyze == null) {
-        break missingId;
-      }
-
       id = R.id.progressConfidence;
       LinearProgressIndicator progressConfidence = ViewBindings.findChildViewById(rootView, id);
       if (progressConfidence == null) {
-        break missingId;
-      }
-
-      id = R.id.recyclerRecent;
-      RecyclerView recyclerRecent = ViewBindings.findChildViewById(rootView, id);
-      if (recyclerRecent == null) {
         break missingId;
       }
 
@@ -301,21 +210,15 @@ public final class FragmentDiagnoseBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.textDemoNote;
-      TextView textDemoNote = ViewBindings.findChildViewById(rootView, id);
-      if (textDemoNote == null) {
-        break missingId;
-      }
-
       id = R.id.textDiseaseName;
       TextView textDiseaseName = ViewBindings.findChildViewById(rootView, id);
       if (textDiseaseName == null) {
         break missingId;
       }
 
-      id = R.id.textRecentEmpty;
-      TextView textRecentEmpty = ViewBindings.findChildViewById(rootView, id);
-      if (textRecentEmpty == null) {
+      id = R.id.textPrevention;
+      TextView textPrevention = ViewBindings.findChildViewById(rootView, id);
+      if (textPrevention == null) {
         break missingId;
       }
 
@@ -325,30 +228,16 @@ public final class FragmentDiagnoseBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.textServerToggle;
-      TextView textServerToggle = ViewBindings.findChildViewById(rootView, id);
-      if (textServerToggle == null) {
-        break missingId;
-      }
-
       id = R.id.textSymptoms;
       TextView textSymptoms = ViewBindings.findChildViewById(rootView, id);
       if (textSymptoms == null) {
         break missingId;
       }
 
-      id = R.id.textSymptomsList;
-      TextView textSymptomsList = ViewBindings.findChildViewById(rootView, id);
-      if (textSymptomsList == null) {
-        break missingId;
-      }
-
       return new FragmentDiagnoseBinding((FrameLayout) rootView, btnAnalyze, btnCamera, btnGallery,
-          btnSaveServer, btnTreatment, cardResult, cardServerSettings, chipServerStatus,
-          editServerUrl, headerServerToggle, imagePreview, layoutServerBody, overlayAnalyzing,
-          overlayEmptyHint, panelDiagnose, binding_panelLocked, progressAnalyze, progressConfidence,
-          recyclerRecent, textConfidence, textDemoNote, textDiseaseName, textRecentEmpty,
-          textResultBadge, textServerToggle, textSymptoms, textSymptomsList);
+          btnSave, cardResult, imagePreview, overlayAnalyzing, overlayEmptyHint, overlayScanFrame,
+          panelDiagnose, binding_panelLocked, progressConfidence, textConfidence, textDiseaseName,
+          textPrevention, textResultBadge, textSymptoms);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

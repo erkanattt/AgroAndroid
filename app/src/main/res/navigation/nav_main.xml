@@ -17,9 +17,6 @@
         android:label="@string/nav_identify"
         tools:layout="@layout/fragment_diagnose">
         <action
-            android:id="@+id/action_diagnose_to_treatment"
-            app:destination="@id/treatmentFragment" />
-        <action
             android:id="@+id/action_diagnose_to_login"
             app:destination="@id/loginFragment" />
         <action
@@ -28,42 +25,23 @@
     </fragment>
 
     <fragment
-        android:id="@+id/nav_field"
-        android:name="kz.agrosfera.app.ui.plants.PlantsFragment"
-        android:label="@string/nav_plants"
-        tools:layout="@layout/fragment_plants" />
+        android:id="@+id/nav_chat"
+        android:name="kz.agrosfera.app.ui.chat.ChatFragment"
+        android:label="@string/nav_chat"
+        tools:layout="@layout/fragment_chat">
+        <action
+            android:id="@+id/action_chat_to_login"
+            app:destination="@id/loginFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_knowledge"
-        android:name="kz.agrosfera.app.ui.diseases.CategoriesFragment"
-        android:label="@string/nav_categories"
-        tools:layout="@layout/fragment_categories">
+        android:name="kz.agrosfera.app.ui.knowledge.KnowledgeFragment"
+        android:label="@string/nav_info"
+        tools:layout="@layout/fragment_knowledge">
         <action
-            android:id="@+id/action_categories_to_disease_list"
-            app:destination="@id/categoryDiseasesFragment" />
-    </fragment>
-
-    <fragment
-        android:id="@+id/categoryDiseasesFragment"
-        android:name="kz.agrosfera.app.ui.diseases.CategoryDiseasesFragment"
-        android:label="@string/category_diseases_title"
-        tools:layout="@layout/fragment_category_diseases">
-        <argument
-            android:name="categoryId"
-            app:argType="string" />
-        <action
-            android:id="@+id/action_disease_list_to_detail"
+            android:id="@+id/action_knowledge_to_detail"
             app:destination="@id/diseaseDetailFragment" />
-    </fragment>
-
-    <fragment
-        android:id="@+id/diseaseDetailFragment"
-        android:name="kz.agrosfera.app.ui.diseases.DiseaseDetailFragment"
-        android:label="@string/disease_detail_title"
-        tools:layout="@layout/fragment_disease_detail">
-        <argument
-            android:name="diseaseId"
-            app:argType="string" />
     </fragment>
 
     <fragment
@@ -80,10 +58,14 @@
     </fragment>
 
     <fragment
-        android:id="@+id/treatmentFragment"
-        android:name="kz.agrosfera.app.ui.treatment.TreatmentFragment"
-        android:label="@string/treatment_title"
-        tools:layout="@layout/fragment_treatment" />
+        android:id="@+id/diseaseDetailFragment"
+        android:name="kz.agrosfera.app.ui.diseases.DiseaseDetailFragment"
+        android:label="@string/disease_detail_title"
+        tools:layout="@layout/fragment_disease_detail">
+        <argument
+            android:name="diseaseId"
+            app:argType="string" />
+    </fragment>
 
     <fragment
         android:id="@+id/loginFragment"
@@ -94,6 +76,14 @@
             android:name="redirect_ai"
             android:defaultValue="false"
             app:argType="boolean" />
+        <argument
+            android:name="redirect_chat"
+            android:defaultValue="false"
+            app:argType="boolean" />
+        <argument
+            android:name="redirect_tab"
+            android:defaultValue="0"
+            app:argType="integer" />
     </fragment>
 
     <fragment
@@ -105,5 +95,13 @@
             android:name="redirect_ai"
             android:defaultValue="false"
             app:argType="boolean" />
+        <argument
+            android:name="redirect_chat"
+            android:defaultValue="false"
+            app:argType="boolean" />
+        <argument
+            android:name="redirect_tab"
+            android:defaultValue="0"
+            app:argType="integer" />
     </fragment>
 </navigation>

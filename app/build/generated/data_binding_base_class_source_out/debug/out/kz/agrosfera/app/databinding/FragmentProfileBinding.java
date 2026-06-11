@@ -4,10 +4,10 @@ package kz.agrosfera.app.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.widget.NestedScrollView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.google.android.material.button.MaterialButton;
@@ -18,7 +18,7 @@ import kz.agrosfera.app.R;
 
 public final class FragmentProfileBinding implements ViewBinding {
   @NonNull
-  private final LinearLayout rootView;
+  private final NestedScrollView rootView;
 
   @NonNull
   public final MaterialButton btnLogin;
@@ -30,25 +30,43 @@ public final class FragmentProfileBinding implements ViewBinding {
   public final MaterialButton btnRegister;
 
   @NonNull
+  public final TextView rowFields;
+
+  @NonNull
+  public final TextView rowPersonal;
+
+  @NonNull
+  public final TextView rowSupport;
+
+  @NonNull
   public final TextView textEmail;
 
   @NonNull
   public final TextView textGreeting;
 
-  private FragmentProfileBinding(@NonNull LinearLayout rootView, @NonNull MaterialButton btnLogin,
-      @NonNull MaterialButton btnLogout, @NonNull MaterialButton btnRegister,
-      @NonNull TextView textEmail, @NonNull TextView textGreeting) {
+  @NonNull
+  public final TextView textPhone;
+
+  private FragmentProfileBinding(@NonNull NestedScrollView rootView,
+      @NonNull MaterialButton btnLogin, @NonNull MaterialButton btnLogout,
+      @NonNull MaterialButton btnRegister, @NonNull TextView rowFields,
+      @NonNull TextView rowPersonal, @NonNull TextView rowSupport, @NonNull TextView textEmail,
+      @NonNull TextView textGreeting, @NonNull TextView textPhone) {
     this.rootView = rootView;
     this.btnLogin = btnLogin;
     this.btnLogout = btnLogout;
     this.btnRegister = btnRegister;
+    this.rowFields = rowFields;
+    this.rowPersonal = rowPersonal;
+    this.rowSupport = rowSupport;
     this.textEmail = textEmail;
     this.textGreeting = textGreeting;
+    this.textPhone = textPhone;
   }
 
   @Override
   @NonNull
-  public LinearLayout getRoot() {
+  public NestedScrollView getRoot() {
     return rootView;
   }
 
@@ -91,6 +109,24 @@ public final class FragmentProfileBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.rowFields;
+      TextView rowFields = ViewBindings.findChildViewById(rootView, id);
+      if (rowFields == null) {
+        break missingId;
+      }
+
+      id = R.id.rowPersonal;
+      TextView rowPersonal = ViewBindings.findChildViewById(rootView, id);
+      if (rowPersonal == null) {
+        break missingId;
+      }
+
+      id = R.id.rowSupport;
+      TextView rowSupport = ViewBindings.findChildViewById(rootView, id);
+      if (rowSupport == null) {
+        break missingId;
+      }
+
       id = R.id.textEmail;
       TextView textEmail = ViewBindings.findChildViewById(rootView, id);
       if (textEmail == null) {
@@ -103,8 +139,14 @@ public final class FragmentProfileBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentProfileBinding((LinearLayout) rootView, btnLogin, btnLogout, btnRegister,
-          textEmail, textGreeting);
+      id = R.id.textPhone;
+      TextView textPhone = ViewBindings.findChildViewById(rootView, id);
+      if (textPhone == null) {
+        break missingId;
+      }
+
+      return new FragmentProfileBinding((NestedScrollView) rootView, btnLogin, btnLogout,
+          btnRegister, rowFields, rowPersonal, rowSupport, textEmail, textGreeting, textPhone);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

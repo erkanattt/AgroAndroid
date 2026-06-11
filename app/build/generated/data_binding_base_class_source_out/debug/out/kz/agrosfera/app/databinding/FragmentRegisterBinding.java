@@ -35,16 +35,20 @@ public final class FragmentRegisterBinding implements ViewBinding {
   @NonNull
   public final TextInputEditText inputPasswordConfirm;
 
+  @NonNull
+  public final TextInputEditText inputPhone;
+
   private FragmentRegisterBinding(@NonNull NestedScrollView rootView,
       @NonNull MaterialButton btnSubmit, @NonNull TextInputEditText inputEmail,
       @NonNull TextInputEditText inputName, @NonNull TextInputEditText inputPassword,
-      @NonNull TextInputEditText inputPasswordConfirm) {
+      @NonNull TextInputEditText inputPasswordConfirm, @NonNull TextInputEditText inputPhone) {
     this.rootView = rootView;
     this.btnSubmit = btnSubmit;
     this.inputEmail = inputEmail;
     this.inputName = inputName;
     this.inputPassword = inputPassword;
     this.inputPasswordConfirm = inputPasswordConfirm;
+    this.inputPhone = inputPhone;
   }
 
   @Override
@@ -104,8 +108,14 @@ public final class FragmentRegisterBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.inputPhone;
+      TextInputEditText inputPhone = ViewBindings.findChildViewById(rootView, id);
+      if (inputPhone == null) {
+        break missingId;
+      }
+
       return new FragmentRegisterBinding((NestedScrollView) rootView, btnSubmit, inputEmail,
-          inputName, inputPassword, inputPasswordConfirm);
+          inputName, inputPassword, inputPasswordConfirm, inputPhone);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

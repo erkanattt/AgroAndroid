@@ -10,10 +10,9 @@ import androidx.navigation.fragment.findNavController
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.coroutines.launch
 import kz.agrosfera.app.AgroApp
-import kz.agrosfera.app.R
 import kz.agrosfera.app.MainActivity
+import kz.agrosfera.app.R
 import kz.agrosfera.app.databinding.FragmentLoginBinding
-import kz.agrosfera.app.ui.auth.AuthNavArgs
 
 class LoginFragment : Fragment() {
 
@@ -44,15 +43,25 @@ class LoginFragment : Fragment() {
                 val result = auth.login(email, password)
                 if (result.isSuccess) {
                     Snackbar.make(binding.root, R.string.auth_success_login, Snackbar.LENGTH_SHORT).show()
-                    val redirectAi = arguments?.getBoolean(AuthNavArgs.REDIRECT_AI) == true
                     findNavController().popBackStack()
-                    if (redirectAi) {
-                        (requireActivity() as MainActivity).selectTab(R.id.nav_check)
-                    }
+                    redirectAfterAuth()
                 } else {
                     Snackbar.make(binding.root, R.string.auth_error_invalid, Snackbar.LENGTH_SHORT).show()
                 }
             }
+        }
+    }
+
+    private fun redirectAfterAuth() {
+        val tab = arguments?.getInt(AuthNavArgs.REDIRECT_TAB, 0) ?: 0
+        if (tab != 0) {
+            (requireActivity() as MainActivity).selectTab(tab)
+            return
+        }
+        if (arguments?.getBoolean(AuthNavArgs.REDIRECT_AI) == true) {
+            (requireActivity() as MainActivity).selectTab(R.id.nav_check)
+        } else if (arguments?.getBoolean(AuthNavArgs.REDIRECT_CHAT) == true) {
+            (requireActivity() as MainActivity).selectTab(R.id.nav_chat)
         }
     }
 

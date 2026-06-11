@@ -1,29 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="accent">#4CAF50</color>
-    <color name="accent_dark">#388E3C</color>
-    <color name="accent_light">#E8F5E9</color>
-    <color name="accent_muted">#334CAF50</color>
-    <color name="ai_glow">#334CAF50</color>
-    <color name="background">#F4F8F4</color>
-    <color name="card">#FFFFFF</color>
-    <color name="card_elevated">#FFFFFF</color>
-    <color name="card_stroke">#E0E8E0</color>
-    <color name="danger">#E53935</color>
-    <color name="hero_overlay">#00000000</color>
-    <color name="icon_circle_bg">#E8F5E9</color>
-    <color name="shadow">#1A000000</color>
-    <color name="success">#4CAF50</color>
-    <color name="surface">#FFFFFF</color>
-    <color name="text_muted">#9AA89C</color>
-    <color name="text_primary">#1A2E1C</color>
-    <color name="text_secondary">#5F6F61</color>
-    <color name="warning">#FF9800</color>
-    <color name="weather_sky">#E3F2FD</color>
+    <color name="accent">#8BC34A</color>
+    <color name="accent_dark">#689F38</color>
+    <color name="accent_light">#1E3A28</color>
+    <color name="accent_muted">#338BC34A</color>
+    <color name="ai_glow">#338BC34A</color>
+    <color name="background">#0B1A13</color>
+    <color name="bottom_nav_bg">#0F2118</color>
+    <color name="card">#1A3328</color>
+    <color name="card_elevated">#1F3D30</color>
+    <color name="card_stroke">#2A4A38</color>
+    <color name="chat_bot_bubble">#1A3328</color>
+    <color name="chat_user_bubble">#2E5A3C</color>
+    <color name="danger">#EF5350</color>
+    <color name="hero_overlay">#80000000</color>
+    <color name="icon_circle_bg">#1E3A28</color>
+    <color name="shadow">#66000000</color>
+    <color name="success">#8BC34A</color>
+    <color name="surface">#142820</color>
+    <color name="surface_elevated">#1A3328</color>
+    <color name="text_muted">#6B7C72</color>
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#B0BEB4</color>
+    <color name="warning">#FFB74D</color>
+    <color name="weather_sky">#1A2E3A</color>
+    <item name="action_calendar" type="id"/>
+    <item name="action_tips" type="id"/>
     <string name="about_disease">Ауру туралы</string>
     <string name="action_login">Кіру</string>
     <string name="action_logout">Шығу</string>
     <string name="action_register">Тіркелу</string>
+    <string name="action_save">Сақтау</string>
+    <string name="action_saved">Сақталды</string>
     <string name="ai_locked_message">Жасанды интеллект арқылы ауруды анықтау үшін аккаунтқа кіріңіз немесе тіркеліңіз. Аурулар каталогын оқуға тіркелу қажет емес.</string>
     <string name="ai_locked_title">ЖИ диагностика — тек тіркелгендерге</string>
     <string name="ai_model_badge">ResNet9 · PyTorch · 38 класс</string>
@@ -45,6 +53,11 @@
     <string name="category_disease_count">%1$d ауру</string>
     <string name="category_diseases_hint">Осы өсімдікте жиі кездесетін аурулар. Карточканы басып, толық ақпаратты оқыңыз</string>
     <string name="category_diseases_title">Жиі кездесетін аурулар</string>
+    <string name="chat_error">Чат қатесі: %1$s</string>
+    <string name="chat_gemini_missing">Gemini API кілті қойылмаған. local.properties файлына gemini.api.key=... жазыңыз.</string>
+    <string name="chat_input_hint">Хабар жазыңыз…</string>
+    <string name="chat_title">AI Чат-бот</string>
+    <string name="chat_welcome">Сәлеметсіз бе! Мен сіздің агроном көмекшіңізбін. Өсімдік аурулары, алдын алу және егістік жұмыстары туралы сұрақ қойыңыз.</string>
     <string name="common_diseases_subtitle">Егістікте жиі кездесетін патологиялар тізімі. Толығырақ карточканы басыңыз.</string>
     <string name="common_diseases_title">Жиі кездесетін аурулар</string>
     <string name="cta_check_plant">Өсімдікті тексеру</string>
@@ -58,10 +71,11 @@
     <string name="diagnosis_demo_note">Сервер күйі тексерілуде…</string>
     <string name="diagnosis_error_detail">Сервер қатесі: %1$s</string>
     <string name="diagnosis_error_generic">Талдау сәтсіз аяқталды. Сурет пен серверді тексеріңіз.</string>
-    <string name="diagnosis_error_server">Серверге қосылу мүмкін болмады. Flask-ты іске қосып, эмуляторда 10.0.2.2:5000, телефонда компьютер IP мекенжайын тексеріңіз.</string>
+    <string name="diagnosis_error_server">ЖИ серверіне қосылу мүмкін болмады. Компьютерде сервер іске қосылғанын және телефонмен бір желіге қосылғанын тексеріңіз.</string>
     <string name="diagnosis_error_timeout">Сервер жауап бермеді. Кейін қайталаңыз.</string>
     <string name="diagnosis_prevention">Алдын алу және емдеу</string>
     <string name="diagnosis_result_title">Болжамды нәтиже</string>
+    <string name="diagnosis_saved">Диагноз базаға сақталды</string>
     <string name="diagnosis_server_offline">✗ ЖИ серверіне қосылу жоқ: %1$s\n\n① Компьютерде:\ncd disser-project-flask\\app\npython app.py\n\n② ipconfig → IPv4 (мыс. 192.168.0.5)\n③ Жоғарыға http://IP:5000 жазыңыз\n④ «Сақтау және тексеру» басыңыз\n\nЭмулятор: http://10.0.2.2:5000</string>
     <string name="diagnosis_server_online">✓ Сервер қосулы: %1$s\nСуретті таңдап «Талдау» батырмасын басыңыз.</string>
     <string name="diagnosis_symptoms">Белгілер</string>
@@ -75,10 +89,15 @@
     <string name="feat_prevent_title">Алдын алу</string>
     <string name="feat_yield_desc">Динамика және болжам</string>
     <string name="feat_yield_title">Өнім бақылау</string>
+    <string name="feature_soon">Жақында қосылады</string>
     <string name="field_email">Пошта</string>
     <string name="field_name">Аты-жөні</string>
     <string name="field_password">Құпия сөз</string>
     <string name="field_password_confirm">Құпия сөзді растау</string>
+    <string name="field_phone">Телефон</string>
+    <string name="filter_all">Барлығы</string>
+    <string name="filter_fruit">Жеміс ағаштары</string>
+    <string name="filter_vegetables">Көкөністер</string>
     <string name="garden_add">+ Қосу</string>
     <string name="garden_add_soon">Жakında қосылады</string>
     <string name="garden_title">Менің бақшам</string>
@@ -88,10 +107,15 @@
     <string name="home_features_title">Мүмкіндіктер</string>
     <string name="home_greeting_guest">Сәлем, фермер!</string>
     <string name="home_greeting_name">Сәлем, %1$s!</string>
+    <string name="home_hero_subtitle">Жасанды интеллект арқылы өсімдік ауруларын анықтаңыз</string>
+    <string name="home_hero_title">Ауруды анықтаңыз</string>
     <string name="home_identify_desc">ЖИ суретті талдап, ауруды анықтайды</string>
     <string name="home_identify_title">Ауруды анықтау</string>
+    <string name="home_main_menu">Негізгі мәзір</string>
     <string name="home_my_plants">Менің өсімдіктерім</string>
     <string name="home_process_hint">Фото таңдаңыз → PyTorch ResNet9 талдайды → нәтиже мен кеңес.</string>
+    <string name="home_scan">Сканерлеу</string>
+    <string name="home_see_all">Барлығын көру</string>
     <string name="home_start">Бастау</string>
     <string name="home_subtitle">Өсімдіктеріңізді қорғаңыз, өнімді арттырыңыз</string>
     <string name="home_tagline">Ақылды агро көмекші</string>
@@ -106,15 +130,23 @@
     <string name="knowledge_block3_text">Қайшы, пырақ пен қолғаптарды залалсыз өсімдіктерден кейін дезинфекциялаңыз.</string>
     <string name="knowledge_block3_title">Таза құрал</string>
     <string name="knowledge_intro">Алдын алу — емдеуден арзан. Төмендегі қағидаларды сақтаңыз.</string>
-    <string name="knowledge_screen_title">Агро кеңестер</string>
+    <string name="knowledge_screen_title">Аурулар туралы ақпарат</string>
     <string name="latest_title">Соңғы диагноз</string>
     <string name="login_title">Кіру</string>
     <string name="logo_agro">AGRO</string>
     <string name="logo_sfera">SFERA</string>
+    <string name="menu_calendar">Егістік күнтізбесі</string>
+    <string name="menu_chat">Чат-бот</string>
+    <string name="menu_disease_info">Аурулар туралы ақпарат</string>
+    <string name="menu_identify">Ауруды анықтау</string>
+    <string name="menu_profile">Профиль</string>
+    <string name="menu_tips">Кеңестер</string>
     <string name="nav_ai">ЖИ</string>
     <string name="nav_categories">Аурулар</string>
+    <string name="nav_chat">Чат</string>
     <string name="nav_home">Басты</string>
     <string name="nav_identify">Анықтау</string>
+    <string name="nav_info">Ақпарат</string>
     <string name="nav_plants">Өсімдіктер</string>
     <string name="nav_profile">Профиль</string>
     <string name="nav_tips">Аурулар</string>
@@ -128,6 +160,12 @@
     <string name="profile_email_label">Пошта: %1$s</string>
     <string name="profile_guest">Қонақ режимі</string>
     <string name="profile_hello">Сәлем, %1$s!</string>
+    <string name="profile_language">Тіл</string>
+    <string name="profile_language_value">Қазақша</string>
+    <string name="profile_my_fields">Менің егістіктерім</string>
+    <string name="profile_personal">Жеке мәліметтер</string>
+    <string name="profile_phone_label">Телефон: %1$s</string>
+    <string name="profile_support">Қолдау орталығы</string>
     <string name="profile_title">Профиль</string>
     <string name="rec1">Зақымдалған жапырақтарды алып тастаңыз</string>
     <string name="rec2">Фунгицидтермен емдеңіз</string>
@@ -138,6 +176,7 @@
     <string name="result_disease">Ауру анықталды</string>
     <string name="result_healthy">Сау</string>
     <string name="result_title">Нәтиже</string>
+    <string name="search_hint">Іздеу…</string>
     <string name="server_collapse">Жабу ▲</string>
     <string name="server_expand">Ашу ▼</string>
     <string name="server_save_and_check">Сақтау және қосылуды тексеру</string>
@@ -174,10 +213,10 @@
     <string name="weather_details">Күн ашық · Ылғалдылық 45% · Жел 3 м/с</string>
     <string name="weather_error">Ауа-райын алу мүмкін болмады</string>
     <string name="weather_format_city">%1$s, Қазақстан</string>
-    <string name="weather_format_details">%1$s · Ылғalдылық %2$d%% · Жел %3$.0f м/с</string>
+    <string name="weather_format_details">%1$s · Ылғалдылық %2$d%% · Жел %3$.0f м/с</string>
     <string name="weather_format_temp">%1$+d°C</string>
     <string name="weather_loading">Ауа-райы жүктелуде…</string>
-    <string name="weather_select_city">Қala таңдау</string>
+    <string name="weather_select_city">Қала таңдау</string>
     <string name="weather_select_city_title">Қазақстан қаласын таңдаңыз</string>
     <string name="weather_temp">--</string>
     <style name="AgroBody">
@@ -195,16 +234,19 @@
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">@color/text_primary</item>
     </style>
-    <style name="Theme.AgroSfera" parent="Theme.Material3.Light.NoActionBar">
+    <style name="Theme.AgroSphere" parent="Theme.Material3.Dark.NoActionBar">
         <item name="colorPrimary">@color/accent</item>
-        <item name="colorOnPrimary">@color/surface</item>
+        <item name="colorOnPrimary">@color/background</item>
         <item name="colorPrimaryContainer">@color/accent_light</item>
+        <item name="colorOnPrimaryContainer">@color/accent</item>
         <item name="android:statusBarColor">@color/background</item>
-        <item name="android:navigationBarColor">@color/surface</item>
-        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:navigationBarColor">@color/bottom_nav_bg</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:colorBackground">@color/background</item>
         <item name="colorSurface">@color/surface</item>
         <item name="colorOnSurface">@color/text_primary</item>
+        <item name="colorSurfaceVariant">@color/surface_elevated</item>
+        <item name="colorOutline">@color/card_stroke</item>
     </style>
     <style name="Widget.Agro.Card" parent="Widget.Material3.CardView.Elevated">
         <item name="cardBackgroundColor">@color/card</item>

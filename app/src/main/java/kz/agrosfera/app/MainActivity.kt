@@ -48,12 +48,27 @@ class MainActivity : AppCompatActivity() {
         val navController = navHost.navController
 
         binding.bottomNav.setOnItemSelectedListener { item ->
-            if (item.itemId == R.id.nav_check && !isLoggedIn) {
-                navController.navigate(
-                    R.id.loginFragment,
-                    bundleOf(AuthNavArgs.REDIRECT_AI to true),
-                )
-                return@setOnItemSelectedListener false
+            when (item.itemId) {
+                R.id.nav_check -> if (!isLoggedIn) {
+                    navController.navigate(
+                        R.id.loginFragment,
+                        bundleOf(
+                            AuthNavArgs.REDIRECT_AI to true,
+                            AuthNavArgs.REDIRECT_TAB to R.id.nav_check,
+                        ),
+                    )
+                    return@setOnItemSelectedListener false
+                }
+                R.id.nav_chat -> if (!isLoggedIn) {
+                    navController.navigate(
+                        R.id.loginFragment,
+                        bundleOf(
+                            AuthNavArgs.REDIRECT_CHAT to true,
+                            AuthNavArgs.REDIRECT_TAB to R.id.nav_chat,
+                        ),
+                    )
+                    return@setOnItemSelectedListener false
+                }
             }
             NavigationUI.onNavDestinationSelected(item, navController)
             true
@@ -63,9 +78,8 @@ class MainActivity : AppCompatActivity() {
         val mainDestinations = setOf(
             R.id.nav_home,
             R.id.nav_check,
-            R.id.nav_field,
+            R.id.nav_chat,
             R.id.nav_knowledge,
-            R.id.nav_profile,
         )
         navController.addOnDestinationChangedListener { _, destination, _ ->
             binding.bottomNav.isVisible = destination.id in mainDestinations
@@ -74,16 +88,34 @@ class MainActivity : AppCompatActivity() {
 
     fun selectTab(@IdRes menuItemId: Int) {
         if (menuItemId == R.id.nav_check && !isLoggedIn) {
+            navigateToLogin(redirectAi = true, tab = R.id.nav_check)
+            return
+        }
+        if (menuItemId == R.id.nav_chat && !isLoggedIn) {
+            navigateToLogin(redirectChat = true, tab = R.id.nav_chat)
+            return
+        }
+        if (menuItemId == R.id.nav_profile) {
             val navHost =
                 supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
-            navHost.navController.navigate(
-                R.id.loginFragment,
-                bundleOf(AuthNavArgs.REDIRECT_AI to true),
-            )
+            navHost.navController.navigate(R.id.nav_profile)
             return
         }
         val item = binding.bottomNav.menu.findItem(menuItemId) ?: return
         binding.bottomNav.selectedItemId = item.itemId
+    }
+
+    fun navigateToLogin(redirectAi: Boolean = false, redirectChat: Boolean = false, tab: Int = 0) {
+        val navHost =
+            supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+        navHost.navController.navigate(
+            R.id.loginFragment,
+            bundleOf(
+                AuthNavArgs.REDIRECT_AI to redirectAi,
+                AuthNavArgs.REDIRECT_CHAT to redirectChat,
+                AuthNavArgs.REDIRECT_TAB to tab,
+            ),
+        )
     }
 
     fun isUserLoggedIn(): Boolean = isLoggedIn

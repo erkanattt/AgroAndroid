@@ -24,6 +24,7 @@ class AuthRepositoryImpl(
     private object Keys {
         val name = stringPreferencesKey("name")
         val email = stringPreferencesKey("email")
+        val phone = stringPreferencesKey("phone")
         val password = stringPreferencesKey("password")
         val loggedIn = booleanPreferencesKey("logged_in")
     }
@@ -33,13 +34,23 @@ class AuthRepositoryImpl(
         val email = prefs[Keys.email]
         val name = prefs[Keys.name]
         if (!logged || email.isNullOrBlank() || name.isNullOrBlank()) null
-        else UserSession(name = name, email = email)
+        else UserSession(
+            name = name,
+            email = email,
+            phone = prefs[Keys.phone].orEmpty(),
+        )
     }
 
-    override suspend fun register(name: String, email: String, password: String): Result<Unit> {
+    override suspend fun register(
+        name: String,
+        email: String,
+        password: String,
+        phone: String,
+    ): Result<Unit> {
         store.edit { prefs ->
             prefs[Keys.name] = name.trim()
             prefs[Keys.email] = email.trim().lowercase()
+            prefs[Keys.phone] = phone.trim()
             prefs[Keys.password] = password
             prefs[Keys.loggedIn] = true
         }
