@@ -4,24 +4,19 @@ import android.app.Application
 import kz.agrosfera.app.data.auth.AuthRepositoryImpl
 import kz.agrosfera.app.data.local.AppDatabase
 import kz.agrosfera.app.data.local.DiagnosisRepositoryImpl
-import kz.agrosfera.app.data.local.WeatherPreferences
-import kz.agrosfera.app.data.plant.DiseaseDiagnosisService
+import kz.agrosfera.app.data.plant.DiseaseRepositoryImpl
+import kz.agrosfera.app.data.remote.DiseaseApiClient
 import kz.agrosfera.app.data.remote.GeminiApiClient
-import kz.agrosfera.app.data.remote.WeatherApiClient
-import kz.agrosfera.app.data.weather.WeatherRepositoryImpl
 import kz.agrosfera.app.domain.auth.AuthRepository
 import kz.agrosfera.app.domain.chat.ChatRepository
 import kz.agrosfera.app.domain.diagnosis.DiagnosisRepository
 import kz.agrosfera.app.domain.plant.PredictDiseaseUseCase
-import kz.agrosfera.app.domain.weather.WeatherRepository
 
 class AgroApp : Application() {
 
     lateinit var authRepository: AuthRepository
-    lateinit var diseaseDiagnosisService: DiseaseDiagnosisService
     lateinit var predictDiseaseUseCase: PredictDiseaseUseCase
     lateinit var diagnosisRepository: DiagnosisRepository
-    lateinit var weatherRepository: WeatherRepository
     lateinit var chatRepository: ChatRepository
 
     override fun onCreate() {
@@ -29,9 +24,9 @@ class AgroApp : Application() {
         val db = AppDatabase.get(this)
         authRepository = AuthRepositoryImpl(this)
         diagnosisRepository = DiagnosisRepositoryImpl(db.diagnosisDao())
-        diseaseDiagnosisService = DiseaseDiagnosisService()
-        predictDiseaseUseCase = PredictDiseaseUseCase(diseaseDiagnosisService)
-        weatherRepository = WeatherRepositoryImpl(WeatherPreferences(this), WeatherApiClient())
+        predictDiseaseUseCase = PredictDiseaseUseCase(
+            DiseaseRepositoryImpl(DiseaseApiClient()),
+        )
         chatRepository = ChatRepository(GeminiApiClient())
     }
 }

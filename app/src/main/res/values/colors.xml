@@ -19,7 +19,6 @@
     <color name="hero_overlay">#80000000</color>
     <color name="icon_circle_bg">#1E3A28</color>
     <color name="ai_glow">#338BC34A</color>
-    <color name="weather_sky">#1A2E3A</color>
     <color name="shadow">#66000000</color>
     <color name="chat_user_bubble">#2E5A3C</color>
     <color name="chat_bot_bubble">#1A3328</color>

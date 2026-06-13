@@ -12,5 +12,7 @@ public final class BuildConfig {
   // Field from default config.
   public static final String API_BASE_URL = "http://172.20.10.2:5000";
   // Field from default config.
-  public static final String GEMINI_API_KEY = "";
+  public static final String GEMINI_API_KEY = "AIzaSyC7r69ZtTemKzCyAjNyTrnb42ArKO9kVjw";
+  // Field from default config.
+  public static final String GEMINI_MODEL = "gemini-2.5-flash";
 }
